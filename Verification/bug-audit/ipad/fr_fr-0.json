@@ -1,0 +1,25 @@
+{
+  "captions": [
+    {
+      "end": 8.921125000000002,
+      "start": 1.9211250000000013,
+      "text": "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par un incendimal veillant."
+    }
+  ],
+  "cpuInference": true,
+  "detectedOutputLanguage": "fr",
+  "device": "iPad",
+  "droppedAudioSeconds": 0,
+  "fixture": "fr_fr-0.wav",
+  "inferenceSeconds": 0.46402275,
+  "model": "tiny",
+  "modelSHA256": "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback": true,
+  "osVersion": "27.0",
+  "processedAudioSeconds": 7.33,
+  "requestedUseGPU": false,
+  "sourceDurationSeconds": 10.2,
+  "sourceLanguage": "fr",
+  "usingGPU": false,
+  "wallSecondsIncludingPlayback": 10.689049005508423
+}

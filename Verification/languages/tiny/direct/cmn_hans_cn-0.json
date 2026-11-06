@@ -1,0 +1,39 @@
+{
+  "audioSeconds" : 10.380000000000001,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 10.380000000000001,
+      "durationSeconds" : 0.070731708343373612,
+      "startSeconds" : 0.0042529583442956209,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 10.380000000000001,
+  "inferenceTotalSeconds" : 0.070731708343373612,
+  "inferenceWallSeconds" : 0.075046458339784294,
+  "language" : "zh",
+  "loadSeconds" : 0.074491024017333984,
+  "peakResidentBytes" : 246022144,
+  "segments" : [
+    {
+      "end" : 3,
+      "start" : 0,
+      "text" : "这并不是告别"
+    },
+    {
+      "end" : 5,
+      "start" : 3,
+      "text" : "这是一个偏胶的结束"
+    },
+    {
+      "end" : 7,
+      "start" : 5,
+      "text" : "也是新偏胶的开始"
+    }
+  ]
+}

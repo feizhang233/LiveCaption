@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "toolchain": "Xcode 27.2 / Swift 6.4.2",
+  "macOSBuild": {
+    "exitStatus": 0,
+    "signing": "ad hoc development"
+  },
+  "iPadDeviceBuild": {
+    "exitStatus": 0,
+    "signing": "disabled; physical device not installed"
+  },
+  "iPadSimulatorTests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "testMethodSeconds": 69.089,
+    "evidence": "ipad/README.md"
+  },
+  "coreTests": {
+    "passed": 39,
+    "failed": 0,
+    "evidence": "../engine/en-zh/README.md"
+  },
+  "sourceLanguagePreferences": {
+    "passed": true,
+    "evidence": "language-settings.log"
+  },
+  "sourceSHA256": {
+    "App/Session/SourceLanguage.swift": "8be74bfca883dee9efcf65293390da88d2d24d0d02f50db0ac76c1e89b587cf4",
+    "App/Session/SessionController.swift": "eaa5624a9296d0395c23c7933a4897f8abc356db92a73ef2071fcf5b935004be",
+    "App/UI/RootView.swift": "d163d27b64f632225818c2c8951a00c3448e1c50e0040d68182271a4c8ab0ebc",
+    "Tests/iPadIntegration/AppIntegrationTests.swift": "167d91eac0e97c17d3beb238fea22821aaa561b659568a76eabaaa4621ad8d6d",
+    "LiveCaption.xcodeproj/project.pbxproj": "597b5b73f89da55bd4d0326892198fb439cc86c719ed37462b46412a897cc1f0"
+  }
+}

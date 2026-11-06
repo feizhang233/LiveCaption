@@ -1,0 +1,17 @@
+{
+  "audioSeconds" : 14.220000000000001,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.15063297748565674,
+  "language" : "ja",
+  "loadSeconds" : 0.11481797695159912,
+  "peakResidentBytes" : 340754432,
+  "segments" : [
+    {
+      "end" : 12,
+      "start" : 0,
+      "text" : "また、北側に行くなら、世界的に有名なマリアゾーの聖地であるファティマの生物生息、神社を訪れましょう。"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+--- a/Packages/CaptionCore/Sources/CaptionCore/AudioProcessing.swift
++++ b/Packages/CaptionCore/Sources/CaptionCore/AudioProcessing.swift
+@@ -57,6 +57,10 @@
+ /// 250 ms preroll, 600 ms hangover. It is deliberately NOT claimed as a neural
+ /// speech/music classifier. Music and very quiet speech remain a QA limitation.
+ struct SpeechWindowBuilder {
++    // Only provisional timing is shortened. Final VAD/overlap boundaries stay
++    // unchanged so a faster preview does not sacrifice transcription context.
++    private static let firstPartialSamples = 16_000
++    private static let partialStrideSamples = 12_800
+     private(set) var active: [Float] = []
+     private var preRoll: [Float] = []
+     private var start = 0.0
+@@ -71,7 +75,7 @@
+ 
+     mutating func reset() { self = SpeechWindowBuilder() }
+ 
+-    mutating func append(_ samples: [Float], at time: Double) -> [SpeechWindow] {
++    mutating func append(_ samples: [Float], at time: Double, emitPartials: Bool = true) -> [SpeechWindow] {
+         guard time.isFinite, !samples.isEmpty else { return [] }
+         var windows: [SpeechWindow] = []
+         if let expectedNext, abs(time - expectedNext) > 0.15 {
+@@ -87,14 +91,14 @@
+             while pending.count >= 320 {
+                 let frame = Array(pending.prefix(320))
+                 pending.removeFirst(320)
+-                windows.append(contentsOf: process(frame, at: pendingStart))
++                windows.append(contentsOf: process(frame, at: pendingStart, emitPartials: emitPartials))
+                 pendingStart += 0.02
+             }
+         }
+         return windows
+     }
+ 
+-    private mutating func process(_ frame: [Float], at time: Double) -> [SpeechWindow] {
++    private mutating func process(_ frame: [Float], at time: Double, emitPartials: Bool) -> [SpeechWindow] {
+         let rms = sqrt(frame.reduce(0.0) { $0 + Double($1 * $1) } / Double(frame.count))
+         // Digital/media audio can be very quiet even when intelligible. A fixed
+         // 0.004 gate rejected an actual French FLEURS clip (max RMS 0.00266).
+@@ -125,7 +129,8 @@
+                 active = overlap
+                 lastPartialCount = overlap.count
+                 hasNewSpeech = false
+-            } else if active.count >= 19_200 && active.count - lastPartialCount >= 24_000 {
++            } else if emitPartials && active.count >= Self.firstPartialSamples &&
++                        (lastPartialCount == 0 || active.count - lastPartialCount >= Self.partialStrideSamples) {
+                 output.append(SpeechWindow(samples: active, start: start, isFinal: false))
+                 lastPartialCount = active.count
+             }
+--- a/Packages/CaptionCore/Sources/CaptionCore/StreamingTranscriber.swift
++++ b/Packages/CaptionCore/Sources/CaptionCore/StreamingTranscriber.swift
+@@ -63,7 +63,11 @@
+     public func append(samples: [Float], at startTime: Double) {
+         guard running, startTime.isFinite, !samples.isEmpty else { return }
+         let valid = samples.map { $0.isFinite ? max(-1, min(1, $0)) : 0 }
+-        for window in builder.append(valid, at: startTime) { enqueue(window) }
++        // While inference is busy, keep accumulating PCM but do not manufacture
++        // newer provisional jobs that would invalidate its only useful result.
++        // The next input after it becomes idle uses the latest accumulated audio.
++        // Final windows remain unconditional and retain priority in the queue.
++        for window in builder.append(valid, at: startTime, emitPartials: worker == nil) { enqueue(window) }
+         if builder.silentSeconds >= 6 && !lastNoAudio {
+             lastNoAudio = true; emit(.status(.noAudio))
+         } else if builder.silentSeconds < 0.1 && lastNoAudio {
+@@ -162,8 +166,10 @@
+                     if !confirmed.isEmpty { emit(.confirmed(confirmed)) }
+                     partialID = UUID()
+                 } else if scheduled.sequence == latestWindowSequence {
+-                    // Any newer accepted window supersedes this hypothesis,
+-                    // including another partial or a final later shed on overload.
++                    // A newer scheduled window supersedes this hypothesis,
++                    // including a final later shed on overload. Merely receiving
++                    // more audio while busy does not suppress the best available
++                    // preview and cannot starve slower models of all partials.
+                     emit(.partial(reconciler.provisional(segments, windowStart: job.start, windowEnd: job.end, id: partialID)))
+                 }
+             } catch is CancellationError {

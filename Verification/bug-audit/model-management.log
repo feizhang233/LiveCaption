@@ -1,0 +1,11 @@
+Command: bash Scripts/test-models.sh
+Captured stdout from the completed focused regression run.
+
+PASS: streamed SHA-256, size rejection, checksum rejection, symlink rejection
+PASS: synchronous startup reservations prevent download/delete races for all queued models
+PASS: startup verification, selection, in-use deletion lock, deletion clears selection
+PASS: existing corrupt model is not marked installed
+PASS: dangling model links are rejected and removable instead of blocking retries
+PASS: storage initialization failure prevents a pointless download
+All model-management checks passed.
+

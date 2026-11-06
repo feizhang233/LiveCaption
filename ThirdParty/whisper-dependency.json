@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/ggml-org/whisper.cpp",
+  "version": "1.9.5",
+  "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+  "binaryRelease": "b5454",
+  "binaryURL": "https://github.com/ggml-org/whisper.cpp/releases/download/b5454/whisper-b5454-xcframework.zip",
+  "binarySHA256": "e57f8c48933000acabc13bb913fbe82805d483a2deff692cc6738836bd92393b",
+  "binaryBytes": 65816082,
+  "license": "MIT",
+  "acceleration": "Official XCFramework: Metal, Accelerate, CPU. Core ML loader is present, but no converted encoder model is shipped or downloaded by this app. Core ML loading therefore falls back to ggml and is not claimed as validated acceleration.",
+  "simulatorPolicy": "CPU only: observed iOS Simulator Metal abort while loading tiny despite successful small-buffer preflight. Physical devices still use eligible Metal with nonzero working-set budget and allocation preflight.",
+  "reviewed": "2026-11-06"
+}

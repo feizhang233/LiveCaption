@@ -1,0 +1,28 @@
+{
+  "audioSeconds" : 10.199999999999999,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 10.213050007820129,
+  "language" : "fr",
+  "loadSeconds" : 0.14331209659576416,
+  "peakResidentBytes" : 246841344,
+  "segments" : [
+    {
+      "end" : 8.9299999999999997,
+      "start" : 1.9300000000000002,
+      "text" : "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par un incendimal veillant."
+    }
+  ],
+  "streaming" : {
+    "droppedAudioSeconds" : 0,
+    "firstPartialSeconds" : 3.4590330123901367,
+    "maximumFinalDelaySeconds" : 0.17061204433441191,
+    "maximumInferenceSeconds" : 0.091166582999999995,
+    "partialCount" : 4,
+    "peakResidentBytesAfterEachRepeat" : [
+      246841344
+    ],
+    "repeatCount" : 1
+  }
+}

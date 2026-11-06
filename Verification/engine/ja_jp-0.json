@@ -1,0 +1,17 @@
+{
+  "audioSeconds" : 10.44,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.4471660852432251,
+  "language" : "ja",
+  "loadSeconds" : 3.0030890703201294,
+  "peakResidentBytes" : 257441792,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。"
+    }
+  ]
+}

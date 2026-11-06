@@ -1,0 +1,39 @@
+{
+  "audioSeconds" : 10.380000000000001,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 10.380000000000001,
+      "durationSeconds" : 0.088633916660910472,
+      "startSeconds" : 0.0043126250093337148,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 10.380000000000001,
+  "inferenceTotalSeconds" : 0.088633916660910472,
+  "inferenceWallSeconds" : 0.09301220832276158,
+  "language" : "zh",
+  "loadSeconds" : 0.092245936393737793,
+  "peakResidentBytes" : 341950464,
+  "segments" : [
+    {
+      "end" : 3,
+      "start" : 0,
+      "text" : "這並不是告別"
+    },
+    {
+      "end" : 5,
+      "start" : 3,
+      "text" : "這是一個偏章的結束"
+    },
+    {
+      "end" : 7,
+      "start" : 5,
+      "text" : "也是新偏章的開始"
+    }
+  ]
+}

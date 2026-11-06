@@ -1,0 +1,218 @@
+{
+  "audioSeconds" : 8.7599999999999998,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 11,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.060491333337267861,
+      "startSeconds" : 1.0150805000157561,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.061154333350714296,
+      "startSeconds" : 1.8021215416665655,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.6000000000000001,
+      "durationSeconds" : 0.066180166671983898,
+      "startSeconds" : 2.6021186250145547,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.3999999999999999,
+      "durationSeconds" : 0.063549166690791026,
+      "startSeconds" : 3.4113134166691452,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.2000000000000002,
+      "durationSeconds" : 0.086235166672850028,
+      "startSeconds" : 4.2107196249999106,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5,
+      "durationSeconds" : 0.084752541675698012,
+      "startSeconds" : 5.0044678333506454,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5.7999999999999998,
+      "durationSeconds" : 0.084891750011593103,
+      "startSeconds" : 5.8014357500069309,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6.5999999999999996,
+      "durationSeconds" : 0.1006092083407566,
+      "startSeconds" : 6.6132632083317731,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.4000000000000004,
+      "durationSeconds" : 0.097554125008173287,
+      "startSeconds" : 7.4077494166849647,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.1999999999999993,
+      "durationSeconds" : 0.090018791641341522,
+      "startSeconds" : 8.2069403333589435,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.7599999999999998,
+      "durationSeconds" : 0.07813025001087226,
+      "startSeconds" : 8.7663493333384395,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 54.759999999999998,
+  "inferenceTotalSeconds" : 0.87356683341204189,
+  "inferenceWallSeconds" : 8.8446295416797511,
+  "language" : "en",
+  "loadSeconds" : 0.08900606632232666,
+  "peakResidentBytes" : 258965504,
+  "segments" : [
+    {
+      "end" : 6,
+      "start" : 1.3877787807814457e-17,
+      "text" : "All now is alongside the world's safe for you, always begin with a capital letter,"
+    },
+    {
+      "end" : 8,
+      "start" : 6,
+      "text" : "even in the middle of a sentence."
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.075729833333753,
+    "firstSubtitleSeconds" : 1.075729833333753,
+    "lastConfirmedAfterEOFSeconds" : 0.084543333339970772,
+    "lastConfirmedSeconds" : 8.8445433333399706,
+    "maximumFeedLatenessSeconds" : 0.013362666679313406,
+    "maximumFinalDelaySeconds" : 0.84454333333997056,
+    "maximumInferenceSeconds" : 0.10061816699999999,
+    "partialCount" : 10,
+    "partialUpdateIntervalsSeconds" : [
+      0.78764604168827645,
+      0.80501583332079463,
+      0.80654650001088157,
+      0.82210487499833107,
+      0.79228570833220147,
+      0.797092666674871,
+      0.82753195831901394,
+      0.79142987501109019,
+      0.79162733332486823
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      256327680
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 8.6400000000000006,
+    "speechEnergyEndToLastConfirmedSeconds" : 0.20454333333996999,
+    "speechEnergyOnsetSeconds" : 0.26000000000000001,
+    "speechEnergyToFirstSubtitleSeconds" : 0.81572983333375304,
+    "updates" : [
+      {
+        "end" : 1,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "Hold that",
+        "wallSeconds" : 1.075729833333753
+      },
+      {
+        "end" : 1.8,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is almost like",
+        "wallSeconds" : 1.8633758750220295
+      },
+      {
+        "end" : 2.6000000000000001,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's same",
+        "wallSeconds" : 2.6683917083428241
+      },
+      {
+        "end" : 3.3599999999999999,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you.",
+        "wallSeconds" : 3.4749382083537057
+      },
+      {
+        "end" : 4.2000000000000002,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you. Always be careful.",
+        "wallSeconds" : 4.2970430833520368
+      },
+      {
+        "end" : 5,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you. Always begin with a character.",
+        "wallSeconds" : 5.0893287916842382
+      },
+      {
+        "end" : 5.7999999999999998,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you. Always begin with a capital letter.",
+        "wallSeconds" : 5.8864214583591092
+      },
+      {
+        "end" : 6.5999999999999996,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you. Always begin with a capital letter. Even the mayor of the city.",
+        "wallSeconds" : 6.7139534166781232
+      },
+      {
+        "end" : 7.4000000000000004,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you, always begin with a capital letter, even the middle of a sense.",
+        "wallSeconds" : 7.5053832916892134
+      },
+      {
+        "end" : 8,
+        "kind" : "partial",
+        "start" : 1.3877787807814457e-17,
+        "text" : "All now is alongside the world's safe for you, always begin with a capital letter, even the middle of a sentence.",
+        "wallSeconds" : 8.2970106250140816
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 6,
+            "start" : 1.3877787807814457e-17,
+            "text" : "All now is alongside the world's safe for you, always begin with a capital letter,"
+          },
+          {
+            "end" : 8,
+            "start" : 6,
+            "text" : "even in the middle of a sentence."
+          }
+        ],
+        "wallSeconds" : 8.8445433333399706
+      }
+    ]
+  }
+}

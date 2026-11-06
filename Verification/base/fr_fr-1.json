@@ -1,0 +1,22 @@
+{
+  "audioSeconds" : 8.2799999999999994,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.13723301887512207,
+  "language" : "fr",
+  "loadSeconds" : 0.11865198612213135,
+  "peakResidentBytes" : 341868544,
+  "segments" : [
+    {
+      "end" : 3.9199999999999999,
+      "start" : 0,
+      "text" : "Il a ajouté qu'on ne devrait se pendant pas leur demander d'assumer des obligations"
+    },
+    {
+      "end" : 7.6000000000000005,
+      "start" : 3.9199999999999999,
+      "text" : "qui n'est pas à ce que leur stade de développement, le responsabilité et leur capacité."
+    }
+  ]
+}

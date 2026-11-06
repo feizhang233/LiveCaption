@@ -1,0 +1,92 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "77883D44-3685-4026-A5A3-C86BD03A061B.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-en_us-0.wav-cpu_0_42B95578-C4DD-4C7A-8A56-A1CD7532A7F5.json",
+        "timestamp" : 1793966450.089
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testEnglishRealAudioProducesEnglishCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testEnglishRealAudioProducesEnglishCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "A77104E8-475F-4E23-A434-1C58041F3A35.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr_fr-0.wav-cpu_0_FCC60A66-11E7-44BF-85FE-92158E94C0B6.json",
+        "timestamp" : 1793966460.959
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "3694EE69-ADED-4EB5-A6E2-661A9635B535.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr-native-video.mp4-cpu_0_5504F1F7-BA1D-4938-B69A-7F9044037237.json",
+        "timestamp" : 1793966471.913
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "380BC90C-276F-4308-A136-B2443D87E380.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-ja_jp-0.wav-automatic-acceleration_0_18C895DD-9F75-4D9F-BA58-6F96F6DBA9D7.json",
+        "timestamp" : 1793966483.793
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "A0AB8ADE-B759-4067-8219-8B5B93315681.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-ja_jp-0.wav-cpu_0_D4FB9B7E-E9BD-439D-B994-CA35045E7C4C.json",
+        "timestamp" : 1793966495.91
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "51B3346B-BE79-4F44-AA6F-4A24DD66A8A4.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-cmn_hans_cn-0.wav-cpu_0_D4C868EC-5E4E-45E3-AAA2-EDB02B6F252C.json",
+        "timestamp" : 1793966506.908
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testMandarinRealAudioProducesChineseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testMandarinRealAudioProducesChineseCaptions"
+  }
+]

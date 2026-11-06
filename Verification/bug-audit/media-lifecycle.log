@@ -1,0 +1,19 @@
+Command: bash Scripts/test-media.sh /tmp/live-caption-verification-audio/fr-native-video.mp4
+Captured stdout from the completed focused regression run. SDK 27 AVAssetReader deprecation warnings were emitted separately and are omitted here.
+
+PASS: mono 16 kHz decoding, no future audio, 0.5-second bound, stationary playhead
+PASS: forward/backward seek timestamps and close
+PASS: failed reader replacement discards old PCM; huge finite time stays bounded
+PASS: close invalidates in-flight opens (16 observed); pre-cancelled open stays closed
+PASS: actual muted AVPlayer playback, pause stability, seek and resume
+PASS: failed media import clears ready/loading state (The operation could not be completed)
+PASS: controller disposal closes a player retained by a native display surface
+All media checks passed. Fixture: fr-native-video.mp4, duration 10.2s
+PASS: mono 16 kHz decoding, no future audio, 0.5-second bound, stationary playhead
+PASS: forward/backward seek timestamps and close
+PASS: failed reader replacement discards old PCM; huge finite time stays bounded
+PASS: close invalidates in-flight opens (16 observed); pre-cancelled open stays closed
+PASS: actual muted AVPlayer playback, pause stability, seek and resume
+PASS: failed media import clears ready/loading state (The operation could not be completed)
+PASS: controller disposal closes a player retained by a native display surface
+All media checks passed. Fixture: stereo48k.wav, duration 10.2s

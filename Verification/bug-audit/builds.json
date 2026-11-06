@@ -1,0 +1,47 @@
+{
+  "recordedAtUTC": "2026-11-06T11:28:32Z",
+  "toolchain": "Xcode 27.2 (27B52), Swift 6.4.2",
+  "host": "macOS 27.2, Apple M4 Pro, 24 GiB",
+  "results": {
+    "coreTests": {
+      "passed": 30,
+      "failed": 0,
+      "log": "../engine/bug-audit/core-tests-after.log"
+    },
+    "macAppBuild": {
+      "exitStatus": 0,
+      "signing": "ad hoc development",
+      "log": "/tmp/live-caption-bug-audit-mac-build.log"
+    },
+    "iPadDeviceBuild": {
+      "exitStatus": 0,
+      "signing": "disabled, not installed",
+      "log": "/tmp/live-caption-bug-audit-ipad-device-build.log"
+    },
+    "iPadSimulator": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "testMethodSeconds": 45.757,
+      "resultBundle": "/tmp/live-caption-bug-audit-ipad.xcresult",
+      "evidence": "ipad/README.md"
+    },
+    "frenchActualSession": {
+      "exitStatus": 0,
+      "report": "session-fr.json"
+    }
+  },
+  "sourceSHA256": {
+    "App/Session/SessionController.swift": "0ca5fe855ec1914e274ce33c0b0eb048b4f8c25a5ac5ba8fe9b9bec402864b13",
+    "App/Media/MediaController.swift": "6008a3ac581c72dd7f2c51f199b638a556329fe91138a46773ecc2596d0a4567",
+    "App/Models/ModelStore.swift": "01e31d92d055874e1236755b6195c4db4921414edcf062ccff49a98643cfb792",
+    "Packages/CaptionCore/Sources/CaptionCore/WhisperEngine.swift": "5ccc8777b181cf48edd36cfc80622962cd7a32a6de68e9e2bed3a8ee8eff5a4d",
+    "Packages/CaptionCore/Sources/CaptionCore/StreamingTranscriber.swift": "0f27b7db5c48d6d33a04f8c94dd978a5396ccb2e2fac5dd25c40ec392b220e75"
+  },
+  "limits": [
+    "No physical iPad, live Mac system capture, fullscreen overlay, or multimonitor UI verification in this audit.",
+    "The simulator uses CPU fallback; this does not verify physical iPad Metal.",
+    "Builds emitted only the optional AppIntents metadata warning. Runtime Apple Simulator diagnostics are retained in the original log.",
+    "Historical Verification/builds.json describes the earlier delivery; this file records the bug-audit build."
+  ]
+}

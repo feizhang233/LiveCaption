@@ -1,0 +1,29 @@
+{
+  "audioSeconds" : 10.56,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 10.56,
+      "durationSeconds" : 0.10650925000663847,
+      "startSeconds" : 0.0042553750099614263,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 10.56,
+  "inferenceTotalSeconds" : 0.10650925000663847,
+  "inferenceWallSeconds" : 0.11084091666270979,
+  "language" : "en",
+  "loadSeconds" : 0.096070051193237305,
+  "peakResidentBytes" : 341540864,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+    }
+  ]
+}

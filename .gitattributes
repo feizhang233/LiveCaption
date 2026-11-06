@@ -1,0 +1,3 @@
+# Generated evidence retains literal diff-context spaces and tool output.
+Verification/**/*.patch -whitespace
+Verification/**/*.log -whitespace

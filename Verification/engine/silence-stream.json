@@ -1,0 +1,24 @@
+{
+  "audioSeconds" : 7,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 7.0117809772491455,
+  "language" : "ja",
+  "loadSeconds" : 0.11813902854919434,
+  "peakResidentBytes" : 234258432,
+  "segments" : [
+
+  ],
+  "streaming" : {
+    "droppedAudioSeconds" : 0,
+    "firstPartialSeconds" : null,
+    "maximumFinalDelaySeconds" : 0,
+    "maximumInferenceSeconds" : 0,
+    "partialCount" : 0,
+    "peakResidentBytesAfterEachRepeat" : [
+      234258432
+    ],
+    "repeatCount" : 1
+  }
+}

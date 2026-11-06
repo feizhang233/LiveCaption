@@ -1,0 +1,62 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "B3CFE6F5-6E8B-4DBF-A00F-1AB2DCA3121C.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr_fr-0.wav-cpu_0_04E46D65-D523-41CD-98B8-F76BC6485CB3.json",
+        "timestamp" : 1793962767.32
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "D8EB9760-98ED-46DF-BB3D-BEEF159CCFBA.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr-native-video.mp4-cpu_0_EBA3352F-FA64-402E-A3DA-FF6936B9DF6C.json",
+        "timestamp" : 1793962778.281
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "583E67A3-FE2D-40C2-BE08-A3C84EE81A15.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-ja_jp-0.wav-automatic-acceleration_0_CC1C6E1B-7B9A-4EC5-958C-01B782CE90AD.json",
+        "timestamp" : 1793962789.874
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "2C77D243-F5DE-403B-BD5F-FB36A899044B.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-ja_jp-0.wav-cpu_0_E27AC5D2-CB5C-423F-9B19-BEE366A11B78.json",
+        "timestamp" : 1793962801.504
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions"
+  }
+]

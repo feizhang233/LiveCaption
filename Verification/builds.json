@@ -1,0 +1,23 @@
+{
+  "recordedAtUTC": "2026-11-06T11:04:46Z",
+  "host": { "os": "macOS 27.2 (26B123)", "hardware": "Apple M4 Pro", "memoryGiB": 24 },
+  "toolchain": { "xcode": "27.2 (27B52)", "swift": "6.4.2" },
+  "deploymentTargets": { "macOS": "26.0", "iPadOS": "26.0" },
+  "builds": [
+    { "scheme": "LiveCaptionMac", "destination": "platform=macOS", "result": "BUILD SUCCEEDED", "signing": "ad hoc development", "log": "/tmp/live-caption-mac-final-build.log" },
+    { "scheme": "LiveCaptioniPad", "destination": "generic/platform=iOS", "result": "BUILD SUCCEEDED", "signing": "disabled; not installed on a physical device", "log": "/tmp/live-caption-ipad-device-final-build.log" },
+    { "scheme": "LiveCaptioniPad", "destination": "iPad Air 11-inch (M3), iPadOS 27.0 Simulator", "result": "TEST SUCCEEDED; 4 passed, 0 failed, 0 skipped", "signing": "disabled", "resultBundle": "/tmp/live-caption-ipad-verified.xcresult", "evidence": "ipad/README.md" }
+  ],
+  "sourceSHA256": {
+    "App/Session/SessionController.swift": "0695c643f5c625490a523b75e1c44cbafd64335c09736e4dc576aabbcae6593e",
+    "Packages/CaptionCore/Sources/CaptionCore/WhisperEngine.swift": "f0f41b0a6834404639e99641cf75c6c249916a85b79fb6a442eeccaf8c5ac125"
+  },
+  "scopeNotes": [
+    "After correcting both generated Xcode schemes to use the actual product name LiveCaption.app, both native targets passed an incremental build again (exit status 0). Logs: /tmp/live-caption-mac-project-check.log and /tmp/live-caption-ipad-project-check.log.",
+    "The two final native builds include the last native-seek-to-EOF notification-race fix. The four Simulator tests preceded that one-line fix; the affected seek path has a separate actual-player SessionHarness regression.",
+    "Simulator accelerator selection correctly falls back to CPU. Physical Mac Metal was exercised separately; physical iPad Metal was not tested.",
+    "The only warnings in the two final incremental build logs were optional AppIntents metadata extraction skipped because this app does not use AppIntents.",
+    "Logs and xcresult paths are local temporary evidence; portable extracted results are retained in Verification. No signing identity, notarization, TestFlight, or App Store release is implied.",
+    "Mac recording consent was granted by the user, but system permission and runtime capture were not completed because the Mac locked during UI verification."
+  ]
+}

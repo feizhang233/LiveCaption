@@ -1,0 +1,29 @@
+{
+  "audioSeconds" : 8.7599999999999998,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 8.7599999999999998,
+      "durationSeconds" : 0.081262708350550383,
+      "startSeconds" : 0.0043736249790526927,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 8.7599999999999998,
+  "inferenceTotalSeconds" : 0.081262708350550383,
+  "inferenceWallSeconds" : 0.085717499983729795,
+  "language" : "en",
+  "loadSeconds" : 0.10071098804473877,
+  "peakResidentBytes" : 342654976,
+  "segments" : [
+    {
+      "end" : 8,
+      "start" : 0,
+      "text" : "All nouns alongside the world say for you always begin with a capital letter, even the middle of a sentence."
+    }
+  ]
+}

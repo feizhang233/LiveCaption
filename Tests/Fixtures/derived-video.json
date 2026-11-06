@@ -1,0 +1,20 @@
+{
+  "file": "fr-native-video.mp4",
+  "developmentPath": "/tmp/live-caption-verification-audio/fr-native-video.mp4",
+  "generatedOn": "2026-11-06",
+  "generator": "Tests/MakeVideoFixture.swift",
+  "command": "bash Scripts/make-video-fixture.sh",
+  "sourceAudio": "fr_fr-0.wav",
+  "sourceAudioSHA256": "c834367fd212902124bdd0e0f6c1f16b5561af6386600f145e5aec50008b298d",
+  "sourceDataset": "Google FLEURS fr_fr test split",
+  "sourceOriginalFileName": "10043298898524273336.wav",
+  "sourceRevision": "d7c758a6dceecd54a98cac43404d3d576e721f07",
+  "attribution": "Google FLEURS contributors",
+  "license": "CC-BY-4.0",
+  "modifications": "Added a generated neutral solid 640x360 24 fps H.264 video track; original spoken content retained and encoded to AAC by AVAssetExportSession. No subtitles or other text rendered into video.",
+  "durationSeconds": 10.2,
+  "videoTracks": 1,
+  "audioTracks": 1,
+  "generatedFileSHA256": "5690ed480c4a4980eed09185ba9c97e0042d766b44cfc5e16220f1753c863af6",
+  "reproducibility": "The source audio is hash-pinned; the generation process is reproducible. MP4 bitstreams or container metadata can differ across AVFoundation encoder versions or runs, so the generated SHA-256 records this particular verification artifact rather than a universal expected hash."
+}

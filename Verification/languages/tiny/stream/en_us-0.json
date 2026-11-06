@@ -1,0 +1,258 @@
+{
+  "audioSeconds" : 10.56,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 14,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.052934208331862465,
+      "startSeconds" : 1.0100815833429806,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.049880833335919306,
+      "startSeconds" : 1.8130247500084806,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.6000000000000001,
+      "durationSeconds" : 0.073316541645908728,
+      "startSeconds" : 2.614323375019012,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.3999999999999999,
+      "durationSeconds" : 0.071664583316305652,
+      "startSeconds" : 3.413411375018768,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.2000000000000002,
+      "durationSeconds" : 0.069496708340011537,
+      "startSeconds" : 4.2129195000161417,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5,
+      "durationSeconds" : 0.072819791676010936,
+      "startSeconds" : 5.0143385000119451,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5.7999999999999998,
+      "durationSeconds" : 0.074878333340166137,
+      "startSeconds" : 5.8049713750078809,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6.5999999999999996,
+      "durationSeconds" : 0.082322916685370728,
+      "startSeconds" : 6.6134055416623596,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.4000000000000004,
+      "durationSeconds" : 0.083785499999066815,
+      "startSeconds" : 7.4141587500052992,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.1999999999999993,
+      "durationSeconds" : 0.11283870835904963,
+      "startSeconds" : 8.2138176666630898,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9,
+      "durationSeconds" : 0.093013874982716516,
+      "startSeconds" : 9.005399750021752,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9.8000000000000007,
+      "durationSeconds" : 0.097813875006977469,
+      "startSeconds" : 9.803062624996528,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 10,
+      "durationSeconds" : 0.095346833346411586,
+      "startSeconds" : 10.007759750005789,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.3600000000000001,
+      "durationSeconds" : 0.048995083343470469,
+      "startSeconds" : 10.564154749998124,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 76.159999999999997,
+  "inferenceTotalSeconds" : 1.079107791709248,
+  "inferenceWallSeconds" : 10.613349333347287,
+  "language" : "en",
+  "loadSeconds" : 0.074573040008544922,
+  "peakResidentBytes" : 264929280,
+  "segments" : [
+    {
+      "end" : 9,
+      "start" : 0,
+      "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+    },
+    {
+      "end" : 10.199999999999999,
+      "start" : 9.1999999999999993,
+      "text" : "Thank you."
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.0633479583484586,
+    "firstSubtitleSeconds" : 1.0633479583484586,
+    "lastConfirmedAfterEOFSeconds" : 0.053244000007397929,
+    "lastConfirmedSeconds" : 10.613244000007398,
+    "maximumFeedLatenessSeconds" : 0.013158291694708169,
+    "maximumFinalDelaySeconds" : 1.1032387083396316,
+    "maximumInferenceSeconds" : 0.11284675,
+    "partialCount" : 12,
+    "partialUpdateIntervalsSeconds" : [
+      0.79966329166200012,
+      0.82470783332246356,
+      0.79745412501506507,
+      0.7973245833418332,
+      0.80477479164255783,
+      0.79267570833326317,
+      0.81587504167691804,
+      0.80219929167651571,
+      0.82871162498486228,
+      0.77174975001253188,
+      0.80248145831865259
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      264929280
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 8.4399999999999995,
+    "speechEnergyEndToLastConfirmedSeconds" : 2.1732440000073989,
+    "speechEnergyOnsetSeconds" : 1.0800000000000001,
+    "speechEnergyToFirstSubtitleSeconds" : -0.016652041651541438,
+    "updates" : [
+      {
+        "end" : 1,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "Thank you.",
+        "wallSeconds" : 1.0633479583484586
+      },
+      {
+        "end" : 1.8,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However.",
+        "wallSeconds" : 1.8630112500104588
+      },
+      {
+        "end" : 2.6000000000000001,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow motion,",
+        "wallSeconds" : 2.6877190833329223
+      },
+      {
+        "end" : 3.3000000000000003,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication.",
+        "wallSeconds" : 3.4851732083479874
+      },
+      {
+        "end" : 4,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels.",
+        "wallSeconds" : 4.2824977916898206
+      },
+      {
+        "end" : 5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles",
+        "wallSeconds" : 5.0872725833323784
+      },
+      {
+        "end" : 5.7599999999999998,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West.",
+        "wallSeconds" : 5.8799482916656416
+      },
+      {
+        "end" : 6.5999999999999996,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West could lag behind.",
+        "wallSeconds" : 6.6958233333425596
+      },
+      {
+        "end" : 7,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West could lag behind by",
+        "wallSeconds" : 7.4980226250190753
+      },
+      {
+        "end" : 8.1999999999999993,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to the",
+        "wallSeconds" : 8.3267342500039376
+      },
+      {
+        "end" : 9,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.",
+        "wallSeconds" : 9.0984840000164695
+      },
+      {
+        "end" : 9,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.",
+        "wallSeconds" : 9.9009654583351221
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 9,
+            "start" : 0,
+            "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+          }
+        ],
+        "wallSeconds" : 10.103238708339632
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10.199999999999999,
+            "start" : 9.1999999999999993,
+            "text" : "Thank you."
+          }
+        ],
+        "wallSeconds" : 10.613244000007398
+      }
+    ]
+  }
+}

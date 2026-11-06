@@ -1,0 +1,210 @@
+{
+  "audioSeconds" : 10.380000000000001,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 10,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.065011458325898275,
+      "startSeconds" : 1.0040967083186843,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.72,
+      "durationSeconds" : 0.055111708323238418,
+      "startSeconds" : 1.8141677916573826,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.061076500016497448,
+      "startSeconds" : 2.8076048749790061,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.05697520833928138,
+      "startSeconds" : 3.6086719583254308,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.1400000000000001,
+      "durationSeconds" : 0.056829625013051555,
+      "startSeconds" : 4.0146772916486952,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.041627250000601634,
+      "startSeconds" : 5.0131463333091233,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.046803083328995854,
+      "startSeconds" : 5.8135541249939706,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.6000000000000001,
+      "durationSeconds" : 0.049408666673116386,
+      "startSeconds" : 6.6129186666512396,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.3999999999999999,
+      "durationSeconds" : 0.067398083338048309,
+      "startSeconds" : 7.4052680833265185,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.04,
+      "durationSeconds" : 0.084932166646467522,
+      "startSeconds" : 8.0100839583319612,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 20.5,
+  "inferenceTotalSeconds" : 0.58517375000519678,
+  "inferenceWallSeconds" : 10.392385374987498,
+  "language" : "zh",
+  "loadSeconds" : 0.093235015869140625,
+  "peakResidentBytes" : 250494976,
+  "segments" : [
+    {
+      "end" : 1.72,
+      "start" : 0,
+      "text" : "謝謝"
+    },
+    {
+      "end" : 3.3600000000000003,
+      "start" : 1.7200000000000002,
+      "text" : "這並不是告別"
+    },
+    {
+      "end" : 7.5800000000000001,
+      "start" : 3.8599999999999999,
+      "text" : "这是一个偏胶的结束也是新偏胶的开始"
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.069300833332818,
+    "firstSubtitleSeconds" : 1.069300833332818,
+    "lastConfirmedAfterEOFSeconds" : -2.2848774166731172,
+    "lastConfirmedSeconds" : 8.0951225833268836,
+    "maximumFeedLatenessSeconds" : 0.013198249973356724,
+    "maximumFinalDelaySeconds" : 0.71159658332238873,
+    "maximumInferenceSeconds" : 0.084942709000000005,
+    "partialCount" : 7,
+    "partialUpdateIntervalsSeconds" : [
+      1.799486458330648,
+      0.79694904165808111,
+      1.3890950416680425,
+      0.80557945833425038,
+      0.80196229167631827,
+      0.81033183331601322
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      250494976
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 7.0800000000000001,
+    "speechEnergyEndToLastConfirmedSeconds" : 1.0151225833268835,
+    "speechEnergyOnsetSeconds" : 1.98,
+    "speechEnergyToFirstSubtitleSeconds" : -0.91069916666718198,
+    "updates" : [
+      {
+        "end" : 1,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "謝謝",
+        "wallSeconds" : 1.069300833332818
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 1.72,
+            "start" : 0,
+            "text" : "謝謝"
+          }
+        ],
+        "wallSeconds" : 1.8693951666646171
+      },
+      {
+        "end" : 2.7200000000000002,
+        "kind" : "partial",
+        "start" : 1.7200000000000002,
+        "text" : "就要并不是搞定",
+        "wallSeconds" : 2.868787291663466
+      },
+      {
+        "end" : 3.3600000000000003,
+        "kind" : "partial",
+        "start" : 1.7200000000000002,
+        "text" : "這並不是告別",
+        "wallSeconds" : 3.6657363333215471
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 3.3600000000000003,
+            "start" : 1.7200000000000002,
+            "text" : "這並不是告別"
+          }
+        ],
+        "wallSeconds" : 4.0715965833223891
+      },
+      {
+        "end" : 4.8599999999999994,
+        "kind" : "partial",
+        "start" : 3.8599999999999999,
+        "text" : "这是一个片段",
+        "wallSeconds" : 5.0548313749895897
+      },
+      {
+        "end" : 5.6600000000000001,
+        "kind" : "partial",
+        "start" : 3.8599999999999999,
+        "text" : "这是一个偏胶的结束",
+        "wallSeconds" : 5.8604108333238401
+      },
+      {
+        "end" : 6.46,
+        "kind" : "partial",
+        "start" : 3.8599999999999999,
+        "text" : "這是一個偏長的結束也是新品",
+        "wallSeconds" : 6.6623731250001583
+      },
+      {
+        "end" : 7.2599999999999998,
+        "kind" : "partial",
+        "start" : 3.8599999999999999,
+        "text" : "这是一个偏胶的结束 也是新偏胶的开束",
+        "wallSeconds" : 7.4727049583161715
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 7.5800000000000001,
+            "start" : 3.8599999999999999,
+            "text" : "这是一个偏胶的结束也是新偏胶的开始"
+          }
+        ],
+        "wallSeconds" : 8.0951225833268836
+      }
+    ]
+  }
+}

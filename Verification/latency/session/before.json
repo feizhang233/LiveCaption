@@ -1,0 +1,64 @@
+{
+  "autoRestartSourceSeconds" : 0.25193033300000001,
+  "checked" : [
+    "verified model selection",
+    "AVPlayer\/AVAssetReader real source-time feed",
+    "delayed polling tick preserves audio generation",
+    "pause drains all played PCM",
+    "pause clock",
+    "explicit seek",
+    "resume",
+    "immutable earlier history",
+    "disjoint SRT",
+    "native AVPlayer seek",
+    "native transport pause drains all played PCM",
+    "clean EOF with flushed tail and retained metrics",
+    "no punctuation-only captions",
+    "automatic replay at EOF",
+    "native direct EOF seek skips unplayed audio",
+    "clear\/stop stale-event rejection",
+    "model unload",
+    "released context reloads after Stop",
+    "unreadable import"
+  ],
+  "cleanEOFSourceSeconds" : 10.199999999999999,
+  "cpuInference" : true,
+  "EOFMaximumCueEnd" : 8.6617499999999996,
+  "exportedSRT" : "1\n00:00:01,926 --> 00:00:04,526\nL'accident a eu lieu intérément annu.\n\n2\n00:00:04,730 --> 00:00:07,405\nIl semblerait que cela était causé par...\n",
+  "firstPass" : [
+    {
+      "end" : 4.525875000000001,
+      "start" : 1.9258750000000013,
+      "text" : "L'accident a eu lieu intérément annu."
+    }
+  ],
+  "input" : "fr-native-video.mp4",
+  "language" : "fr",
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "nativeSeekToEOFConfirmedCount" : 0,
+  "nativeSeekToEOFSkippedSeconds" : 9.3653324169999994,
+  "passed" : true,
+  "pausedAtSourceSeconds" : 4.5310799590000004,
+  "replayAlternativeCount" : 1,
+  "replayPrimary" : [
+    {
+      "end" : 4.525875000000001,
+      "start" : 1.9258750000000013,
+      "text" : "L'accident a eu lieu intérément annu."
+    },
+    {
+      "end" : 7.4048750000000005,
+      "start" : 4.7300000000000013,
+      "text" : "Il semblerait que cela était causé par..."
+    }
+  ],
+  "startCallSeconds" : [
+    0.106319625,
+    0.05663025,
+    0.038763208,
+    0.057150790999999999,
+    0.056996208
+  ]
+}

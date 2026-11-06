@@ -1,0 +1,53 @@
+{
+  "autoRestartSourceSeconds" : 0.30021381499999999,
+  "checked" : [
+    "verified model selection",
+    "AVPlayer\/AVAssetReader real source-time feed",
+    "pause clock",
+    "explicit seek",
+    "resume",
+    "immutable earlier history",
+    "disjoint SRT",
+    "native AVPlayer seek",
+    "clean EOF with flushed tail and retained metrics",
+    "no punctuation-only captions",
+    "automatic replay at EOF",
+    "native direct EOF seek skips unplayed audio",
+    "clear\/stop stale-event rejection",
+    "model unload",
+    "unreadable import"
+  ],
+  "cleanEOFSourceSeconds" : 10.199999999999999,
+  "cpuInference" : true,
+  "EOFMaximumCueEnd" : 8.9200000000000017,
+  "exportedSRT" : "1\n00:00:01,924 --> 00:00:04,490\nL'accident a eu lieu intérément annu.\n\n2\n00:00:04,890 --> 00:00:07,290\nIl semblerait que cela était causé.\n",
+  "firstPass" : [
+    {
+      "end" : 4.4900625000000014,
+      "start" : 1.9241875000000013,
+      "text" : "L'accident a eu lieu intérément annu."
+    }
+  ],
+  "input" : "fr-native-video.mp4",
+  "language" : "fr",
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "nativeSeekToEOFConfirmedCount" : 0,
+  "nativeSeekToEOFSkippedSeconds" : 9.3748649749999995,
+  "passed" : true,
+  "pausedAtSourceSeconds" : 4.5293117079999998,
+  "replayAlternativeCount" : 1,
+  "replayPrimary" : [
+    {
+      "end" : 4.4900625000000014,
+      "start" : 1.9241875000000013,
+      "text" : "L'accident a eu lieu intérément annu."
+    },
+    {
+      "end" : 7.2900000000000009,
+      "start" : 4.8900000000000006,
+      "text" : "Il semblerait que cela était causé."
+    }
+  ]
+}

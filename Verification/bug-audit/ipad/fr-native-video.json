@@ -1,0 +1,30 @@
+{
+  "captions": [
+    {
+      "end": 4.8831250000000015,
+      "start": 1.9231250000000015,
+      "text": "L'accident a eu lieu intérêts montagnois."
+    },
+    {
+      "end": 8.923125000000002,
+      "start": 4.8831250000000015,
+      "text": "Il semblerait que cela était causé par un incendimalveillant."
+    }
+  ],
+  "cpuInference": true,
+  "detectedOutputLanguage": "fr",
+  "device": "iPad",
+  "droppedAudioSeconds": 0,
+  "fixture": "fr-native-video.mp4",
+  "inferenceSeconds": 0.484649958,
+  "model": "tiny",
+  "modelSHA256": "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback": true,
+  "osVersion": "27.0",
+  "processedAudioSeconds": 7.21,
+  "requestedUseGPU": false,
+  "sourceDurationSeconds": 10.2,
+  "sourceLanguage": "fr",
+  "usingGPU": false,
+  "wallSecondsIncludingPlayback": 10.435473084449768
+}

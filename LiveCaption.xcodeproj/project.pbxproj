@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008FA0C001F6B3BE382BE472 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262B312C4FFF495AD844EAE /* Theme.swift */; };
+		08361FBABF20F355F50641CC /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = BA7896814B04821CD4902A09 /* CaptionCore */; };
+		1711435422C83864964655F5 /* NativePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */; };
+		25E4DD4B972EA3A0CF43D527 /* CaptionPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */; };
+		2AF9191B24A068DCC7978263 /* PlaybackAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */; };
+		3E15F52B9553AFD9F21FB16C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA1B1141429E4823DECA05 /* RootView.swift */; };
+		4D668C7C616AA33A6D4C379E /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A60CF58A57AE18C271120 /* ModelsView.swift */; };
+		4D6897147F256089AF7A1CD2 /* WhisperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */; };
+		4F71C0E62C6E0B710FE28CF5 /* AppIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */; };
+		53B97DC563EEA8D2265E909C /* PlaybackAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */; };
+		5722D80515FDA27F5052187B /* SourceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */; };
+		5FDA390D35C3EFADCA916DD5 /* NativePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */; };
+		6B75E477550C8D11226AE851 /* CaptionPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */; };
+		70958BDA6840ECFB91514F40 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2FA1F5D5410BD54375C47 /* SettingsView.swift */; };
+		73EA3FAA4FDF4DB4E4C1680D /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */; };
+		791EFC3B8098551C8709C061 /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */; };
+		7C52D98DB65F8A37C9B5A899 /* LiveCaptionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */; };
+		7FD74F2ABFEB09597303C157 /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = 924193751240D8C043FC66E1 /* CaptionCore */; };
+		888803B09125277C9CDC0E30 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA7F51559A1745A5C35478 /* SharedViews.swift */; };
+		91465F961DC46F083D51E96D /* LiveCaptionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */; };
+		916744E9F01472B829866899 /* ModelDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */; };
+		9350EF6B9140442B322466D5 /* WhisperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */; };
+		9588A6169F607B9EBD35D405 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08E40D3994439CB144741 /* SessionController.swift */; };
+		97036A6867B02C8FACF749F0 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08E40D3994439CB144741 /* SessionController.swift */; };
+		9EC416D00DFE89E8C5015AD6 /* ModelIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */; };
+		A013355E5BE7A0AB8D325D8C /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2511BC169487E80B43E59840 /* CaptionCore */; };
+		AAB737769E164816FEA674D5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2FA1F5D5410BD54375C47 /* SettingsView.swift */; };
+		ABCA2FC20F3888959996C2C5 /* MacSystemAudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */; };
+		B2B5D6D3C0D63809A4E69E48 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */; };
+		BA310146C6C9F2BEFD9B36E4 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD73637FA25EDC27942F86B /* ModelStore.swift */; };
+		C919537D63E5DD712C57876A /* ModelIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */; };
+		D0435B3BE2A94A77BE65FE1D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA1B1141429E4823DECA05 /* RootView.swift */; };
+		D0F82A468BD04BDFF87D0278 /* SourceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */; };
+		D2C67E1EA05FDC00683E2247 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA7F51559A1745A5C35478 /* SharedViews.swift */; };
+		D8B4167F39F1A0E10A8D0249 /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A60CF58A57AE18C271120 /* ModelsView.swift */; };
+		D8BC04C89E8B07F9A980A3AD /* MacSystemAudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */; };
+		DFF3E6B7B5892A83B3DE22D1 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD73637FA25EDC27942F86B /* ModelStore.swift */; };
+		EECDC3B3515BDAC0793084A2 /* ModelDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */; };
+		EF22657A95970E75D53F2075 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262B312C4FFF495AD844EAE /* Theme.swift */; };
+		FD0F77945EE720ED923634AE /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CC0244D02F747444F69A749 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB2AC0880C9BF7D55EA2FDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66C9FD5C2EB44C2264739068;
+			remoteInfo = LiveCaptioniPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		207A60CF58A57AE18C271120 /* ModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsView.swift; sourceTree = "<group>"; };
+		2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperModel.swift; sourceTree = "<group>"; };
+		3AFA1B1141429E4823DECA05 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDownload.swift; sourceTree = "<group>"; };
+		4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThirdPartyNotices.txt; sourceTree = "<group>"; };
+		5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackAudioSession.swift; sourceTree = "<group>"; };
+		5DC94BD4BABEB3B5F169F6B3 /* LiveCaption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveCaption.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		767C0954D66AD8E974C8B955 /* CaptionCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CaptionCore; path = Packages/CaptionCore; sourceTree = SOURCE_ROOT; };
+		791C11322489685B5B6ED079 /* LiveCaption.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LiveCaption.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CC08E40D3994439CB144741 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		7D109C68F3CBD9C0F5532EDE /* LiveCaptioniPadTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LiveCaptioniPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D2FA1F5D5410BD54375C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionPanelController.swift; sourceTree = "<group>"; };
+		B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCaptionApp.swift; sourceTree = "<group>"; };
+		B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSystemAudioCapture.swift; sourceTree = "<group>"; };
+		BDD73637FA25EDC27942F86B /* ModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStore.swift; sourceTree = "<group>"; };
+		C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIntegrity.swift; sourceTree = "<group>"; };
+		C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntegrationTests.swift; sourceTree = "<group>"; };
+		C8BA7F51559A1745A5C35478 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
+		D262B312C4FFF495AD844EAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePlayerView.swift; sourceTree = "<group>"; };
+		FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLanguage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076717FCCA07A29DDF3C7729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD74F2ABFEB09597303C157 /* CaptionCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0FD49C737B579F7CC0D5DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A013355E5BE7A0AB8D325D8C /* CaptionCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBBC48AC273AB762121EDAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08361FBABF20F355F50641CC /* CaptionCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0115FC82A07D9F7020B51CA7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D89AA13E8D4A5032BE80421E /* iPadIntegration */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0F2384D7DE1C02ADF20B84A9 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				7CC08E40D3994439CB144741 /* SessionController.swift */,
+				FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		1F16428D31DA94912F7295C6 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				450E2642E04393CBA7CDCB0D /* macOS */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		2CD28059DA5494F396A59CFF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				207A60CF58A57AE18C271120 /* ModelsView.swift */,
+				3AFA1B1141429E4823DECA05 /* RootView.swift */,
+				80D2FA1F5D5410BD54375C47 /* SettingsView.swift */,
+				C8BA7F51559A1745A5C35478 /* SharedViews.swift */,
+				D262B312C4FFF495AD844EAE /* Theme.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		450E2642E04393CBA7CDCB0D /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */,
+				B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		5573483CFC7D725A126C4229 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */,
+				FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */,
+				5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		5EC65283C2987E32641D2A0E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */,
+				5573483CFC7D725A126C4229 /* Media */,
+				D8FEB83340304FF92B82C848 /* Models */,
+				1F16428D31DA94912F7295C6 /* Platform */,
+				0F2384D7DE1C02ADF20B84A9 /* Session */,
+				2CD28059DA5494F396A59CFF /* UI */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		781B7B225DD25D4DFA6E8A5B /* Notices */ = {
+			isa = PBXGroup;
+			children = (
+				4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */,
+			);
+			path = Notices;
+			sourceTree = "<group>";
+		};
+		7A3F829A1BC8809694B407A6 = {
+			isa = PBXGroup;
+			children = (
+				5EC65283C2987E32641D2A0E /* App */,
+				AD0595527E450223A6D5E4CD /* Packages */,
+				0115FC82A07D9F7020B51CA7 /* Tests */,
+				E3F60B918DDC547274A568DA /* ThirdParty */,
+				CEAF0832A12B81A408AC82CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD0595527E450223A6D5E4CD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				767C0954D66AD8E974C8B955 /* CaptionCore */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		CEAF0832A12B81A408AC82CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DC94BD4BABEB3B5F169F6B3 /* LiveCaption.app */,
+				791C11322489685B5B6ED079 /* LiveCaption.app */,
+				7D109C68F3CBD9C0F5532EDE /* LiveCaptioniPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D89AA13E8D4A5032BE80421E /* iPadIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */,
+			);
+			path = iPadIntegration;
+			sourceTree = "<group>";
+		};
+		D8FEB83340304FF92B82C848 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */,
+				C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */,
+				BDD73637FA25EDC27942F86B /* ModelStore.swift */,
+				2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3F60B918DDC547274A568DA /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				781B7B225DD25D4DFA6E8A5B /* Notices */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E683C4FF8442BF521080327 /* LiveCaptioniPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2C1C814AE834327FF07B1E /* Build configuration list for PBXNativeTarget "LiveCaptioniPadTests" */;
+			buildPhases = (
+				32C1D42851FE9A56966F52BE /* Sources */,
+				AFBBC48AC273AB762121EDAE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5E65F7B20336DA84576A6D5 /* PBXTargetDependency */,
+			);
+			name = LiveCaptioniPadTests;
+			packageProductDependencies = (
+				BA7896814B04821CD4902A09 /* CaptionCore */,
+			);
+			productName = LiveCaptioniPadTests;
+			productReference = 7D109C68F3CBD9C0F5532EDE /* LiveCaptioniPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66C9FD5C2EB44C2264739068 /* LiveCaptioniPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6862B8648446BF3DBB2A2A86 /* Build configuration list for PBXNativeTarget "LiveCaptioniPad" */;
+			buildPhases = (
+				C3F449338A5BE3BDD7A329BD /* Sources */,
+				3857EBFB013A08FA3AC81C74 /* Resources */,
+				1A0FD49C737B579F7CC0D5DD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveCaptioniPad;
+			packageProductDependencies = (
+				2511BC169487E80B43E59840 /* CaptionCore */,
+			);
+			productName = LiveCaptioniPad;
+			productReference = 791C11322489685B5B6ED079 /* LiveCaption.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94E82A16BB90F0B92F52890A /* LiveCaptionMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B861378EAAF30A11FDAF2B0 /* Build configuration list for PBXNativeTarget "LiveCaptionMac" */;
+			buildPhases = (
+				04D9E794BDFF2033FDC35504 /* Sources */,
+				28984410CB8FC2E935DABE60 /* Resources */,
+				076717FCCA07A29DDF3C7729 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveCaptionMac;
+			packageProductDependencies = (
+				924193751240D8C043FC66E1 /* CaptionCore */,
+			);
+			productName = LiveCaptionMac;
+			productReference = 5DC94BD4BABEB3B5F169F6B3 /* LiveCaption.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB2AC0880C9BF7D55EA2FDE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3E683C4FF8442BF521080327 = {
+						ProvisioningStyle = Automatic;
+					};
+					66C9FD5C2EB44C2264739068 = {
+						ProvisioningStyle = Automatic;
+					};
+					94E82A16BB90F0B92F52890A = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B5B3140887C6AE25BF193C7C /* Build configuration list for PBXProject "LiveCaption" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7A3F829A1BC8809694B407A6;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				83EAA54FEB5F7797A478264A /* XCLocalSwiftPackageReference "Packages/CaptionCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CEAF0832A12B81A408AC82CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E82A16BB90F0B92F52890A /* LiveCaptionMac */,
+				66C9FD5C2EB44C2264739068 /* LiveCaptioniPad */,
+				3E683C4FF8442BF521080327 /* LiveCaptioniPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28984410CB8FC2E935DABE60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791EFC3B8098551C8709C061 /* ThirdPartyNotices.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3857EBFB013A08FA3AC81C74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73EA3FAA4FDF4DB4E4C1680D /* ThirdPartyNotices.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04D9E794BDFF2033FDC35504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E4DD4B972EA3A0CF43D527 /* CaptionPanelController.swift in Sources */,
+				7C52D98DB65F8A37C9B5A899 /* LiveCaptionApp.swift in Sources */,
+				ABCA2FC20F3888959996C2C5 /* MacSystemAudioCapture.swift in Sources */,
+				FD0F77945EE720ED923634AE /* MediaController.swift in Sources */,
+				EECDC3B3515BDAC0793084A2 /* ModelDownload.swift in Sources */,
+				9EC416D00DFE89E8C5015AD6 /* ModelIntegrity.swift in Sources */,
+				DFF3E6B7B5892A83B3DE22D1 /* ModelStore.swift in Sources */,
+				D8B4167F39F1A0E10A8D0249 /* ModelsView.swift in Sources */,
+				5FDA390D35C3EFADCA916DD5 /* NativePlayerView.swift in Sources */,
+				2AF9191B24A068DCC7978263 /* PlaybackAudioSession.swift in Sources */,
+				D0435B3BE2A94A77BE65FE1D /* RootView.swift in Sources */,
+				9588A6169F607B9EBD35D405 /* SessionController.swift in Sources */,
+				70958BDA6840ECFB91514F40 /* SettingsView.swift in Sources */,
+				888803B09125277C9CDC0E30 /* SharedViews.swift in Sources */,
+				5722D80515FDA27F5052187B /* SourceLanguage.swift in Sources */,
+				008FA0C001F6B3BE382BE472 /* Theme.swift in Sources */,
+				9350EF6B9140442B322466D5 /* WhisperModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32C1D42851FE9A56966F52BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F71C0E62C6E0B710FE28CF5 /* AppIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F449338A5BE3BDD7A329BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B75E477550C8D11226AE851 /* CaptionPanelController.swift in Sources */,
+				91465F961DC46F083D51E96D /* LiveCaptionApp.swift in Sources */,
+				D8BC04C89E8B07F9A980A3AD /* MacSystemAudioCapture.swift in Sources */,
+				B2B5D6D3C0D63809A4E69E48 /* MediaController.swift in Sources */,
+				916744E9F01472B829866899 /* ModelDownload.swift in Sources */,
+				C919537D63E5DD712C57876A /* ModelIntegrity.swift in Sources */,
+				BA310146C6C9F2BEFD9B36E4 /* ModelStore.swift in Sources */,
+				4D668C7C616AA33A6D4C379E /* ModelsView.swift in Sources */,
+				1711435422C83864964655F5 /* NativePlayerView.swift in Sources */,
+				53B97DC563EEA8D2265E909C /* PlaybackAudioSession.swift in Sources */,
+				3E15F52B9553AFD9F21FB16C /* RootView.swift in Sources */,
+				97036A6867B02C8FACF749F0 /* SessionController.swift in Sources */,
+				AAB737769E164816FEA674D5 /* SettingsView.swift in Sources */,
+				D2C67E1EA05FDC00683E2247 /* SharedViews.swift in Sources */,
+				D0F82A468BD04BDFF87D0278 /* SourceLanguage.swift in Sources */,
+				EF22657A95970E75D53F2075 /* Theme.swift in Sources */,
+				4D6897147F256089AF7A1CD2 /* WhisperModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5E65F7B20336DA84576A6D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66C9FD5C2EB44C2264739068 /* LiveCaptioniPad */;
+			targetProxy = 2CC0244D02F747444F69A749 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03C4C4688284A09216083154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/iPad-Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad;
+				PRODUCT_NAME = LiveCaption;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		374DDEF7BFFCBB805BC4C85A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption";
+			};
+			name = Release;
+		};
+		5AA7B7F9849A6EE440E2332D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/iPad-Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad;
+				PRODUCT_NAME = LiveCaption;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5B175B1DB6402F219F6F6AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Caption";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A843B8024760876FCD056E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Live Caption";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B4AAF26E71338783D993815F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption";
+			};
+			name = Debug;
+		};
+		BB4E3C7137195F5ECD6AD89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Mac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSAudioCaptureUsageDescription = "擷取您正在播放的系統音訊，在本機產生原文字幕。";
+				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "擷取系統播放音訊以產生字幕，不儲存螢幕影像。";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.mac;
+				PRODUCT_NAME = LiveCaption;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EA8A25E5E0923FCF55C9929F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Mac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSAudioCaptureUsageDescription = "擷取您正在播放的系統音訊，在本機產生原文字幕。";
+				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "擷取系統播放音訊以產生字幕，不儲存螢幕影像。";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.mac;
+				PRODUCT_NAME = LiveCaption;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B861378EAAF30A11FDAF2B0 /* Build configuration list for PBXNativeTarget "LiveCaptionMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB4E3C7137195F5ECD6AD89D /* Debug */,
+				EA8A25E5E0923FCF55C9929F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6862B8648446BF3DBB2A2A86 /* Build configuration list for PBXNativeTarget "LiveCaptioniPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AA7B7F9849A6EE440E2332D /* Debug */,
+				03C4C4688284A09216083154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B5B3140887C6AE25BF193C7C /* Build configuration list for PBXProject "LiveCaption" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B175B1DB6402F219F6F6AEA /* Debug */,
+				A843B8024760876FCD056E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC2C1C814AE834327FF07B1E /* Build configuration list for PBXNativeTarget "LiveCaptioniPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4AAF26E71338783D993815F /* Debug */,
+				374DDEF7BFFCBB805BC4C85A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		83EAA54FEB5F7797A478264A /* XCLocalSwiftPackageReference "Packages/CaptionCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/CaptionCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2511BC169487E80B43E59840 /* CaptionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CaptionCore;
+		};
+		924193751240D8C043FC66E1 /* CaptionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CaptionCore;
+		};
+		BA7896814B04821CD4902A09 /* CaptionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CaptionCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DB2AC0880C9BF7D55EA2FDE2 /* Project object */;
+}

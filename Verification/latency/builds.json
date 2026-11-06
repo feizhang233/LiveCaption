@@ -1,0 +1,38 @@
+{
+  "toolchain": "Xcode 27.2 (27B52), Swift 6.4.2",
+  "host": "Apple M4 Pro, 24 GiB, macOS 27.2",
+  "macAppBuild": {
+    "exitStatus": 0,
+    "signing": "ad hoc development",
+    "log": "/tmp/live-caption-latency-mac-build.log"
+  },
+  "iPadDeviceBuild": {
+    "exitStatus": 0,
+    "signing": "disabled; not installed on physical device",
+    "log": "/tmp/live-caption-latency-ipad-device-build.log"
+  },
+  "iPadSimulatorTests": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "testMethodSeconds": 46.308,
+    "resultBundle": "/tmp/live-caption-latency-ipad.xcresult",
+    "summary": "ipad/test-summary.json"
+  },
+  "coreTests": {
+    "passed": 33,
+    "failed": 0,
+    "evidence": "../engine/latency/README.md"
+  },
+  "realSessionRegression": {
+    "passed": true,
+    "evidence": "session/after.json"
+  },
+  "sourceSHA256": {
+    "App/Session/SessionController.swift": "285abbd6550d147bd190f0646d1705483e721f637ad9a17496d3714f624c90b0",
+    "Packages/CaptionCore/Sources/CaptionCore/AudioProcessing.swift": "a4ac87cfeab5a903c2a22e4ed7ded35725dd40114a03f931e44b5513f00cd157",
+    "Packages/CaptionCore/Sources/CaptionCore/StreamingTranscriber.swift": "21f43a74df9c08c4a8b5f44c41a5db051cb89f37380c71fe72473b8d1dedc7ea",
+    "Packages/CaptionCore/Sources/CaptionProbe/main.swift": "4acb632a691788abd594e1792d0fc28e5875fc232f9328d56de0398a0898c1c7"
+  },
+  "scope": "Build and regression evidence. Caption latency evidence is separate in baseline/, optimized/ and comparison.json. No physical iPad or live Mac system capture validation."
+}

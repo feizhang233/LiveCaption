@@ -1,0 +1,4 @@
+8c453059db4f34d3a00d517914129ba79f12718e4a14432f25e255dd132c8f27  /tmp/live-caption-latency-optimized/CaptionProbe
+2657359f0e58ef37860b4273e9566dcc3f9d3b9cd8eb28f3b3ae44198ef3df5e  /tmp/live-caption-latency-optimized/Products/libCaptionCore.a
+eb92d192a135dd7014716d04ef3a9ca6602451c4b29a42a3b6e6587e4900b6ab  /tmp/live-caption-latency-optimized/Products/whisper.framework/Versions/Current/whisper
+4acb632a691788abd594e1792d0fc28e5875fc232f9328d56de0398a0898c1c7  Packages/CaptionCore/Sources/CaptionProbe/main.swift

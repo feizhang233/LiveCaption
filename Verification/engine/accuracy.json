@@ -1,0 +1,42 @@
+[
+  {
+    "edits" : 16,
+    "errorRate" : 0.35555555555555557,
+    "fixture" : "ja_jp-0",
+    "hypothesis" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。",
+    "metric" : "CER",
+    "normalization" : "Lowercase; Japanese letters\/numbers only; French split on all non-letter\/non-number characters. Accents retained.",
+    "reference" : "インターネットで 敵対的環境コース について検索すると おそらく現地企業の住所が出てくるでしょう",
+    "referenceUnits" : 45
+  },
+  {
+    "edits" : 12,
+    "errorRate" : 0.2608695652173913,
+    "fixture" : "ja_jp-1",
+    "hypothesis" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマーの成績、人々を訪れましょう。",
+    "metric" : "CER",
+    "normalization" : "Lowercase; Japanese letters\/numbers only; French split on all non-letter\/non-number characters. Accents retained.",
+    "reference" : "また 北側に行くなら世界的に有名なマリア像の聖地であるファティマの聖母の聖域神社を訪れましょう",
+    "referenceUnits" : 46
+  },
+  {
+    "edits" : 4,
+    "errorRate" : 0.20000000000000001,
+    "fixture" : "fr_fr-0",
+    "hypothesis" : "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par n'un 110 malveillant.",
+    "metric" : "WER",
+    "normalization" : "Lowercase; Japanese letters\/numbers only; French split on all non-letter\/non-number characters. Accents retained.",
+    "reference" : "l'accident a eu lieu en terrain montagneux et il semblerait que cela ait été causé par un incendie malveillant",
+    "referenceUnits" : 20
+  },
+  {
+    "edits" : 18,
+    "errorRate" : 0.69230769230769229,
+    "fixture" : "fr_fr-1",
+    "hypothesis" : "Il ajoutait qu'on le devrait se prendre en valeur de monnaie d'assumer des obligations qui n'est pas sur un style de développement, de responsabilité et leur capacité.",
+    "metric" : "WER",
+    "normalization" : "Lowercase; Japanese letters\/numbers only; French split on all non-letter\/non-number characters. Accents retained.",
+    "reference" : "il a ajouté qu’« on ne devrait cependant pas leur demander d’assumer des obligations qui dépassent leur stade de développement leur responsabilité et leurs capacités. »",
+    "referenceUnits" : 26
+  }
+]

@@ -1,0 +1,209 @@
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 9.0438124999999996,
+      "start" : 0.043812499999999997,
+      "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+    },
+    {
+      "end" : 10.243812499999999,
+      "start" : 9.2438124999999989,
+      "text" : "Thank you."
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "en",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "en_us-0.wav",
+  "inferenceSeconds" : 0.41594537500000001,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.316125,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.56,
+  "sourceLanguage" : "en",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.505355000495911
+}
+
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 4.8729375000000008,
+      "start" : 1.9129375000000013,
+      "text" : "L'accident a eu lieu en terrain montagneux."
+    },
+    {
+      "end" : 8.9129375000000017,
+      "start" : 4.8729375000000008,
+      "text" : "Il semblerait que cela était causé par un incendimal veillant."
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "fr",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "fr_fr-0.wav",
+  "inferenceSeconds" : 0.46663212500000001,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 7.25,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.199999999999999,
+  "sourceLanguage" : "fr",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.42081892490387
+}
+
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 4.7300625000000007,
+      "start" : 1.9300625000000009,
+      "text" : "L'accident a eu lieu intérêt à montagneux."
+    },
+    {
+      "end" : 8.9300625000000018,
+      "start" : 4.7300625000000007,
+      "text" : "Il semblerait que cela était causé par un incendimalveillant."
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "fr",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "fr-native-video.mp4",
+  "inferenceSeconds" : 0.46448095900000003,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 7.21,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.199999999999999,
+  "sourceLanguage" : "fr",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.487726926803589
+}
+
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 10.039999999999999,
+      "start" : 0.040000000000000001,
+      "text" : "インターネットで適対的環境構成し、検索すると、恐らく電池器用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.439937499999999,
+      "start" : 10.039999999999999,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "ja",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "ja_jp-0.wav",
+  "inferenceSeconds" : 0.41707337500000002,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.1999375000000001,
+  "requestedUseGPU" : true,
+  "sourceDurationSeconds" : 10.44,
+  "sourceLanguage" : "ja",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.413370013237
+}
+
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 10.174625000000001,
+      "start" : 0.174625,
+      "text" : "インターネットで適対的環境構成し、検索すると、恐らく原地機用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.439937499999999,
+      "start" : 10.174625000000001,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "ja",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "ja_jp-0.wav",
+  "inferenceSeconds" : 0.41957450000000002,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.0653125000000001,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.44,
+  "sourceLanguage" : "ja",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.665629982948303
+}
+
+IPAD_REAL_INFERENCE {
+  "captions" : [
+    {
+      "end" : 1.7041875,
+      "start" : 0.044187499999999998,
+      "text" : "謝謝"
+    },
+    {
+      "end" : 3.7041875000000015,
+      "start" : 1.7041875000000013,
+      "text" : "這並不是告別"
+    },
+    {
+      "end" : 5.7641875000000011,
+      "start" : 3.8441875000000012,
+      "text" : "这是一个偏胶的结束"
+    },
+    {
+      "end" : 7.564187500000001,
+      "start" : 5.7641875000000011,
+      "text" : "也是新偏胶的开水"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "zh-Hans",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "cmn_hans_cn-0.wav",
+  "inferenceSeconds" : 0.45464220900000002,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 4.04,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.380000000000001,
+  "sourceLanguage" : "zh",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.558231115341187
+}
+
+Test Suite 'AppIntegrationTests' passed at 2026-11-06 13:01:47.244.
+
+	 Executed 6 tests, with 0 failures (0 unexpected) in 69.089 (69.094) seconds
+
+Test Suite 'LiveCaptioniPadTests.xctest' passed at 2026-11-06 13:01:47.245.
+
+	 Executed 6 tests, with 0 failures (0 unexpected) in 69.089 (69.095) seconds
+
+Test Suite 'All tests' passed at 2026-11-06 13:01:47.245.
+
+	 Executed 6 tests, with 0 failures (0 unexpected) in 69.089 (69.096) seconds
+
+** TEST SUCCEEDED **

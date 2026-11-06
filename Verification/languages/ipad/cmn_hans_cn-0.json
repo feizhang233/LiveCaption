@@ -1,0 +1,40 @@
+{
+  "captions" : [
+    {
+      "end" : 1.7041875,
+      "start" : 0.044187499999999998,
+      "text" : "謝謝"
+    },
+    {
+      "end" : 3.7041875000000015,
+      "start" : 1.7041875000000013,
+      "text" : "這並不是告別"
+    },
+    {
+      "end" : 5.7641875000000011,
+      "start" : 3.8441875000000012,
+      "text" : "这是一个偏胶的结束"
+    },
+    {
+      "end" : 7.564187500000001,
+      "start" : 5.7641875000000011,
+      "text" : "也是新偏胶的开水"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "zh-Hans",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "cmn_hans_cn-0.wav",
+  "inferenceSeconds" : 0.45464220900000002,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 4.04,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.380000000000001,
+  "sourceLanguage" : "zh",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.558231115341187
+}

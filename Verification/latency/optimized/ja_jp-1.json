@@ -1,0 +1,320 @@
+{
+  "audioSeconds" : 14.220000000000001,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 19,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.077479333325754851,
+      "startSeconds" : 1.0150974999996834,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.071320791641483083,
+      "startSeconds" : 1.8102495000057388,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.6000000000000001,
+      "durationSeconds" : 0.059421375015517697,
+      "startSeconds" : 2.614409916655859,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.3999999999999999,
+      "durationSeconds" : 0.05972929165000096,
+      "startSeconds" : 3.4146508749981876,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.2000000000000002,
+      "durationSeconds" : 0.059948625013930723,
+      "startSeconds" : 4.2134945833240636,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5,
+      "durationSeconds" : 0.069945291674230248,
+      "startSeconds" : 5.0029723749903496,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5.7999999999999998,
+      "durationSeconds" : 0.067468708351952955,
+      "startSeconds" : 5.8144708749896381,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6.5999999999999996,
+      "durationSeconds" : 0.077499000006355345,
+      "startSeconds" : 6.6074439583171625,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.4000000000000004,
+      "durationSeconds" : 0.10335300001315773,
+      "startSeconds" : 7.41473916664836,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.1999999999999993,
+      "durationSeconds" : 0.093335583311272785,
+      "startSeconds" : 8.2074331250041723,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9,
+      "durationSeconds" : 0.11164925000048243,
+      "startSeconds" : 9.0079678749898449,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9.8000000000000007,
+      "durationSeconds" : 0.11860566667746753,
+      "startSeconds" : 9.8023514999949839,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 10,
+      "durationSeconds" : 0.12003616665606387,
+      "startSeconds" : 10.014615291671362,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.6000000000000001,
+      "durationSeconds" : 0.07394604166620411,
+      "startSeconds" : 10.807035583333345,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.3999999999999999,
+      "durationSeconds" : 0.26191254166769795,
+      "startSeconds" : 11.604571916657733,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.2000000000000002,
+      "durationSeconds" : 0.079277583339717239,
+      "startSeconds" : 12.414024208323099,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4,
+      "durationSeconds" : 0.36082687499583699,
+      "startSeconds" : 13.20400508333114,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.7999999999999998,
+      "durationSeconds" : 0.3368555833294522,
+      "startSeconds" : 14.008702874998562,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5.0199999999999996,
+      "durationSeconds" : 0.24483708332991228,
+      "startSeconds" : 14.345569958328269,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 95.819999999999993,
+  "inferenceTotalSeconds" : 2.447447791666491,
+  "inferenceWallSeconds" : 14.590593208326027,
+  "language" : "ja",
+  "loadSeconds" : 0.089634060859680176,
+  "peakResidentBytes" : 266567680,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマーの成績。"
+    },
+    {
+      "end" : 14.219999999999999,
+      "start" : 10,
+      "text" : "ぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜ"
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.0928422083379701,
+    "firstSubtitleSeconds" : 1.0928422083379701,
+    "lastConfirmedAfterEOFSeconds" : 0.37053899999707873,
+    "lastConfirmedSeconds" : 14.590538999997079,
+    "maximumFeedLatenessSeconds" : 0.013330249988939613,
+    "maximumFinalDelaySeconds" : 0.37053899999708051,
+    "maximumInferenceSeconds" : 0.36083437499999998,
+    "partialCount" : 16,
+    "partialUpdateIntervalsSeconds" : [
+      0.78884379166993313,
+      0.79222616663901135,
+      0.80056795835844241,
+      0.79904387498390861,
+      0.7994522083317861,
+      0.80905295832781121,
+      0.80296908333548345,
+      0.83317933333455585,
+      0.78266712502227165,
+      0.8188324999937322,
+      0.80135120832710527,
+      0.9601799166703131,
+      0.98539537499891594,
+      0.62683812499744818,
+      1.071515958319651
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      266534912
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 13.859999999999999,
+    "speechEnergyEndToLastConfirmedSeconds" : 0.73053899999707994,
+    "speechEnergyOnsetSeconds" : 3.1000000000000001,
+    "speechEnergyToFirstSubtitleSeconds" : -2.00715779166203,
+    "updates" : [
+      {
+        "end" : 1,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 1.0928422083379701
+      },
+      {
+        "end" : 1.8,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 1.8816860000079032
+      },
+      {
+        "end" : 2.6000000000000001,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 2.6739121666469146
+      },
+      {
+        "end" : 3.3599999999999999,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 3.474480125005357
+      },
+      {
+        "end" : 4.2000000000000002,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また来たご",
+        "wallSeconds" : 4.2735239999892656
+      },
+      {
+        "end" : 5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また来たがあり行くなら",
+        "wallSeconds" : 5.0729762083210517
+      },
+      {
+        "end" : 5.7999999999999998,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また来たがありなくなら世界的に",
+        "wallSeconds" : 5.8820291666488629
+      },
+      {
+        "end" : 6.5999999999999996,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また、下側に行くなら、世界的に有名な。",
+        "wallSeconds" : 6.6849982499843463
+      },
+      {
+        "end" : 7.4000000000000004,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また、下側に行くなら、世界的に有名なマリアゾーの生地。",
+        "wallSeconds" : 7.5181775833189022
+      },
+      {
+        "end" : 8,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績である。",
+        "wallSeconds" : 8.3008447083411738
+      },
+      {
+        "end" : 9,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマの成績。",
+        "wallSeconds" : 9.119677208334906
+      },
+      {
+        "end" : 9.8000000000000007,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマーの成績。",
+        "wallSeconds" : 9.9210284166620113
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10,
+            "start" : 0,
+            "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマーの成績。"
+          }
+        ],
+        "wallSeconds" : 10.134737583313836
+      },
+      {
+        "end" : 10.799999999999999,
+        "kind" : "partial",
+        "start" : 10,
+        "text" : "ぜひ、 じんじゃうおうとする",
+        "wallSeconds" : 10.881208333332324
+      },
+      {
+        "end" : 11.6,
+        "kind" : "partial",
+        "start" : 10,
+        "text" : "ぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜ",
+        "wallSeconds" : 11.86660370833124
+      },
+      {
+        "end" : 11.199999999999999,
+        "kind" : "partial",
+        "start" : 10,
+        "text" : "ぜひ、 じんじゃおうとつれましょう。",
+        "wallSeconds" : 12.493441833328689
+      },
+      {
+        "end" : 13.199999999999999,
+        "kind" : "partial",
+        "start" : 10,
+        "text" : "ぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜ",
+        "wallSeconds" : 13.564957791648339
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 14.219999999999999,
+            "start" : 10,
+            "text" : "ぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜひぜ"
+          }
+        ],
+        "wallSeconds" : 14.590538999997079
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "autoRestartSourceSeconds" : 0.28685829600000001,
+  "checked" : [
+    "verified model selection",
+    "AVPlayer\/AVAssetReader real source-time feed",
+    "delayed polling tick preserves audio generation",
+    "pause drains all played PCM",
+    "pause clock",
+    "explicit seek",
+    "resume",
+    "immutable earlier history",
+    "disjoint SRT",
+    "native AVPlayer seek",
+    "native transport pause drains all played PCM",
+    "clean EOF with flushed tail and retained metrics",
+    "no punctuation-only captions",
+    "automatic replay at EOF",
+    "native direct EOF seek skips unplayed audio",
+    "clear\/stop stale-event rejection",
+    "model unload",
+    "released context reloads after Stop",
+    "unreadable import"
+  ],
+  "cleanEOFSourceSeconds" : 10.199999999999999,
+  "cpuInference" : true,
+  "EOFMaximumCueEnd" : 8.6615625000000005,
+  "exportedSRT" : "1\n00:00:01,930 --> 00:00:04,512\nL'accident a eu lieu intérêts montagues.\n\n2\n00:00:04,730 --> 00:00:07,424\nIl semblerait que cela était causé par...\n",
+  "firstPass" : [
+    {
+      "end" : 4.5115625000000019,
+      "start" : 1.9300000000000015,
+      "text" : "L'accident a eu lieu intérêts montagues."
+    }
+  ],
+  "input" : "fr-native-video.mp4",
+  "language" : "fr",
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "nativeSeekToEOFConfirmedCount" : 0,
+  "nativeSeekToEOFSkippedSeconds" : 9.383583870999999,
+  "passed" : true,
+  "pausedAtSourceSeconds" : 4.5115862079999998,
+  "replayAlternativeCount" : 1,
+  "replayPrimary" : [
+    {
+      "end" : 4.5115625000000019,
+      "start" : 1.9300000000000015,
+      "text" : "L'accident a eu lieu intérêts montagues."
+    },
+    {
+      "end" : 7.423937500000001,
+      "start" : 4.7300000000000013,
+      "text" : "Il semblerait que cela était causé par..."
+    }
+  ],
+  "startCallSeconds" : [
+    0.080817,
+    0.0090758330000000002,
+    0.0038877500000000001,
+    0.0093420829999999993,
+    0.057146166999999998
+  ]
+}

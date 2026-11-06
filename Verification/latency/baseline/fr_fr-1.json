@@ -1,0 +1,148 @@
+{
+  "audioSeconds" : 8.2799999999999994,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 6,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1.5,
+      "durationSeconds" : 0.060728041658876464,
+      "startSeconds" : 1.6050905416777823,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3,
+      "durationSeconds" : 0.070782166672870517,
+      "startSeconds" : 3.0098728333250619,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.5,
+      "durationSeconds" : 0.099015500018140301,
+      "startSeconds" : 4.6134138749912381,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6,
+      "durationSeconds" : 0.1129755416768603,
+      "startSeconds" : 6.0062709166668355,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.5,
+      "durationSeconds" : 0.12710154167143628,
+      "startSeconds" : 7.6046237499976996,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.2799999999999994,
+      "durationSeconds" : 0.12870408335584216,
+      "startSeconds" : 8.2820701249875128,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 30.780000000000001,
+  "inferenceTotalSeconds" : 0.59930687505402602,
+  "inferenceWallSeconds" : 8.4110165000020061,
+  "language" : "fr",
+  "loadSeconds" : 0.091544985771179199,
+  "peakResidentBytes" : 248889344,
+  "segments" : [
+    {
+      "end" : 5.6399999999999997,
+      "start" : 0,
+      "text" : "Il ajoutait qu'on le devrait se prendre en valeur de monnaie d'assumer des obligations qui n'est pas sur un style de développement,"
+    },
+    {
+      "end" : 7.6400000000000006,
+      "start" : 5.6399999999999997,
+      "text" : "de responsabilité et leur capacité."
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.6659633750095963,
+    "firstSubtitleSeconds" : 1.6659633750095963,
+    "lastConfirmedAfterEOFSeconds" : 0.13090054166852561,
+    "lastConfirmedSeconds" : 8.410900541668525,
+    "maximumFeedLatenessSeconds" : 0.012611999991349876,
+    "maximumFinalDelaySeconds" : 0.7709005416685244,
+    "maximumInferenceSeconds" : 0.12871179199999999,
+    "partialCount" : 5,
+    "partialUpdateIntervalsSeconds" : [
+      1.4147850833251141,
+      1.6317741666571237,
+      1.4068143750191666,
+      1.6124705416441429
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      246382592
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 7.3799999999999999,
+    "speechEnergyEndToLastConfirmedSeconds" : 1.0309005416685251,
+    "speechEnergyOnsetSeconds" : 0.90000000000000002,
+    "speechEnergyToFirstSubtitleSeconds" : 0.76596337500959633,
+    "updates" : [
+      {
+        "end" : 1.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "et là je vous ai con",
+        "wallSeconds" : 1.6659633750095963
+      },
+      {
+        "end" : 3,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "Il ajoutait qu'on le devrait se prendre en valeur de mon aide.",
+        "wallSeconds" : 3.0807484583347104
+      },
+      {
+        "end" : 4.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "Il ajoutait qu'on ne devrait se prendre en valeur de monnaie d'assumer des obligations qui dépasse.",
+        "wallSeconds" : 4.7125226249918342
+      },
+      {
+        "end" : 6,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "Il ajoutait qu'on le devrait se pendant par leur demander d'assumer des obligations qui dépassent le style de développement. Le récemment.",
+        "wallSeconds" : 6.1193370000110008
+      },
+      {
+        "end" : 7.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "Il ajoutait qu'on le devrait se prendre en valeur de monnaie d'assumer des obligations qui n'est pas sur un style de développement, de responsabilité et leur capacité.",
+        "wallSeconds" : 7.7318075416551437
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 5.6399999999999997,
+            "start" : 0,
+            "text" : "Il ajoutait qu'on le devrait se prendre en valeur de monnaie d'assumer des obligations qui n'est pas sur un style de développement,"
+          },
+          {
+            "end" : 7.6400000000000006,
+            "start" : 5.6399999999999997,
+            "text" : "de responsabilité et leur capacité."
+          }
+        ],
+        "wallSeconds" : 8.410900541668525
+      }
+    ]
+  }
+}

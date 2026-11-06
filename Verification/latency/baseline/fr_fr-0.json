@@ -1,0 +1,124 @@
+{
+  "audioSeconds" : 10.199999999999999,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 5,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1.51,
+      "durationSeconds" : 0.069039291644003242,
+      "startSeconds" : 3.6054529166722205,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.0099999999999998,
+      "durationSeconds" : 0.073642916657263413,
+      "startSeconds" : 5.0082244999939576,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.5099999999999998,
+      "durationSeconds" : 0.082005666656186804,
+      "startSeconds" : 6.6023329166637268,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6.0099999999999998,
+      "durationSeconds" : 0.087797291693277657,
+      "startSeconds" : 8.0061190416454338,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.2300000000000004,
+      "durationSeconds" : 0.11421362499822862,
+      "startSeconds" : 9.211679958330933,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 22.27,
+  "inferenceTotalSeconds" : 0.42669879164895974,
+  "inferenceWallSeconds" : 10.213564125006087,
+  "language" : "fr",
+  "loadSeconds" : 0.074923992156982422,
+  "peakResidentBytes" : 246956032,
+  "segments" : [
+    {
+      "end" : 8.9299999999999997,
+      "start" : 1.9300000000000002,
+      "text" : "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par un incendimal veillant."
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 3.6746674999885727,
+    "firstSubtitleSeconds" : 3.6746674999885727,
+    "lastConfirmedAfterEOFSeconds" : -0.87397558334050629,
+    "lastConfirmedSeconds" : 9.326024416659493,
+    "maximumFeedLatenessSeconds" : 0.013336875010281801,
+    "maximumFinalDelaySeconds" : 0.39602441665949328,
+    "maximumInferenceSeconds" : 0.114227833,
+    "partialCount" : 4,
+    "partialUpdateIntervalsSeconds" : [
+      1.4072993333393242,
+      1.602457291650353,
+      1.4095504166907631
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      246956032
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : null,
+    "speechEnergyEndToLastConfirmedSeconds" : null,
+    "speechEnergyOnsetSeconds" : null,
+    "speechEnergyToFirstSubtitleSeconds" : null,
+    "updates" : [
+      {
+        "end" : 3.4400000000000004,
+        "kind" : "partial",
+        "start" : 1.9300000000000002,
+        "text" : "L'accident a eu lieu.",
+        "wallSeconds" : 3.6746674999885727
+      },
+      {
+        "end" : 4.9299999999999997,
+        "kind" : "partial",
+        "start" : 1.9300000000000002,
+        "text" : "L'accident a eu lieu intérêts montagno.",
+        "wallSeconds" : 5.0819668333278969
+      },
+      {
+        "end" : 6.370000000000001,
+        "kind" : "partial",
+        "start" : 1.9300000000000002,
+        "text" : "L'accident a eu lieu intérêt à montagneux et il semble vrai que cela était",
+        "wallSeconds" : 6.6844241249782499
+      },
+      {
+        "end" : 7.9299999999999997,
+        "kind" : "partial",
+        "start" : 1.9300000000000002,
+        "text" : "L'accident a eu lieu en terrain montagneux. Il semblerait que cela était causé par un ensemble.",
+        "wallSeconds" : 8.093974541669013
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 8.9299999999999997,
+            "start" : 1.9300000000000002,
+            "text" : "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par un incendimal veillant."
+          }
+        ],
+        "wallSeconds" : 9.326024416659493
+      }
+    ]
+  }
+}

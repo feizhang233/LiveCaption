@@ -1,0 +1,174 @@
+{
+  "audioSeconds" : 10.44,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 8,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1.5,
+      "durationSeconds" : 0.07197554167942144,
+      "startSeconds" : 1.6137954166624695,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3,
+      "durationSeconds" : 0.062958708324003965,
+      "startSeconds" : 3.0095220416842494,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.5,
+      "durationSeconds" : 0.086141333333216608,
+      "startSeconds" : 4.6048543750075623,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6,
+      "durationSeconds" : 0.093966791668208316,
+      "startSeconds" : 6.0112625833426137,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.5,
+      "durationSeconds" : 0.10284224999486469,
+      "startSeconds" : 7.6086799166805577,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9,
+      "durationSeconds" : 0.1239942499960307,
+      "startSeconds" : 9.014814791677054,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 10,
+      "durationSeconds" : 0.12862420832971111,
+      "startSeconds" : 10.011413375003031,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.24,
+      "durationSeconds" : 0.062103624979499727,
+      "startSeconds" : 10.443259333347669,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 42.740000000000002,
+  "inferenceTotalSeconds" : 0.73260670830495656,
+  "inferenceWallSeconds" : 10.505766041664174,
+  "language" : "ja",
+  "loadSeconds" : 3.0871111154556274,
+  "peakResidentBytes" : 268517376,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.44,
+      "start" : 10,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.686050125019392,
+    "firstSubtitleSeconds" : 1.686050125019392,
+    "lastConfirmedAfterEOFSeconds" : 0.065626124999253577,
+    "lastConfirmedSeconds" : 10.505626124999253,
+    "maximumFeedLatenessSeconds" : 0.013211208337452263,
+    "maximumFinalDelaySeconds" : 0.14015049999579787,
+    "maximumInferenceSeconds" : 0.128631459,
+    "partialCount" : 6,
+    "partialUpdateIntervalsSeconds" : [
+      1.3865106666635256,
+      1.6185464999871328,
+      1.4142050000082236,
+      1.6062586666666903,
+      1.4273324999958277
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      266502144
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 10.44,
+    "speechEnergyEndToLastConfirmedSeconds" : 0.065626124999253577,
+    "speechEnergyOnsetSeconds" : 0.059999999999999998,
+    "speechEnergyToFirstSubtitleSeconds" : 1.6260501250193919,
+    "updates" : [
+      {
+        "end" : 1.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 1.686050125019392
+      },
+      {
+        "end" : 3,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで",
+        "wallSeconds" : 3.0725607916829176
+      },
+      {
+        "end" : 4.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、",
+        "wallSeconds" : 4.6911072916700505
+      },
+      {
+        "end" : 6,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、実行って検索すると。",
+        "wallSeconds" : 6.1053122916782741
+      },
+      {
+        "end" : 7.5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、検索すると、恐らく電池器用の上手をしています。",
+        "wallSeconds" : 7.7115709583449643
+      },
+      {
+        "end" : 9,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。",
+        "wallSeconds" : 9.138903458340792
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10,
+            "start" : 0,
+            "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。"
+          }
+        ],
+        "wallSeconds" : 10.140150499995798
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10.44,
+            "start" : 10,
+            "text" : "ご視聴ありがとうございました"
+          }
+        ],
+        "wallSeconds" : 10.505626124999253
+      }
+    ]
+  }
+}

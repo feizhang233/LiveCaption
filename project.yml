@@ -1,0 +1,89 @@
+name: LiveCaption
+options:
+  deploymentTarget:
+    iOS: '26.0'
+    macOS: '26.0'
+  createIntermediateGroups: true
+packages:
+  CaptionCore:
+    path: Packages/CaptionCore
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    SWIFT_STRICT_CONCURRENCY: targeted
+    MARKETING_VERSION: '0.1.0'
+    CURRENT_PROJECT_VERSION: '1'
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: Live Caption
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.video
+targets:
+  LiveCaptionMac:
+    type: application
+    platform: macOS
+    productName: LiveCaption
+    sources:
+      - path: App
+      - path: ThirdParty/Notices
+        optional: true
+    dependencies:
+      - package: CaptionCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.livecaption.mac
+        PRODUCT_NAME: LiveCaption
+        CODE_SIGN_ENTITLEMENTS: Config/Mac.entitlements
+        ENABLE_APP_SANDBOX: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        INFOPLIST_KEY_NSAudioCaptureUsageDescription: 擷取您正在播放的系統音訊，在本機產生原文字幕。
+        INFOPLIST_KEY_NSScreenCaptureUsageDescription: 擷取系統播放音訊以產生字幕，不儲存螢幕影像。
+  LiveCaptioniPad:
+    type: application
+    platform: iOS
+    productName: LiveCaption
+    sources:
+      - path: App
+      - path: ThirdParty/Notices
+        optional: true
+    dependencies:
+      - package: CaptionCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.livecaption.ipad
+        PRODUCT_NAME: LiveCaption
+        INFOPLIST_FILE: Config/iPad-Info.plist
+        TARGETED_DEVICE_FAMILY: '2'
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsMultipleScenes: YES
+        INFOPLIST_KEY_UIFileSharingEnabled: YES
+        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        SUPPORTS_MACCATALYST: NO
+  LiveCaptioniPadTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/iPadIntegration
+    dependencies:
+      - target: LiveCaptioniPad
+      - package: CaptionCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.livecaption.ipad.tests
+        TEST_HOST: '$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption'
+        BUNDLE_LOADER: '$(TEST_HOST)'
+        TARGETED_DEVICE_FAMILY: '2'
+schemes:
+  LiveCaptionMac:
+    build:
+      targets:
+        LiveCaptionMac: all
+  LiveCaptioniPad:
+    build:
+      targets:
+        LiveCaptioniPad: all
+    test:
+      targets:
+        - LiveCaptioniPadTests

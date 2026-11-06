@@ -1,0 +1,10 @@
+{
+  "model": "base multilingual",
+  "filename": "ggml-base.bin",
+  "bytes": 147951465,
+  "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+  "sourceURL": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base.bin",
+  "verifiedAtUTC": "2026-11-06T10:45:51.084936+00:00",
+  "storage": "/tmp/live-caption-verification-models/ggml-base.bin",
+  "scope": "Developer QA only; not bundled, committed, or auto-downloaded by the App."
+}

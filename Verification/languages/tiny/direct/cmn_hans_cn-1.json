@@ -1,0 +1,39 @@
+{
+  "audioSeconds" : 8.2799999999999994,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 8.2799999999999994,
+      "durationSeconds" : 0.069380666682263836,
+      "startSeconds" : 0.0034619999933056533,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 8.2799999999999994,
+  "inferenceTotalSeconds" : 0.069380666682263836,
+  "inferenceWallSeconds" : 0.072902208339655772,
+  "language" : "zh",
+  "loadSeconds" : 0.07464599609375,
+  "peakResidentBytes" : 245563392,
+  "segments" : [
+    {
+      "end" : 3.54,
+      "start" : 0,
+      "text" : "蓋家等元素属于金属"
+    },
+    {
+      "end" : 5.2199999999999998,
+      "start" : 3.54,
+      "text" : "迎合金等元素"
+    },
+    {
+      "end" : 6.9000000000000004,
+      "start" : 5.2199999999999998,
+      "text" : "当然也是金属"
+    }
+  ]
+}

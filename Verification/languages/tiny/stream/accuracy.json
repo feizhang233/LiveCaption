@@ -1,0 +1,56 @@
+[
+  {
+    "edits" : 3,
+    "errorRate" : 0.15789473684210525,
+    "fixture" : "en_us-0",
+    "hypothesis" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years. Thank you.",
+    "metric" : "WER",
+    "normalization" : "Lowercase; Japanese\/Chinese letters\/numbers only (no simplified\/traditional conversion); English\/French split on all non-letter\/non-number characters. Accents retained; no number-word conversion.",
+    "reference" : "however due to the slow communication channels styles in the west could lag behind by 25 to 30 year",
+    "referenceUnits" : 19
+  },
+  {
+    "edits" : 5,
+    "errorRate" : 0.23809523809523808,
+    "fixture" : "en_us-1",
+    "hypothesis" : "All now is alongside the world's safe for you, always begin with a capital letter, even in the middle of a sentence.",
+    "metric" : "WER",
+    "normalization" : "Lowercase; Japanese\/Chinese letters\/numbers only (no simplified\/traditional conversion); English\/French split on all non-letter\/non-number characters. Accents retained; no number-word conversion.",
+    "reference" : "all nouns alongside the word sie for you always begin with a capital letter even in the middle of a sentence",
+    "referenceUnits" : 21
+  },
+  {
+    "edits" : 9,
+    "errorRate" : 0.39130434782608697,
+    "fixture" : "cmn_hans_cn-0",
+    "hypothesis" : "謝謝 這並不是告別 这是一个偏胶的结束也是新偏胶的开始",
+    "metric" : "CER",
+    "normalization" : "Lowercase; Japanese\/Chinese letters\/numbers only (no simplified\/traditional conversion); English\/French split on all non-letter\/non-number characters. Accents retained; no number-word conversion.",
+    "reference" : "这 并 不 是 告 别 这 是 一 个 篇 章 的 结 束 也 是 新 篇 章 的 开 始",
+    "referenceUnits" : 23,
+    "simplifiedScriptDiagnostic" : {
+      "edits" : 6,
+      "errorRate" : 0.2608695652173913,
+      "metric" : "CER",
+      "normalization" : "Same character normalization plus Foundation ICU Traditional-Simplified applied to both texts; diagnostic only, raw score and captions unchanged.",
+      "referenceUnits" : 23
+    }
+  },
+  {
+    "edits" : 5,
+    "errorRate" : 0.23809523809523808,
+    "fixture" : "cmn_hans_cn-1",
+    "hypothesis" : "《新年》 蓋家等元素属于金属 银河金等元素 当然也是金属",
+    "metric" : "CER",
+    "normalization" : "Lowercase; Japanese\/Chinese letters\/numbers only (no simplified\/traditional conversion); English\/French split on all non-letter\/non-number characters. Accents retained; no number-word conversion.",
+    "reference" : "钙 钾 等 元 素 属 于 金 属 银 和 金 等 元 素 当 然 也 是 金 属",
+    "referenceUnits" : 21,
+    "simplifiedScriptDiagnostic" : {
+      "edits" : 5,
+      "errorRate" : 0.23809523809523808,
+      "metric" : "CER",
+      "normalization" : "Same character normalization plus Foundation ICU Traditional-Simplified applied to both texts; diagnostic only, raw score and captions unchanged.",
+      "referenceUnits" : 21
+    }
+  }
+]

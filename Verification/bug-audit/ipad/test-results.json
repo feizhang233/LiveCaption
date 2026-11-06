@@ -1,0 +1,80 @@
+{
+  "devices" : [
+    {
+      "architecture" : "arm64",
+      "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+      "deviceName" : "iPad Simulator",
+      "modelName" : "iPad Air 11-inch (M3)",
+      "osBuildNumber" : "24A434",
+      "osVersion" : "27.0",
+      "platform" : "iOS Simulator"
+    }
+  ],
+  "testNodes" : [
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "11s",
+                  "durationInSeconds" : 11.345216035842896,
+                  "name" : "testFrenchRealAudioProducesFrenchCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "10s",
+                  "durationInSeconds" : 10.91872501373291,
+                  "name" : "testFrenchRealVideoProducesFrenchCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "11s",
+                  "durationInSeconds" : 11.58365797996521,
+                  "name" : "testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "11s",
+                  "durationInSeconds" : 11.909767985343933,
+                  "name" : "testJapaneseRealAudioProducesJapaneseCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "AppIntegrationTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "LiveCaptioniPadTests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests",
+          "nodeType" : "Unit test bundle",
+          "result" : "Passed"
+        }
+      ],
+      "name" : "LiveCaptioniPad",
+      "nodeType" : "Test Plan",
+      "result" : "Passed"
+    }
+  ],
+  "testPlanConfigurations" : [
+    {
+      "configurationId" : "1",
+      "configurationName" : "Test Scheme Action"
+    }
+  ]
+}

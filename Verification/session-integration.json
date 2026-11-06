@@ -1,0 +1,53 @@
+{
+  "autoRestartSourceSeconds" : 0.25223362700000002,
+  "checked" : [
+    "verified model selection",
+    "AVPlayer\/AVAssetReader real source-time feed",
+    "pause clock",
+    "explicit seek",
+    "resume",
+    "immutable earlier history",
+    "disjoint SRT",
+    "native AVPlayer seek",
+    "clean EOF with flushed tail and retained metrics",
+    "no punctuation-only captions",
+    "automatic replay at EOF",
+    "native direct EOF seek skips unplayed audio",
+    "clear\/stop stale-event rejection",
+    "model unload",
+    "unreadable import"
+  ],
+  "cleanEOFSourceSeconds" : 10.44,
+  "cpuInference" : true,
+  "EOFMaximumCueEnd" : 9.75,
+  "exportedSRT" : "1\n00:00:00,055 --> 00:00:02,479\nインターネット\n\n2\n00:00:02,479 --> 00:00:07,405\nで適対的環境構成し、検索すると、恐らく電池器用の上手をしています。\n",
+  "firstPass" : [
+    {
+      "end" : 2.4788125000000001,
+      "start" : 0.0546875,
+      "text" : "インターネット"
+    }
+  ],
+  "input" : "ja_jp-0.wav",
+  "language" : "ja",
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "nativeSeekToEOFConfirmedCount" : 0,
+  "nativeSeekToEOFSkippedSeconds" : 9.6055970819999992,
+  "passed" : true,
+  "pausedAtSourceSeconds" : 2.5361342919999998,
+  "replayAlternativeCount" : 0,
+  "replayPrimary" : [
+    {
+      "end" : 2.4788125000000001,
+      "start" : 0.0546875,
+      "text" : "インターネット"
+    },
+    {
+      "end" : 7.4050000000000002,
+      "start" : 2.4788125000000001,
+      "text" : "で適対的環境構成し、検索すると、恐らく電池器用の上手をしています。"
+    }
+  ]
+}

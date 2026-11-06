@@ -1,0 +1,54 @@
+{
+  "runDate": "2026-11-06",
+  "hardware": "Apple M4 Pro, 24 GiB RAM",
+  "engine": "whisper.cpp 1.9.5 / official b5454",
+  "model": "base multilingual",
+  "decodeMode": "direct file windows, translate=false, manual language, Metal",
+  "comparisonLimit": "Tiny scores are the earlier audited Verification/engine run; timing is not a controlled cold/warm model speed benchmark. Four clean read-speech clips do not establish film/anime accuracy.",
+  "results": [
+    {
+      "fixture": "ja_jp-0",
+      "metric": "CER",
+      "tinyObservedErrorRate": 0.35555555555555557,
+      "baseObservedErrorRate": 0.28888888888888886,
+      "baseInferenceSeconds": 0.43411004543304443,
+      "baseLoadSeconds": 0.2023860216140747,
+      "basePeakResidentBytes": 343425024,
+      "baseGPU": true,
+      "audioSeconds": 10.44
+    },
+    {
+      "fixture": "ja_jp-1",
+      "metric": "CER",
+      "tinyObservedErrorRate": 0.2608695652173913,
+      "baseObservedErrorRate": 0.15217391304347827,
+      "baseInferenceSeconds": 0.15063297748565674,
+      "baseLoadSeconds": 0.11481797695159912,
+      "basePeakResidentBytes": 340754432,
+      "baseGPU": true,
+      "audioSeconds": 14.22
+    },
+    {
+      "fixture": "fr_fr-0",
+      "metric": "WER",
+      "tinyObservedErrorRate": 0.2,
+      "baseObservedErrorRate": 0.35,
+      "baseInferenceSeconds": 0.12220799922943115,
+      "baseLoadSeconds": 0.12591397762298584,
+      "basePeakResidentBytes": 341540864,
+      "baseGPU": true,
+      "audioSeconds": 10.2
+    },
+    {
+      "fixture": "fr_fr-1",
+      "metric": "WER",
+      "tinyObservedErrorRate": 0.6923076923076923,
+      "baseObservedErrorRate": 0.4230769230769231,
+      "baseInferenceSeconds": 0.13723301887512207,
+      "baseLoadSeconds": 0.11865198612213135,
+      "basePeakResidentBytes": 341868544,
+      "baseGPU": true,
+      "audioSeconds": 8.28
+    }
+  ]
+}

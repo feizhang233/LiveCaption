@@ -1,0 +1,258 @@
+{
+  "audioSeconds" : 10.44,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 14,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 1,
+      "durationSeconds" : 0.073048833350185305,
+      "startSeconds" : 1.0146746249811258,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.8,
+      "durationSeconds" : 0.069092958350665867,
+      "startSeconds" : 1.8069934999803081,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 2.6000000000000001,
+      "durationSeconds" : 0.056495083350455388,
+      "startSeconds" : 2.6151656666479539,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 3.3999999999999999,
+      "durationSeconds" : 0.070111166685819626,
+      "startSeconds" : 3.4146112083108164,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 4.2000000000000002,
+      "durationSeconds" : 0.065881999995326623,
+      "startSeconds" : 4.2044284583244007,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5,
+      "durationSeconds" : 0.057491375016979873,
+      "startSeconds" : 5.0080380416475236,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 5.7999999999999998,
+      "durationSeconds" : 0.0805945833271835,
+      "startSeconds" : 5.805436374997953,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 6.5999999999999996,
+      "durationSeconds" : 0.11388237500796095,
+      "startSeconds" : 6.6150173749774694,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 7.4000000000000004,
+      "durationSeconds" : 0.12670979165704921,
+      "startSeconds" : 7.4052494583302177,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 8.1999999999999993,
+      "durationSeconds" : 0.13249150000046939,
+      "startSeconds" : 8.2098641250049695,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9,
+      "durationSeconds" : 0.1258034166530706,
+      "startSeconds" : 9.004554791667033,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 9.8000000000000007,
+      "durationSeconds" : 0.12985429164837115,
+      "startSeconds" : 9.80746262500179,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 10,
+      "durationSeconds" : 0.094306541694095358,
+      "startSeconds" : 10.002013916644501,
+      "succeeded" : 1
+    },
+    {
+      "audioSeconds" : 1.24,
+      "durationSeconds" : 0.055101958336308599,
+      "startSeconds" : 10.450738624989754,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 76.039999999999992,
+  "inferenceTotalSeconds" : 1.2508658750739414,
+  "inferenceWallSeconds" : 10.50619783331058,
+  "language" : "ja",
+  "loadSeconds" : 3.0372200012207031,
+  "peakResidentBytes" : 280084480,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.44,
+      "start" : 10,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "streaming" : {
+    "chunkSeconds" : 0.20000000000000001,
+    "delivery" : "At or after each source chunk end, paced by systemUptime; model loaded before playback clock",
+    "droppedAudioSeconds" : 0,
+    "energyBoundaryMethod" : "20 ms RMS >= 0.006 for 3 consecutive frames; fixed benchmark-only speech-energy proxy, not human annotation",
+    "errors" : [
+
+    ],
+    "firstPartialSeconds" : 1.0878975416708272,
+    "firstSubtitleSeconds" : 1.0878975416708272,
+    "lastConfirmedAfterEOFSeconds" : 0.066073916651076203,
+    "lastConfirmedSeconds" : 10.506073916651076,
+    "maximumFeedLatenessSeconds" : 0.013205958326580003,
+    "maximumFinalDelaySeconds" : 0.096382499992614612,
+    "maximumInferenceSeconds" : 0.132499542,
+    "partialCount" : 12,
+    "partialUpdateIntervalsSeconds" : [
+      0.78830349998315796,
+      0.79555808333680034,
+      0.81309395833523013,
+      0.78552362500340678,
+      0.79520175000652671,
+      0.82050891665858217,
+      0.84290416666772217,
+      0.8030527500086464,
+      0.81041541666490957,
+      0.78800574998604134,
+      0.8069309166749008
+    ],
+    "peakResidentBytesAfterEachRepeat" : [
+      278593536
+    ],
+    "repeatCount" : 1,
+    "speechEnergyEndSeconds" : 10.44,
+    "speechEnergyEndToLastConfirmedSeconds" : 0.066073916651076203,
+    "speechEnergyOnsetSeconds" : 0.059999999999999998,
+    "speechEnergyToFirstSubtitleSeconds" : 1.0278975416708271,
+    "updates" : [
+      {
+        "end" : 1,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 1.0878975416708272
+      },
+      {
+        "end" : 1.8,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "ご視聴ありがとうございました",
+        "wallSeconds" : 1.8762010416539852
+      },
+      {
+        "end" : 2.6000000000000001,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで",
+        "wallSeconds" : 2.6717591249907855
+      },
+      {
+        "end" : 3.3999999999999999,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対して",
+        "wallSeconds" : 3.4848530833260156
+      },
+      {
+        "end" : 4,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境交通",
+        "wallSeconds" : 4.2703767083294224
+      },
+      {
+        "end" : 5,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適体的環境構成し、",
+        "wallSeconds" : 5.0655784583359491
+      },
+      {
+        "end" : 5.7999999999999998,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、実行って検索すると。",
+        "wallSeconds" : 5.8860873749945313
+      },
+      {
+        "end" : 6.5999999999999996,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、実行って検索すると恐らく電気をすると、",
+        "wallSeconds" : 6.7289915416622534
+      },
+      {
+        "end" : 7.4000000000000004,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成していって検索すると、恐らく電池器用の上手をしています。",
+        "wallSeconds" : 7.5320442916708998
+      },
+      {
+        "end" : 8.1999999999999993,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。",
+        "wallSeconds" : 8.3424597083358094
+      },
+      {
+        "end" : 9,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。",
+        "wallSeconds" : 9.1304654583218507
+      },
+      {
+        "end" : 9.8000000000000007,
+        "kind" : "partial",
+        "start" : 0,
+        "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。",
+        "wallSeconds" : 9.9373963749967515
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10,
+            "start" : 0,
+            "text" : "インターネットで適対的環境構成し、 検索すると、恐らく電池器用の上手が出てくるでしょう。"
+          }
+        ],
+        "wallSeconds" : 10.096382499992615
+      },
+      {
+        "kind" : "confirmed",
+        "segments" : [
+          {
+            "end" : 10.44,
+            "start" : 10,
+            "text" : "ご視聴ありがとうございました"
+          }
+        ],
+        "wallSeconds" : 10.506073916651076
+      }
+    ]
+  }
+}

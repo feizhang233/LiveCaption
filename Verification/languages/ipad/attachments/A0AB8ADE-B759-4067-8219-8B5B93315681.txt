@@ -1,0 +1,30 @@
+{
+  "captions" : [
+    {
+      "end" : 10.174625000000001,
+      "start" : 0.174625,
+      "text" : "インターネットで適対的環境構成し、検索すると、恐らく原地機用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.439937499999999,
+      "start" : 10.174625000000001,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "ja",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "ja_jp-0.wav",
+  "inferenceSeconds" : 0.41957450000000002,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.0653125000000001,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.44,
+  "sourceLanguage" : "ja",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.665629982948303
+}

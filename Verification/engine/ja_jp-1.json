@@ -1,0 +1,17 @@
+{
+  "audioSeconds" : 14.220000000000001,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.10436403751373291,
+  "language" : "ja",
+  "loadSeconds" : 0.077479004859924316,
+  "peakResidentBytes" : 247414784,
+  "segments" : [
+    {
+      "end" : 12,
+      "start" : 0,
+      "text" : "また、下側に行くなら、世界的に有名なマリアゾーの成績であるファティマーの成績、人々を訪れましょう。"
+    }
+  ]
+}

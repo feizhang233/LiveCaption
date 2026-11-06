@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-06",
+  "destination": "https://github.com/feizhang233/LiveCaption",
+  "visibility": "public",
+  "verifiedSourceTree": "7a715ada72d3ccc1c3792b81444e575a483fffaa",
+  "sourceOnlyBuild": {
+    "macOS": {
+      "exitStatus": 0,
+      "signing": "disabled"
+    },
+    "iPadSimulator": {
+      "exitStatus": 0,
+      "signing": "disabled"
+    },
+    "command": "bash Scripts/build.sh all",
+    "engine": "Copied existing checksum-verified official XCFramework; not tracked in Git",
+    "bootstrapEvidence": "Docs/Repository.md"
+  },
+  "validation": {
+    "coreTests": 39,
+    "iPadSimulatorPassed": 6,
+    "iPadSimulatorFailed": 0,
+    "iPadSimulatorSkipped": 0,
+    "sourceLanguagePreferences": "PASS",
+    "englishMandarinCoreRuns": 16
+  },
+  "scope": "Source publication. No model weights, framework binaries, media, private evidence, distribution binaries or signing credentials."
+}

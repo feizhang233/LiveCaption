@@ -1,0 +1,13 @@
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project LiveCaption.xcodeproj -scheme LiveCaptioniPad -configuration Debug -destination "platform=iOS Simulator,id=1843660C-BAF1-4664-A668-5827B711BF15" -derivedDataPath DerivedData-iPad -resultBundlePath /tmp/live-caption-bug-audit-ipad.xcresult -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testFrenchRealAudioProducesFrenchCaptions]' started.
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testFrenchRealAudioProducesFrenchCaptions]' passed (11.345 seconds).
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testFrenchRealVideoProducesFrenchCaptions]' started.
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testFrenchRealVideoProducesFrenchCaptions]' passed (10.919 seconds).
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testJapaneseAutomaticAccelerationProducesJapaneseCaptions]' started.
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testJapaneseAutomaticAccelerationProducesJapaneseCaptions]' passed (11.584 seconds).
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testJapaneseRealAudioProducesJapaneseCaptions]' started.
+Test Case '-[LiveCaptioniPadTests.AppIntegrationTests testJapaneseRealAudioProducesJapaneseCaptions]' passed (11.910 seconds).
+	 Executed 4 tests, with 0 failures (0 unexpected) in 45.757 (45.763) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 45.757 (45.764) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 45.757 (45.765) seconds
+** TEST SUCCEEDED **

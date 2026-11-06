@@ -1,0 +1,6 @@
+PASS 8 source records retained; 4 new actual audio SHA256 values match.
+PASS 16 actual Tiny/Base direct/stream results: nonempty original-language output, valid source timestamps, Metal active; streaming no error/drop.
+PASS 4 historical JA/FR scores unchanged by expanded manifest and language filter; no JA/FR inference repeated.
+PASS selected English existing files reused with a curl stub that fails every network attempt.
+PASS unknown fixture language rejected with argparse exit 2.
+PASS corrupt temporary clip repaired from pinned official archive; valid sibling reused (fetch-repair.log).

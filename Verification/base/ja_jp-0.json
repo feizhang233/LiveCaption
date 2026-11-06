@@ -1,0 +1,17 @@
+{
+  "audioSeconds" : 10.44,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.43411004543304443,
+  "language" : "ja",
+  "loadSeconds" : 0.20238602161407471,
+  "peakResidentBytes" : 343425024,
+  "segments" : [
+    {
+      "end" : 10,
+      "start" : 0,
+      "text" : "インターネットで適体的環境構想について検索すると、おすらく原知機用の従事者が出てくるでしょう。"
+    }
+  ]
+}

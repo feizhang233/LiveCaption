@@ -1,0 +1,32 @@
+[
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/AudioProcessing.swift",
+    "baselineSHA256": "0255272a19b445622718c53776917de50a7d468ea29b54c574c1316804d6d255",
+    "optimizedSHA256": "a4ac87cfeab5a903c2a22e4ed7ded35725dd40114a03f931e44b5513f00cd157"
+  },
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/Caption.swift",
+    "baselineSHA256": "9c2339f0580335f016db5ba35beeb5b493e6d7019061f2b448e042a6294d0373",
+    "optimizedSHA256": "9c2339f0580335f016db5ba35beeb5b493e6d7019061f2b448e042a6294d0373"
+  },
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/CaptionReconciler.swift",
+    "baselineSHA256": "d8a721986042001d82a2f9741bff537471ee036b6f66d1725ad352e45f9d7349",
+    "optimizedSHA256": "d8a721986042001d82a2f9741bff537471ee036b6f66d1725ad352e45f9d7349"
+  },
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/CaptionTimeline.swift",
+    "baselineSHA256": "e09840a5708955ecc8620a1afecb2741eb4a15cf91bfe3add4018e24d79f66d4",
+    "optimizedSHA256": "e09840a5708955ecc8620a1afecb2741eb4a15cf91bfe3add4018e24d79f66d4"
+  },
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/StreamingTranscriber.swift",
+    "baselineSHA256": "0f27b7db5c48d6d33a04f8c94dd978a5396ccb2e2fac5dd25c40ec392b220e75",
+    "optimizedSHA256": "21f43a74df9c08c4a8b5f44c41a5db051cb89f37380c71fe72473b8d1dedc7ea"
+  },
+  {
+    "file": "Packages/CaptionCore/Sources/CaptionCore/WhisperEngine.swift",
+    "baselineSHA256": "5ccc8777b181cf48edd36cfc80622962cd7a32a6de68e9e2bed3a8ee8eff5a4d",
+    "optimizedSHA256": "5ccc8777b181cf48edd36cfc80622962cd7a32a6de68e9e2bed3a8ee8eff5a4d"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "audioSeconds" : 10.199999999999999,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.12220799922943115,
+  "language" : "fr",
+  "loadSeconds" : 0.12591397762298584,
+  "peakResidentBytes" : 341540864,
+  "segments" : [
+    {
+      "end" : 9,
+      "start" : 0,
+      "text" : "L'accident a eu lieu en terrement à lieu, et il sembleraient que cela était causé par un 110 malveillant."
+    }
+  ]
+}

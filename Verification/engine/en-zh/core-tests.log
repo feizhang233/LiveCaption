@@ -1,0 +1,110 @@
+warning: <USER_HOME>/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: <USER_HOME>/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+warning: <USER_HOME>/Library/Caches/org.swift.swiftpm is not accessible or not writable, disabling user-level cache features.
+warning: 'captioncore': failed storing manifest for 'captioncore' in cache: attempt to write a readonly database
+Building for debugging...
+[Planning deferred tasks]
+[6 / 17] CaptionCoreTests-product
+[8 / 19] CaptionCoreTests-product
+[14 / 18] CaptionCoreTests-product
+Build complete! (1.16 sec)
+Test Suite 'All tests' started at 2026-11-06 12:56:54.062.
+Test Suite 'CaptionCoreTests.xctest' started at 2026-11-06 12:56:54.063.
+Test Suite 'BugAuditRegressionTests' started at 2026-11-06 12:56:54.063.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBusyInferenceStillPublishesPreviewThenUsesLatestAudio]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBusyInferenceStillPublishesPreviewThenUsesLatestAudio]' passed (0.004 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testFinalSupersedesInFlightPartial]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testFinalSupersedesInFlightPartial]' passed (0.004 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testHugeFiniteTimestampDoesNotTrap]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testHugeFiniteTimestampDoesNotTrap]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testLateCancellationHandlerCannotCancelTheNextOperation]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testLateCancellationHandlerCannotCancelTheNextOperation]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testTimestampRoundingCarryAndInvalidValues]' started.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testTimestampRoundingCarryAndInvalidValues]' passed (0.000 seconds).
+Test Suite 'BugAuditRegressionTests' passed at 2026-11-06 12:56:54.072.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.009 (0.010) seconds
+Test Suite 'CaptionCoreTests' started at 2026-11-06 12:56:54.072.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testBufferedEventsAreTaggedForRejectionAfterSeek]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testBufferedEventsAreTaggedForRejectionAfterSeek]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testEngineLanguageListIsFromPinnedRuntime]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testEngineLanguageListIsFromPinnedRuntime]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testFirstPreviewAtOneSecondThenEightHundredMillisecondCadence]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testFirstPreviewAtOneSecondThenEightHundredMillisecondCadence]' passed (0.001 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testFullyOverlappingFinalIsNotRepeated]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testFullyOverlappingFinalIsNotRepeated]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testIdenticalSentenceLaterInMediaIsRetained]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testIdenticalSentenceLaterInMediaIsRetained]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testInvalidModelFailsTruthfully]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testInvalidModelFailsTruthfully]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testOverlapRemovalSupportsJapaneseAndFrench]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testOverlapRemovalSupportsJapaneseAndFrench]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testQuietAudioPunctuationDoesNotBecomePartialOrFinalSubtitle]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testQuietAudioPunctuationDoesNotBecomePartialOrFinalSubtitle]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testQuietSpeechEnergyIsNotRejectedByFixedLoudnessGate]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testQuietSpeechEnergyIsNotRejectedByFixedLoudnessGate]' passed (0.002 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testResetAfterSeekHasNoPriorAudio]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testResetAfterSeekHasNoPriorAudio]' passed (0.001 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSeekInvalidatesInFlightOutput]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSeekInvalidatesInFlightOutput]' passed (0.186 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSilenceDoesNotSubmitInference]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSilenceDoesNotSubmitInference]' passed (0.040 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSkippingBusyPreviewsPreservesEveryFinalSampleAndBoundary]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSkippingBusyPreviewsPreservesEveryFinalSampleAndBoundary]' passed (0.034 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSlowInferenceReportsDroppedAudioAndDoesNotAccumulateQueue]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSlowInferenceReportsDroppedAudioAndDoesNotAccumulateQueue]' passed (0.480 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSpeechWindowsStayBoundedAndOverlap]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSpeechWindowsStayBoundedAndOverlap]' passed (0.041 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSRTUsesSourceTimelineAndOmitsUnconfirmed]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testSRTUsesSourceTimelineAndOmitsUnconfirmed]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testStereoRightChannelIsMixedAndResampled]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testStereoRightChannelIsMixedAndResampled]' passed (0.007 seconds).
+Test Case '-[CaptionCoreTests.CaptionCoreTests testVADPrerollAndHangoverKeepSourceTimes]' started.
+Test Case '-[CaptionCoreTests.CaptionCoreTests testVADPrerollAndHangoverKeepSourceTimes]' passed (0.002 seconds).
+Test Suite 'CaptionCoreTests' passed at 2026-11-06 12:56:54.869.
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.795 (0.797) seconds
+Test Suite 'CaptionTimelineTests' started at 2026-11-06 12:56:54.869.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testCapacityReturnsUnretainedWithoutEvictingEarlierText]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testCapacityReturnsUnretainedWithoutEvictingEarlierText]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testCueAcrossMultipleConfirmedIntervalsIsNotSplitByCharacterRatio]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testCueAcrossMultipleConfirmedIntervalsIsNotSplitByCharacterRatio]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testExactJapaneseBoundaryRetainsNewSuffixWithDisjointTime]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testExactJapaneseBoundaryRetainsNewSuffixWithDisjointTime]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testFullyCoveredDuplicateIsSkippedButRevisionIsRetained]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testFullyCoveredDuplicateIsSkippedButRevisionIsRetained]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testNonoverlappingRepeatIsARealNewUtterance]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testNonoverlappingRepeatIsARealNewUtterance]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testPrimaryExportIsSortedAndDisjointAfterRepeatedSeeks]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testPrimaryExportIsSortedAndDisjointAfterRepeatedSeeks]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testSeekingEarlierPreservesNewPrefixAndExistingWholeCue]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testSeekingEarlierPreservesNewPrefixAndExistingWholeCue]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testSeekingIntoMiddleNeverDeletesEarlierUniqueWords]' started.
+Test Case '-[CaptionCoreTests.CaptionTimelineTests testSeekingIntoMiddleNeverDeletesEarlierUniqueWords]' passed (0.000 seconds).
+Test Suite 'CaptionTimelineTests' passed at 2026-11-06 12:56:54.870.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'EnglishChineseTests' started at 2026-11-06 12:56:54.870.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testChineseOverlapPreservesSimplifiedAndTraditionalScripts]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testChineseOverlapPreservesSimplifiedAndTraditionalScripts]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.EnglishChineseTests testEnglishAndChineseExportRoundTripKeepsUnicodeAndSourceTimes]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testEnglishAndChineseExportRoundTripKeepsUnicodeAndSourceTimes]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.EnglishChineseTests testEnglishOverlapKeepsNewWordsAndOriginalPunctuation]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testEnglishOverlapKeepsNewWordsAndOriginalPunctuation]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.EnglishChineseTests testLaterEnglishAndChineseRepetitionsAreNotDeleted]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testLaterEnglishAndChineseRepetitionsAreNotDeleted]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.EnglishChineseTests testPinnedEngineSupportsEnglishAndChineseAlongsideOtherLanguages]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testPinnedEngineSupportsEnglishAndChineseAlongsideOtherLanguages]' passed (0.000 seconds).
+Test Case '-[CaptionCoreTests.EnglishChineseTests testSchedulerForwardsEnglishChineseAndAutoWithoutRewritingText]' started.
+Test Case '-[CaptionCoreTests.EnglishChineseTests testSchedulerForwardsEnglishChineseAndAutoWithoutRewritingText]' passed (0.002 seconds).
+Test Suite 'EnglishChineseTests' passed at 2026-11-06 12:56:54.873.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds
+Test Suite 'CaptionCoreTests.xctest' passed at 2026-11-06 12:56:54.873.
+	 Executed 39 tests, with 0 failures (0 unexpected) in 0.808 (0.811) seconds
+Test Suite 'All tests' passed at 2026-11-06 12:56:54.873.
+	 Executed 39 tests, with 0 failures (0 unexpected) in 0.808 (0.811) seconds
+◇ Test run started.
+↳ Testing Library Version: 2403
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

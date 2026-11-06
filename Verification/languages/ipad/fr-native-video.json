@@ -1,0 +1,30 @@
+{
+  "captions" : [
+    {
+      "end" : 4.7300625000000007,
+      "start" : 1.9300625000000009,
+      "text" : "L'accident a eu lieu intérêt à montagneux."
+    },
+    {
+      "end" : 8.9300625000000018,
+      "start" : 4.7300625000000007,
+      "text" : "Il semblerait que cela était causé par un incendimalveillant."
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "fr",
+  "device" : "iPad",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "fr-native-video.mp4",
+  "inferenceSeconds" : 0.46448095900000003,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 7.21,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.199999999999999,
+  "sourceLanguage" : "fr",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.487726926803589
+}

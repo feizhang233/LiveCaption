@@ -1,0 +1,32 @@
+warning: <USER_HOME>/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: <USER_HOME>/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+warning: <USER_HOME>/Library/Caches/org.swift.swiftpm is not accessible or not writable, disabling user-level cache features.
+warning: 'captioncore': failed storing manifest for 'captioncore' in cache: attempt to write a readonly database
+Building for debugging...
+[Planning deferred tasks]
+[6 / 17] CaptionCoreTests-product
+[8 / 19] CaptionCoreTests-product
+[14 / 18] CaptionCoreTests-product
+Build complete! (1.11 sec)
+Test Suite 'Selected tests' started at 2026-11-06 12:23:32.209.
+Test Suite 'CaptionCoreTests.xctest' started at 2026-11-06 12:23:32.209.
+Test Suite 'BugAuditRegressionTests' started at 2026-11-06 12:23:32.209.
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped]' started.
+<PROJECT_ROOT>/Packages/CaptionCore/Tests/CaptionCoreTests/BugAuditRegressionTests.swift:9: error: -[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped] : XCTAssertEqual failed: ("nil") is not equal to ("Optional("Oui.")")
+<PROJECT_ROOT>/Packages/CaptionCore/Tests/CaptionCoreTests/BugAuditRegressionTests.swift:10: error: -[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped] : XCTAssertEqualWithAccuracy failed: ("-1.0") is not equal to ("1.01") +/- ("0.001")
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testBriefNewCaptionAfterConfirmedBoundaryIsNotDropped]' failed (0.022 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testNewerPartialSupersedesInFlightPartial]' started.
+<PROJECT_ROOT>/Packages/CaptionCore/Tests/CaptionCoreTests/BugAuditRegressionTests.swift:61: error: -[CaptionCoreTests.BugAuditRegressionTests testNewerPartialSupersedesInFlightPartial] : XCTAssertEqual failed: ("["obsolete hypothesis", "newer hypothesis"]") is not equal to ("["newer hypothesis"]")
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testNewerPartialSupersedesInFlightPartial]' failed (0.004 seconds).
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech]' started.
+<PROJECT_ROOT>/Packages/CaptionCore/Tests/CaptionCoreTests/BugAuditRegressionTests.swift:17: error: -[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech] : XCTAssertEqual failed: ("nil") is not equal to ("Optional("Bonjour.")")
+<PROJECT_ROOT>/Packages/CaptionCore/Tests/CaptionCoreTests/BugAuditRegressionTests.swift:18: error: -[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech] : XCTAssertEqualWithAccuracy failed: ("-1.0") is not equal to ("1.05") +/- ("0.001")
+Test Case '-[CaptionCoreTests.BugAuditRegressionTests testRepeatedWordsAfterConfirmedBoundaryAreStillNewSpeech]' failed (0.000 seconds).
+Test Suite 'BugAuditRegressionTests' failed at 2026-11-06 12:23:32.236.
+	 Executed 3 tests, with 5 failures (0 unexpected) in 0.027 (0.027) seconds
+Test Suite 'CaptionCoreTests.xctest' failed at 2026-11-06 12:23:32.236.
+	 Executed 3 tests, with 5 failures (0 unexpected) in 0.027 (0.027) seconds
+Test Suite 'Selected tests' failed at 2026-11-06 12:23:32.236.
+	 Executed 3 tests, with 5 failures (0 unexpected) in 0.027 (0.028) seconds
+Note: Some test targets reported failures:
+  - CaptionCoreTests (XCTest)

@@ -1,0 +1,22 @@
+{
+  "audioSeconds" : 10.199999999999999,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceWallSeconds" : 0.078065037727355957,
+  "language" : "fr",
+  "loadSeconds" : 0.073816061019897461,
+  "peakResidentBytes" : 245284864,
+  "segments" : [
+    {
+      "end" : 7.6799999999999997,
+      "start" : 0,
+      "text" : "L'accident a eu lieu en terrain montagneux et il semblerait que cela était causé par n'un"
+    },
+    {
+      "end" : 8.6799999999999997,
+      "start" : 7.6799999999999997,
+      "text" : "110 malveillant."
+    }
+  ]
+}

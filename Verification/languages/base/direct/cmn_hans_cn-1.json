@@ -1,0 +1,29 @@
+{
+  "audioSeconds" : 8.2799999999999994,
+  "benchmarkVersion" : 2,
+  "engine" : "whisper.cpp 1.9.5 \/ b5454",
+  "gpuLoaded" : true,
+  "gpuRequested" : true,
+  "inferenceCallCount" : 1,
+  "inferenceCalls" : [
+    {
+      "audioSeconds" : 8.2799999999999994,
+      "durationSeconds" : 0.092863916681380942,
+      "startSeconds" : 0.0033175416465383023,
+      "succeeded" : 1
+    }
+  ],
+  "inferenceTotalAudioSeconds" : 8.2799999999999994,
+  "inferenceTotalSeconds" : 0.092863916681380942,
+  "inferenceWallSeconds" : 0.096240083337761462,
+  "language" : "zh",
+  "loadSeconds" : 0.091748952865600586,
+  "peakResidentBytes" : 341442560,
+  "segments" : [
+    {
+      "end" : 7,
+      "start" : 0,
+      "text" : "蓋夾等元素屬於金屬,銀合金等元素,當然也是金屬。"
+    }
+  ]
+}

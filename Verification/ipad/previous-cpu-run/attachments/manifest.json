@@ -1,0 +1,47 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "A7A4576E-36E0-466E-BE73-B72B11F6CDB2.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr_fr-0.wav_0_0FCCF85A-E580-40A5-B226-41EB0B749B0C.json",
+        "timestamp" : 1793962245.342
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "0775E0AF-1177-4093-9DA9-2E15F2492E8E.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-fr-native-video.mp4_0_34DE889B-CBEA-4BAE-A65C-70F1BEB76172.json",
+        "timestamp" : 1793962256.244
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "1843660C-BAF1-4664-A668-5827B711BF15",
+        "deviceName" : "iPad Simulator",
+        "exportedFileName" : "F6F49179-2664-40BC-9D0F-9B0D297E48D8.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "real-inference-ja_jp-0.wav_0_34541EC9-8A82-48D6-B9F9-29D0E9F23F59.json",
+        "timestamp" : 1793962267.911
+      }
+    ],
+    "testIdentifier" : "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+    "testIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions"
+  }
+]

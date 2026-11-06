@@ -1,0 +1,39 @@
+{
+  "method": "Actual SessionController CPU tiny, muted French MP4; measured start() until running returns; three in-process resumes; cold and post-stop restart separate.",
+  "stages": [
+    "cold",
+    "resume_after_seek",
+    "resume_after_pause",
+    "resume_after_EOF",
+    "restart_after_stop"
+  ],
+  "samples": {
+    "before": {
+      "startCallSeconds": [
+        0.106319625,
+        0.05663025,
+        0.038763208,
+        0.057150791,
+        0.056996208
+      ],
+      "resumeMedianSeconds": 0.05663025,
+      "observedCModelInitCount": 5
+    },
+    "after": {
+      "startCallSeconds": [
+        0.080817,
+        0.009075833,
+        0.00388775,
+        0.009342083,
+        0.057146167
+      ],
+      "resumeMedianSeconds": 0.009075833,
+      "observedCModelInitCount": 2
+    }
+  },
+  "limits": [
+    "One process per version, three resume samples, not a confidence interval or physical iPad measurement.",
+    "Cold timings are retained but no cold-start improvement is claimed.",
+    "The intermediate overlapping warmup run was excluded from performance evidence."
+  ]
+}
