@@ -1,0 +1,30 @@
+{
+  "captions" : [
+    {
+      "end" : 9.0307499999999994,
+      "start" : 0.03075,
+      "text" : "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+    },
+    {
+      "end" : 10.230749999999999,
+      "start" : 9.2307499999999987,
+      "text" : "Thank you."
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "en",
+  "device" : "iPhone",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "en_us-0.wav",
+  "inferenceSeconds" : 0.431199375,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.3291875,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.56,
+  "sourceLanguage" : "en",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.537269949913025
+}

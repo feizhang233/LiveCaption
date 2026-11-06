@@ -1,0 +1,42 @@
+[
+  {
+    "platform": "macOS",
+    "bundleIdentifier": "com.example.livecaption.mac",
+    "minimumOS": "26.0",
+    "deviceFamily": [],
+    "build": "passed",
+    "signedForDistribution": false
+  },
+  {
+    "platform": "iOS Simulator",
+    "bundleIdentifier": "com.example.livecaption.ipad",
+    "minimumOS": "26.0",
+    "deviceFamily": [
+      1,
+      2
+    ],
+    "build": "passed",
+    "signedForDistribution": false,
+    "iPhoneOrientations": [
+      "UIInterfaceOrientationPortrait",
+      "UIInterfaceOrientationLandscapeLeft",
+      "UIInterfaceOrientationLandscapeRight"
+    ]
+  },
+  {
+    "platform": "iOS Device",
+    "bundleIdentifier": "com.example.livecaption.ipad",
+    "minimumOS": "26.0",
+    "deviceFamily": [
+      1,
+      2
+    ],
+    "build": "passed",
+    "signedForDistribution": false,
+    "iPhoneOrientations": [
+      "UIInterfaceOrientationPortrait",
+      "UIInterfaceOrientationLandscapeLeft",
+      "UIInterfaceOrientationLandscapeRight"
+    ]
+  }
+]

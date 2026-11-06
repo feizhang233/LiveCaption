@@ -2,7 +2,11 @@
 
 ## 決策
 
-第一版 iPad 使用 App 內本機媒體播放及本機原文字幕。跨 App 音訊／背景推論／字幕 PiP 沒有在實體 iPad 完成端到端驗證，因此不作為可用的產品功能。研究用 ReplayKit／PiP 工具獨立放在 `Experimental/ReplayKitProbe.xcodeproj`；它不連伺服器，不裝載 Whisper，畫面明確標示「診斷資料，非辨識字幕」。主 App 進入背景時應安全停止辨識，返回後由使用者繼續。
+0.2.0 的 iPhone／iPad 產品已加入本機媒體字幕子母畫面（PiP）：使用者匯入本機音訊或影片，開啟浮動字幕後，可透過系統 PiP 在其他 App 上方觀看字幕。來源仍是本 App 播放的媒體，不能擷取其他 App 的聲音。Mac 則使用獨立字幕面板與選單列控制，主視窗可收起。
+
+產品 PiP 已接入主 App，但實體 iPhone／iPad 的背景音訊、長時間推論、記憶體與耗電尚未完成端到端驗證。開啟時改用 CPU，只有 PiP 已啟動或正在啟動、且本機媒體工作階段符合條件時才保留背景辨識；否則進入背景會停止並釋放模型。PiP 關閉或啟動失敗會還原加速偏好，在背景時並停止辨識。Mac 與 iOS device 建置已通過；編譯不等同真機驗收。
+
+研究用 ReplayKit／PiP 工具仍獨立放在 `Experimental/ReplayKitProbe.xcodeproj`；它不連伺服器，不裝載 Whisper，畫面明確標示「診斷資料，非辨識字幕」。跨 App 音訊與下述 27＋ ScreenCaptureKit 路徑仍屬獨立研究，沒有隨本輪產品 PiP 一起完成。
 
 ## macOS 實作
 
@@ -24,6 +28,8 @@ App Group 是資料交換機制，不是執行排程機制。Apple 的 [extensio
 
 ## 背景生命週期與 PiP
 
+產品的 `CaptionPictureInPictureController` 使用 sample-buffer PiP 顯示目前字幕，時間軸、播放／暫停及跳轉回到同一個本機媒體工作階段。僅在系統 delegate 確認後顯示已開啟；不支援、無法啟動與逾時會提供狀態。`UIBackgroundModes=audio` 與 `AVAudioSession` 的播放模式服務於真正的匯入媒體，沒有無聲音軌或假的背景保活來源。停止會取消仍在準備的 PiP 請求，避免模型載入完成後重新啟動已停止的工作階段。
+
 Apple 的 [sample-buffer PiP content source](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/contentsource-swift.class/init%28samplebufferdisplaylayer%3Aplaybackdelegate%3A%29) 可承載自訂影格；probe 用實際診斷狀態文字生成 CVPixelBuffer，使用公開 playback delegate、renderer 背壓及單調 host-clock 時間。只有 `pictureInPictureControllerDidStartPictureInPicture` 回呼才顯示成功，失敗保留系統錯誤。不使用 private KVC，不偽裝視訊通話。
 
 PiP 的顯示能力不代表 Whisper inference 取得永久背景 CPU/GPU 時間。[Apple 背景執行指引](https://developer.apple.com/documentation/uikit/extending-your-app-s-background-execution-time) 的有限延長機制也不是長時間即時推論保證。probe 沒有 `UIBackgroundModes`，沒有無聲音軌，沒有假 VoIP／背景音訊。若系統拒絕這個無實際媒體播放的 PiP probe，結果應記為失敗，不能為了通過而加入虛假背景模式。
@@ -36,7 +42,7 @@ Apple 的 [背景模式文件](https://developer.apple.com/documentation/xcode/c
 
 下一個獨立實驗應以 `#available(iOS 27.0, *)` 隔離：使用者透過系統 picker 選取內容 → `SCStream` `.audio` → 有界 PCM 緩衝 → 主程序本機推論；依官方要求配置 `NSScreenCaptureUsageDescription` 與真正的 Screen Capture capability。先量測背景音訊交付、推論是否持續、記憶體／熱限制，再驗證字幕 PiP、權限撤銷及受保護內容。Mac 的 display filter initializer 和部分 stream 更新方法在 iOS 明列不可用，不能直接搬用現有 Mac 收音實作。
 
-**本次只完成公開文件及 SDK 可用性查核，未實作／編譯／真機驗證此 27＋路徑**；產品及既有 probe 未加入 `screen-capture` 模式。iPadOS 26 的前景媒體方案保留，現有 ReplayKit probe 僅作 26 版研究；兩條路徑須分開驗收。
+**本次只完成公開文件及 SDK 可用性查核，未實作／編譯／真機驗證此 27＋路徑**；產品及既有 probe 未加入 `screen-capture` 模式。iPadOS 26 的本機媒體方案保留，現有 ReplayKit probe 僅作 26 版研究；兩條路徑須分開驗收。
 
 ## 研究工具建置與簽署
 
@@ -57,9 +63,9 @@ xcodebuild -project Experimental/ReplayKitProbe.xcodeproj -scheme LiveCaptionPro
 |---|---|---|
 | iPad 26：其他 App 播放無保護日語／法語音訊 | `.audioApp` 計數增加、格式／PTS 有效、8 秒 ring 有新 sequence | 待真機 |
 | iPad 26：主 App 在前景／分割畫面／背景 | 分別記錄 callback、IPC 延遲、缺塊及主 App tick 停止時間 | 待真機 |
-| iPad：PiP 起動、停止、復原 | delegate 成功或具體錯誤；不把請求當成功 | 待真機 |
+| iPhone／iPad 產品：本機媒體字幕 PiP 起動、停止、復原 | delegate 成功或具體錯誤；播放／暫停／跳轉與主 App 同步 | 已實作並通過建置；待真機 |
 | iPad：鎖屏、離開 10／30 分鐘、其他 App 前景 | 記錄 suspension/jetsam；不宣稱背景推論 | 待真機 |
-| iPad：實際 Whisper inference 的 CPU/GPU/RSS | 真正音訊及模型，記錄熱降頻、記憶體壓力、長時間漏字 | 待真機；probe 不做推論 |
+| iPhone／iPad 產品：PiP 的 CPU inference／RSS | 真正音訊及模型，記錄熱降頻、記憶體壓力、長時間漏字與關閉後清理 | 待真機；PiP 使用 CPU，probe 不做推論 |
 | iPad 27：ScreenCaptureKit | 系統 picker → SCStream 音訊；正式 screen-capture 模式下的 CPU／GPU、PiP、記憶體及權限實測 | 官方文件／SDK 入口已查核；程式與真機待做 |
 | macOS：拒絕／撤銷錄製權限 | 顯示明確錯誤、停止時釋放 capture | 待互動測試 |
 | macOS：Safari／其他播放器全螢幕 | 字幕可見、無焦點竊取、穿透可恢復 | 待互動測試 |

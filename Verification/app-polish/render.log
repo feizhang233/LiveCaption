@@ -1,0 +1,7 @@
+sandbox_extension_issue_file_to_process failed for /tmp/live-caption-polish-render.ySJcVp/LiveCaption.app: 1 (Operation not permitted)
+Built bundle metadata: version 0.1.0, build 1; notices and privacy manifest found
+Rendered about-wide.png: 800 × 650, 42153 bytes
+Rendered about-narrow.png: 420 × 650, 32587 bytes
+Rendered about-dark.png: 420 × 650, 33319 bytes
+Rendered general-sibling.png: 800 × 650, 32200 bytes
+Foreground preserved; native offscreen windows only; no permissions, downloads or capture started

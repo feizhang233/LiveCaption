@@ -2,6 +2,14 @@
 
 這份文件說明 GitHub 原始碼交付包含什麼、如何從乾淨目錄建置，以及公開驗證紀錄的元資料處理。使用方式見 [README](../README.md)，維護入口見 [STRUCTURE](../STRUCTURE.md)。原始碼上傳不等同 App Store／TestFlight 發布、真機安裝或 Mac notarization。
 
+## 0.2.0 本輪發布核對
+
+本輪納入 Mac 浮動字幕與選單列背景控制、可選的語氣詞顯示過濾，以及 iPhone／iPad 本機媒體字幕 PiP。Mac 與 iOS device 建置已通過；實體行動裝置的 PiP 與長時間背景推論仍待驗證。GitHub 發布與本機 App 更新須以本輪最終提交、建置及安裝核對為準，以下舊版 tree 與快照結果僅保留為歷史證據。
+
+本輪針對 Git tracked 與未忽略的 untracked 候選檔案掃描路徑、私鑰／常見憑據格式及簽署 Team，未發現本機使用者家目錄路徑、真實憑據或個人 Team。URL 內嵌帳密格式僅命中 `Tests/CaptionScopeChecks.swift` 的故意無效測試網址。候選二進位均為圖示及 UI 驗證 PNG；沒有模型、媒體、framework、建置產物、私人備份或 symlink。這是候選清單與格式掃描結果，最終 staged diff 仍須核對。
+
+新增的 8 份 `Verification/` log／audit 已先原樣備份到忽略的 `BuildReports/PrivateEvidence/`，公開版本只替換本機工程路徑，4 份 JSON 均通過解析；沒有改寫測量、字幕、時間或既有 hash。可再生成的根目錄 `premium-audit.json` 已移出發布清單並加入 root-only 忽略規則，具名的 `Verification/**/premium-audit.json` 仍保留。新增驗證完成後須再檢查有無重新帶入本機元資料。
+
 ## 納入與排除
 
 納入原生 App、CaptionCore Swift source／tests、兩份已生成 Xcode 工程與 XcodeGen 定義、Config、建置／測試腳本、第三方授權、測試資料 manifest，以及小型文字驗證證據。`Verification/` 中的 JSON、SRT、log、XCTest 文字附件是測試結果，並非 App 會顯示的預設字幕。

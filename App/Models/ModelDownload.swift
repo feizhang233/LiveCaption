@@ -48,7 +48,8 @@ final class ModelDownload: NSObject, URLSessionDownloadDelegate, @unchecked Send
         let session = URLSession(configuration: configuration, delegate: self, delegateQueue: queue)
         self.session = session
         var request = URLRequest(url: url)
-        request.setValue("LiveCaption/1.0", forHTTPHeaderField: "User-Agent")
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        request.setValue(version.map { "LiveCaption/\($0)" } ?? "LiveCaption", forHTTPHeaderField: "User-Agent")
         let task = session.downloadTask(with: request)
         self.downloadTask = task
         task.resume()

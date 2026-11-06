@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "build": 2,
+  "coreTests": {
+    "passed": 47,
+    "failed": 0
+  },
+  "preferencesAndDisplayIntegration": "passed",
+  "scopeSession": {
+    "assertions": 34,
+    "passed": true,
+    "capture": "controlled silent PCM adapter, not actual system audio"
+  },
+  "macBuild": "passed",
+  "sourceArchiveMacBuild": {
+    "tree": "afeadaece1b0a39a8c8193e4fe4fd99450384315",
+    "passed": true,
+    "framework": "Existing SHA-verified pinned official XCFramework, excluded from Git"
+  },
+  "macInstalled": "0.2.0 (2), signature verified; actual main UI inspected; original models preserved",
+  "macCaptureAfterUpdate": "macOS TCC rejected capture despite switch on; awaiting user confirmation/regrant",
+  "iosPhysicalPiP": "unverified; simulator cannot prove real background execution",
+  "iosSimulatorTests": {
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "breakdown": "6 actual local-media inference; 4 layout; 5 PiP controller/renderer",
+    "actualPiPStart": "Simulator reports unsupported; actual PiP start/background inference unverified"
+  },
+  "iosDeviceBuild": "passed, unsigned",
+  "iosBundle": {
+    "UIApplicationSupportsMultipleScenes": false,
+    "UIBackgroundModes": [
+      "audio"
+    ],
+    "UIDeviceFamily": [
+      1,
+      2
+    ],
+    "MinimumOSVersion": "26.0"
+  }
+}

@@ -8,45 +8,73 @@
 
 /* Begin PBXBuildFile section */
 		008FA0C001F6B3BE382BE472 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262B312C4FFF495AD844EAE /* Theme.swift */; };
+		05FE88020BF2B349F1CEE9C4 /* BackgroundCaptionControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92984EF095732F91BD71C628 /* BackgroundCaptionControls.swift */; };
 		08361FBABF20F355F50641CC /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = BA7896814B04821CD4902A09 /* CaptionCore */; };
+		1114AC99875DE2168E202E91 /* MobileFloatingCaptionControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0905FB1600A2928DDB6C6043 /* MobileFloatingCaptionControls.swift */; };
+		1284B01681B66FC8A30E3E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD2D0FDB4BA5956F76657C /* Assets.xcassets */; };
 		1711435422C83864964655F5 /* NativePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */; };
+		179A1CEFAB265B8A3E9A86B3 /* ForegroundContextMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCF402E445FF5243F4F926 /* ForegroundContextMonitor.swift */; };
+		1BBCEED42FB5F48DE7611C4E /* CaptionDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A49934A1885E6FB0C9288B9 /* CaptionDocument.swift */; };
 		25E4DD4B972EA3A0CF43D527 /* CaptionPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */; };
 		2AF9191B24A068DCC7978263 /* PlaybackAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */; };
+		34DA0C662A68441B6E4228C7 /* CaptionWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035D3A7255B4AB4829A69E /* CaptionWorkspaceView.swift */; };
 		3E15F52B9553AFD9F21FB16C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA1B1141429E4823DECA05 /* RootView.swift */; };
+		4215DD3A96657B6B279F6941 /* CaptionWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA035D3A7255B4AB4829A69E /* CaptionWorkspaceView.swift */; };
+		47AB3E0099C2D7EC83285FF0 /* CaptionPictureInPicturePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471217507FF21560865C686 /* CaptionPictureInPicturePreview.swift */; };
+		4B6BBEA06D860546CD43997F /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F7893ACB5769EC4C3DB36 /* AppPreferences.swift */; };
 		4D668C7C616AA33A6D4C379E /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A60CF58A57AE18C271120 /* ModelsView.swift */; };
 		4D6897147F256089AF7A1CD2 /* WhisperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */; };
 		4F71C0E62C6E0B710FE28CF5 /* AppIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */; };
 		53B97DC563EEA8D2265E909C /* PlaybackAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */; };
 		5722D80515FDA27F5052187B /* SourceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */; };
+		576B0197950CA5A2B30BD2DD /* ForegroundContextMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCF402E445FF5243F4F926 /* ForegroundContextMonitor.swift */; };
+		5C01D5AF43D351B9CE8D928B /* CaptionScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97AF3F98310C6CF5EAC84C /* CaptionScope.swift */; };
 		5FDA390D35C3EFADCA916DD5 /* NativePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */; };
 		6B75E477550C8D11226AE851 /* CaptionPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */; };
+		6BD680933444447266962A24 /* CaptionPictureInPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DCDA6CF0A8A74CD65F556 /* CaptionPictureInPictureController.swift */; };
 		70958BDA6840ECFB91514F40 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2FA1F5D5410BD54375C47 /* SettingsView.swift */; };
+		72F521A15343A1BA5B894934 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F7893ACB5769EC4C3DB36 /* AppPreferences.swift */; };
 		73EA3FAA4FDF4DB4E4C1680D /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */; };
 		791EFC3B8098551C8709C061 /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */; };
 		7C52D98DB65F8A37C9B5A899 /* LiveCaptionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */; };
 		7FD74F2ABFEB09597303C157 /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = 924193751240D8C043FC66E1 /* CaptionCore */; };
+		83B17071970A0E7B96C00F2F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C36248AE1561D6B9E7DFE /* PrivacyInfo.xcprivacy */; };
 		888803B09125277C9CDC0E30 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA7F51559A1745A5C35478 /* SharedViews.swift */; };
 		91465F961DC46F083D51E96D /* LiveCaptionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */; };
 		916744E9F01472B829866899 /* ModelDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */; };
+		9185721DB5E0EFBE6436B207 /* MobileFloatingCaptionControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0905FB1600A2928DDB6C6043 /* MobileFloatingCaptionControls.swift */; };
 		9350EF6B9140442B322466D5 /* WhisperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */; };
 		9588A6169F607B9EBD35D405 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08E40D3994439CB144741 /* SessionController.swift */; };
 		97036A6867B02C8FACF749F0 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08E40D3994439CB144741 /* SessionController.swift */; };
+		9819FE4CE999710DF43EE1BA /* IOSLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E69B828E9EA0D17F47F99B7 /* IOSLayoutTests.swift */; };
+		9C1A73736888B3294BA75F73 /* CaptionDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A49934A1885E6FB0C9288B9 /* CaptionDocument.swift */; };
 		9EC416D00DFE89E8C5015AD6 /* ModelIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */; };
 		A013355E5BE7A0AB8D325D8C /* CaptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2511BC169487E80B43E59840 /* CaptionCore */; };
 		AAB737769E164816FEA674D5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2FA1F5D5410BD54375C47 /* SettingsView.swift */; };
+		AB377059C8601C2788986A69 /* AdaptiveControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA4827B952585602EC6AD6 /* AdaptiveControls.swift */; };
 		ABCA2FC20F3888959996C2C5 /* MacSystemAudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */; };
 		B2B5D6D3C0D63809A4E69E48 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */; };
 		BA310146C6C9F2BEFD9B36E4 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD73637FA25EDC27942F86B /* ModelStore.swift */; };
+		C0CB933BA175B1197AB4398E /* CaptionPictureInPictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DCDA6CF0A8A74CD65F556 /* CaptionPictureInPictureController.swift */; };
 		C919537D63E5DD712C57876A /* ModelIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */; };
+		CBA77733483B80FA1E46436A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C36248AE1561D6B9E7DFE /* PrivacyInfo.xcprivacy */; };
+		CC3274CF8A572F8A5DECC914 /* CaptionPictureInPicturePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B471217507FF21560865C686 /* CaptionPictureInPicturePreview.swift */; };
 		D0435B3BE2A94A77BE65FE1D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA1B1141429E4823DECA05 /* RootView.swift */; };
 		D0F82A468BD04BDFF87D0278 /* SourceLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */; };
 		D2C67E1EA05FDC00683E2247 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA7F51559A1745A5C35478 /* SharedViews.swift */; };
+		D3BE3E331A6E3A6C7217F190 /* BackgroundCaptionControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92984EF095732F91BD71C628 /* BackgroundCaptionControls.swift */; };
 		D8B4167F39F1A0E10A8D0249 /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A60CF58A57AE18C271120 /* ModelsView.swift */; };
 		D8BC04C89E8B07F9A980A3AD /* MacSystemAudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */; };
+		DCB7CBD0084F5DD698E6BDDD /* AdaptiveControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA4827B952585602EC6AD6 /* AdaptiveControls.swift */; };
 		DFF3E6B7B5892A83B3DE22D1 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD73637FA25EDC27942F86B /* ModelStore.swift */; };
+		E77F083514B49A7C748E41C7 /* PictureInPictureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EADCC6CE8EB5BAA8CB759 /* PictureInPictureTests.swift */; };
+		EA1C693B4F907FA002C0920F /* CaptionScopeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9969F321ACE686ACF21D5 /* CaptionScopeSettingsView.swift */; };
 		EECDC3B3515BDAC0793084A2 /* ModelDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */; };
 		EF22657A95970E75D53F2075 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262B312C4FFF495AD844EAE /* Theme.swift */; };
+		EF640C4DB7E18BF3F7B36A0C /* CaptionScopeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9969F321ACE686ACF21D5 /* CaptionScopeSettingsView.swift */; };
+		FC1B798F4C3F505628A8F499 /* CaptionScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97AF3F98310C6CF5EAC84C /* CaptionScope.swift */; };
 		FD0F77945EE720ED923634AE /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */; };
+		FD5677ABF97728D9F5BB72FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD2D0FDB4BA5956F76657C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +88,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0905FB1600A2928DDB6C6043 /* MobileFloatingCaptionControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileFloatingCaptionControls.swift; sourceTree = "<group>"; };
+		0D97AF3F98310C6CF5EAC84C /* CaptionScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionScope.swift; sourceTree = "<group>"; };
+		0FEA4827B952585602EC6AD6 /* AdaptiveControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveControls.swift; sourceTree = "<group>"; };
+		1E2C36248AE1561D6B9E7DFE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		207A60CF58A57AE18C271120 /* ModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsView.swift; sourceTree = "<group>"; };
 		2D3CE79E1C1732306E52E9EB /* WhisperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperModel.swift; sourceTree = "<group>"; };
 		3AFA1B1141429E4823DECA05 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4A49934A1885E6FB0C9288B9 /* CaptionDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionDocument.swift; sourceTree = "<group>"; };
 		4B9F3EE35E17B22145DF1728 /* ModelDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDownload.swift; sourceTree = "<group>"; };
+		4DCD2D0FDB4BA5956F76657C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF92854C7BA7D75B35399C2 /* ThirdPartyNotices.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThirdPartyNotices.txt; sourceTree = "<group>"; };
+		526EADCC6CE8EB5BAA8CB759 /* PictureInPictureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInPictureTests.swift; sourceTree = "<group>"; };
 		5D0FA5AA9D226C4388712367 /* PlaybackAudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackAudioSession.swift; sourceTree = "<group>"; };
 		5DC94BD4BABEB3B5F169F6B3 /* LiveCaption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveCaption.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767C0954D66AD8E974C8B955 /* CaptionCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CaptionCore; path = Packages/CaptionCore; sourceTree = SOURCE_ROOT; };
@@ -72,14 +107,22 @@
 		7CC08E40D3994439CB144741 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		7D109C68F3CBD9C0F5532EDE /* LiveCaptioniPadTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LiveCaptioniPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D2FA1F5D5410BD54375C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		92984EF095732F91BD71C628 /* BackgroundCaptionControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCaptionControls.swift; sourceTree = "<group>"; };
 		9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionPanelController.swift; sourceTree = "<group>"; };
+		9E69B828E9EA0D17F47F99B7 /* IOSLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSLayoutTests.swift; sourceTree = "<group>"; };
+		AF9F7893ACB5769EC4C3DB36 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
 		B399846C1127410FE3E16DA0 /* LiveCaptionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCaptionApp.swift; sourceTree = "<group>"; };
+		B471217507FF21560865C686 /* CaptionPictureInPicturePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionPictureInPicturePreview.swift; sourceTree = "<group>"; };
 		B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSystemAudioCapture.swift; sourceTree = "<group>"; };
 		BDD73637FA25EDC27942F86B /* ModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStore.swift; sourceTree = "<group>"; };
+		BFB9969F321ACE686ACF21D5 /* CaptionScopeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionScopeSettingsView.swift; sourceTree = "<group>"; };
+		C0CCF402E445FF5243F4F926 /* ForegroundContextMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundContextMonitor.swift; sourceTree = "<group>"; };
 		C728A0F5C2B254304403C4CC /* ModelIntegrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIntegrity.swift; sourceTree = "<group>"; };
 		C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntegrationTests.swift; sourceTree = "<group>"; };
 		C8BA7F51559A1745A5C35478 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
 		D262B312C4FFF495AD844EAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DA035D3A7255B4AB4829A69E /* CaptionWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionWorkspaceView.swift; sourceTree = "<group>"; };
+		F15DCDA6CF0A8A74CD65F556 /* CaptionPictureInPictureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionPictureInPictureController.swift; sourceTree = "<group>"; };
 		F9FEB1F7B217AE97A0DB7335 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		FA82B3C1B8DA82B574ACE85A /* NativePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePlayerView.swift; sourceTree = "<group>"; };
 		FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLanguage.swift; sourceTree = "<group>"; };
@@ -124,6 +167,8 @@
 		0F2384D7DE1C02ADF20B84A9 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				AF9F7893ACB5769EC4C3DB36 /* AppPreferences.swift */,
+				0D97AF3F98310C6CF5EAC84C /* CaptionScope.swift */,
 				7CC08E40D3994439CB144741 /* SessionController.swift */,
 				FE725BAE2718DC3ADB9D91CF /* SourceLanguage.swift */,
 			);
@@ -133,6 +178,7 @@
 		1F16428D31DA94912F7295C6 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				5EDB8B8F743BC0F8D6276EB3 /* iOS */,
 				450E2642E04393CBA7CDCB0D /* macOS */,
 			);
 			path = Platform;
@@ -141,6 +187,12 @@
 		2CD28059DA5494F396A59CFF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0FEA4827B952585602EC6AD6 /* AdaptiveControls.swift */,
+				92984EF095732F91BD71C628 /* BackgroundCaptionControls.swift */,
+				4A49934A1885E6FB0C9288B9 /* CaptionDocument.swift */,
+				BFB9969F321ACE686ACF21D5 /* CaptionScopeSettingsView.swift */,
+				DA035D3A7255B4AB4829A69E /* CaptionWorkspaceView.swift */,
+				0905FB1600A2928DDB6C6043 /* MobileFloatingCaptionControls.swift */,
 				207A60CF58A57AE18C271120 /* ModelsView.swift */,
 				3AFA1B1141429E4823DECA05 /* RootView.swift */,
 				80D2FA1F5D5410BD54375C47 /* SettingsView.swift */,
@@ -154,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				9A0AB9A7DD159D0D7F9A9CE6 /* CaptionPanelController.swift */,
+				C0CCF402E445FF5243F4F926 /* ForegroundContextMonitor.swift */,
 				B9E5481CE0932B3E29B761BA /* MacSystemAudioCapture.swift */,
 			);
 			path = macOS;
@@ -176,10 +229,20 @@
 				5573483CFC7D725A126C4229 /* Media */,
 				D8FEB83340304FF92B82C848 /* Models */,
 				1F16428D31DA94912F7295C6 /* Platform */,
+				A9E31C9E9DED56489B9BB1B2 /* Resources */,
 				0F2384D7DE1C02ADF20B84A9 /* Session */,
 				2CD28059DA5494F396A59CFF /* UI */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		5EDB8B8F743BC0F8D6276EB3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F15DCDA6CF0A8A74CD65F556 /* CaptionPictureInPictureController.swift */,
+				B471217507FF21560865C686 /* CaptionPictureInPicturePreview.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		781B7B225DD25D4DFA6E8A5B /* Notices */ = {
@@ -199,6 +262,15 @@
 				E3F60B918DDC547274A568DA /* ThirdParty */,
 				CEAF0832A12B81A408AC82CC /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		A9E31C9E9DED56489B9BB1B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD2D0FDB4BA5956F76657C /* Assets.xcassets */,
+				1E2C36248AE1561D6B9E7DFE /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AD0595527E450223A6D5E4CD /* Packages */ = {
@@ -223,6 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				C7AD0BB27AD118D31377E80D /* AppIntegrationTests.swift */,
+				9E69B828E9EA0D17F47F99B7 /* IOSLayoutTests.swift */,
+				526EADCC6CE8EB5BAA8CB759 /* PictureInPictureTests.swift */,
 			);
 			path = iPadIntegration;
 			sourceTree = "<group>";
@@ -358,6 +432,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5677ABF97728D9F5BB72FA /* Assets.xcassets in Resources */,
+				CBA77733483B80FA1E46436A /* PrivacyInfo.xcprivacy in Resources */,
 				791EFC3B8098551C8709C061 /* ThirdPartyNotices.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +442,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1284B01681B66FC8A30E3E54 /* Assets.xcassets in Resources */,
+				83B17071970A0E7B96C00F2F /* PrivacyInfo.xcprivacy in Resources */,
 				73EA3FAA4FDF4DB4E4C1680D /* ThirdPartyNotices.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,10 +455,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB377059C8601C2788986A69 /* AdaptiveControls.swift in Sources */,
+				4B6BBEA06D860546CD43997F /* AppPreferences.swift in Sources */,
+				D3BE3E331A6E3A6C7217F190 /* BackgroundCaptionControls.swift in Sources */,
+				9C1A73736888B3294BA75F73 /* CaptionDocument.swift in Sources */,
 				25E4DD4B972EA3A0CF43D527 /* CaptionPanelController.swift in Sources */,
+				6BD680933444447266962A24 /* CaptionPictureInPictureController.swift in Sources */,
+				47AB3E0099C2D7EC83285FF0 /* CaptionPictureInPicturePreview.swift in Sources */,
+				FC1B798F4C3F505628A8F499 /* CaptionScope.swift in Sources */,
+				EF640C4DB7E18BF3F7B36A0C /* CaptionScopeSettingsView.swift in Sources */,
+				34DA0C662A68441B6E4228C7 /* CaptionWorkspaceView.swift in Sources */,
+				576B0197950CA5A2B30BD2DD /* ForegroundContextMonitor.swift in Sources */,
 				7C52D98DB65F8A37C9B5A899 /* LiveCaptionApp.swift in Sources */,
 				ABCA2FC20F3888959996C2C5 /* MacSystemAudioCapture.swift in Sources */,
 				FD0F77945EE720ED923634AE /* MediaController.swift in Sources */,
+				1114AC99875DE2168E202E91 /* MobileFloatingCaptionControls.swift in Sources */,
 				EECDC3B3515BDAC0793084A2 /* ModelDownload.swift in Sources */,
 				9EC416D00DFE89E8C5015AD6 /* ModelIntegrity.swift in Sources */,
 				DFF3E6B7B5892A83B3DE22D1 /* ModelStore.swift in Sources */,
@@ -402,6 +491,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F71C0E62C6E0B710FE28CF5 /* AppIntegrationTests.swift in Sources */,
+				9819FE4CE999710DF43EE1BA /* IOSLayoutTests.swift in Sources */,
+				E77F083514B49A7C748E41C7 /* PictureInPictureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +500,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB7CBD0084F5DD698E6BDDD /* AdaptiveControls.swift in Sources */,
+				72F521A15343A1BA5B894934 /* AppPreferences.swift in Sources */,
+				05FE88020BF2B349F1CEE9C4 /* BackgroundCaptionControls.swift in Sources */,
+				1BBCEED42FB5F48DE7611C4E /* CaptionDocument.swift in Sources */,
 				6B75E477550C8D11226AE851 /* CaptionPanelController.swift in Sources */,
+				C0CB933BA175B1197AB4398E /* CaptionPictureInPictureController.swift in Sources */,
+				CC3274CF8A572F8A5DECC914 /* CaptionPictureInPicturePreview.swift in Sources */,
+				5C01D5AF43D351B9CE8D928B /* CaptionScope.swift in Sources */,
+				EA1C693B4F907FA002C0920F /* CaptionScopeSettingsView.swift in Sources */,
+				4215DD3A96657B6B279F6941 /* CaptionWorkspaceView.swift in Sources */,
+				179A1CEFAB265B8A3E9A86B3 /* ForegroundContextMonitor.swift in Sources */,
 				91465F961DC46F083D51E96D /* LiveCaptionApp.swift in Sources */,
 				D8BC04C89E8B07F9A980A3AD /* MacSystemAudioCapture.swift in Sources */,
 				B2B5D6D3C0D63809A4E69E48 /* MediaController.swift in Sources */,
+				9185721DB5E0EFBE6436B207 /* MobileFloatingCaptionControls.swift in Sources */,
 				916744E9F01472B829866899 /* ModelDownload.swift in Sources */,
 				C919537D63E5DD712C57876A /* ModelIntegrity.swift in Sources */,
 				BA310146C6C9F2BEFD9B36E4 /* ModelStore.swift in Sources */,
@@ -446,12 +548,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Config/iPad-Info.plist";
-				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
-				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = NO;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +559,7 @@
 				PRODUCT_NAME = LiveCaption;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -475,7 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad.tests;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption";
 			};
 			name = Release;
@@ -486,12 +585,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Config/iPad-Info.plist";
-				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
-				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = NO;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +596,7 @@
 				PRODUCT_NAME = LiveCaption;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -508,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -539,7 +636,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -563,7 +660,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -579,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -610,7 +708,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -628,7 +726,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,7 +748,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.livecaption.ipad.tests;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption";
 			};
 			name = Debug;
@@ -663,6 +761,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "讀取您允許的瀏覽器目前網址，在指定網站啟用原文字幕；不讀取網頁內容或儲存瀏覽歷史。";
 				INFOPLIST_KEY_NSAudioCaptureUsageDescription = "擷取您正在播放的系統音訊，在本機產生原文字幕。";
 				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "擷取系統播放音訊以產生字幕，不儲存螢幕影像。";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -683,6 +782,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "讀取您允許的瀏覽器目前網址，在指定網站啟用原文字幕；不讀取網頁內容或儲存瀏覽歷史。";
 				INFOPLIST_KEY_NSAudioCaptureUsageDescription = "擷取您正在播放的系統音訊，在本機產生原文字幕。";
 				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "擷取系統播放音訊以產生字幕，不儲存螢幕影像。";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,7 +7,13 @@ import ScreenCaptureKit
 /// Captures other applications through Apple's ScreenCaptureKit. No loopback driver.
 /// A fresh sink owns each session; conversion and delivery run on its serial queue.
 @MainActor
-final class MacSystemAudioCapture {
+protocol SystemAudioCapturing: AnyObject {
+    func start(onError: @escaping @Sendable (String) -> Void) async throws -> AsyncStream<CapturedAudioChunk>
+    func stop() async
+}
+
+@MainActor
+final class MacSystemAudioCapture: SystemAudioCapturing {
     enum CaptureError: LocalizedError {
         case alreadyRunning, noDisplay, permission(String), start(String)
         var errorDescription: String? {

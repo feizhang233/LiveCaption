@@ -163,7 +163,7 @@ final class CaptionCoreTests: XCTestCase {
         await stream.start(language: "ja")
         await stream.append(samples: Array(repeating: 0.1, count: 32_000), at: 100)
         try await Task.sleep(nanoseconds: 20_000_000)
-        await stream.reset(at: 10)
+        await stream.reset()
         await stream.append(samples: Array(repeating: 0.1, count: 32_000), at: 10)
         await stream.finish()
         let captions = await collector.value
@@ -200,7 +200,7 @@ final class CaptionCoreTests: XCTestCase {
     func testBufferedEventsAreTaggedForRejectionAfterSeek() async {
         let stream = StreamingTranscriber(engine: DelayedTestRecognizer())
         await stream.start(language: "ja")
-        await stream.reset(at: 10)
+        await stream.reset()
         var iterator = stream.taggedEvents.makeAsyncIterator()
         let obsolete = await iterator.next()
         XCTAssertEqual(obsolete?.generation, 0)

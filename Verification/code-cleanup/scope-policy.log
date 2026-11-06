@@ -1,0 +1,1 @@
+PASS: 44 foreground scope checks; exact app identity, domain boundaries, invalid input, persistence, callbacks and fail-closed recovery

@@ -1,0 +1,95 @@
+{
+  "actualConfirmedCaptions" : [
+    "インターネットで敵体的環境"
+  ],
+  "bundleIdentifier" : "unbundled test executable",
+  "fixture" : "ja_jp-0.wav",
+  "foregroundPreserved" : true,
+  "highContrast" : "not simulated; read-only system contrast setting",
+  "model" : "tiny CPU",
+  "passed" : true,
+  "reduceTransparency" : "not simulated; read-only system setting",
+  "renderings" : [
+    {
+      "bytes" : 11778,
+      "centerAlpha" : 0,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "initial-controls",
+      "width" : 760
+    },
+    {
+      "bytes" : 5154,
+      "centerAlpha" : 0,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "empty",
+      "width" : 760
+    },
+    {
+      "bytes" : 29036,
+      "centerAlpha" : 0.23529411764705882,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "text-only",
+      "width" : 760
+    },
+    {
+      "bytes" : 27385,
+      "centerAlpha" : 0.38039215686274508,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "text-only-narrow",
+      "width" : 320
+    },
+    {
+      "bytes" : 24823,
+      "centerAlpha" : 1,
+      "cornerAlpha" : 1,
+      "height" : 170,
+      "name" : "text-only-on-white",
+      "width" : 760
+    },
+    {
+      "bytes" : 27125,
+      "centerAlpha" : 0.38039215686274508,
+      "cornerAlpha" : 0,
+      "height" : 144,
+      "name" : "minimum-size-32pt",
+      "width" : 320
+    },
+    {
+      "bytes" : 20208,
+      "centerAlpha" : 1,
+      "cornerAlpha" : 0,
+      "height" : 144,
+      "name" : "minimum-size-64pt",
+      "width" : 320
+    },
+    {
+      "bytes" : 51749,
+      "centerAlpha" : 1,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "standard-size-64pt",
+      "width" : 760
+    },
+    {
+      "bytes" : 21901,
+      "centerAlpha" : 0.95686274509803926,
+      "cornerAlpha" : 0.94117647058823528,
+      "height" : 220,
+      "name" : "main-stage-sibling",
+      "width" : 760
+    },
+    {
+      "bytes" : 31498,
+      "centerAlpha" : 0.95294117647058818,
+      "cornerAlpha" : 0,
+      "height" : 170,
+      "name" : "background-enabled",
+      "width" : 760
+    }
+  ],
+  "sessionPanelStateSync" : true
+}

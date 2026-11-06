@@ -1,0 +1,11 @@
+Building for debugging...
+Build complete! (0.15 sec)
+Initial show: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0), screens=[(0.0, 0.0, 2560.0, 1410.0)]
+Initial show settled: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+After preset: frame=(0.0, 0.0, 480.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+Legacy frame forced: frame=(-10000.0, -10000.0, 320.0, 100.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+Reopened immediately: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+Reopened settled: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+Second reopen settled: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+Explicit resize: frame=(0.0, 0.0, 320.0, 144.0), min=(320.0, 144.0), contentMin=(320.0, 144.0)
+PASS: initial300ms, legacy100-height clamp, two hide/reopen cycles +300ms, original native host identity, live64pt typography all retain320×144 minimum; Session hide removes actual NSPanel

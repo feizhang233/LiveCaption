@@ -1,0 +1,3 @@
+2026-11-06 20:43:52.820 xcodebuild[54906:5455112] [MT] IDESchemeActionsInvocationRecord: Device <DVTiPhonePlaceholder: 0x7808b8e580 (Any iOS Device | undefined_arch)> is missing operatingSystemVersion, operatingSystemVersionWithBuildNumber.
+Build passed: LiveCaptioniPad (iphoneos), unsigned verification only.
+Build products: /private/tmp/livecaption-pip-device-final/Build/Products

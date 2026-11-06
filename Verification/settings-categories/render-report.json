@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "method": "Real SwiftUI SettingsView in offscreen NSHostingView / NSWindow; bitmap snapshots with native window background",
+  "rendered": {
+    "wide": "All 6 Mac categories at 800 x 650",
+    "narrow": "Captions and selected scope at 420 x 650",
+    "short": "Selected scope at 420 x 420, initial and scrolled to bottom"
+  },
+  "visuallyInspected": [
+    "All six wide categories",
+    "420 pt captions, scope and short scope",
+    "native-category-change.png",
+    "scope-short-bottom.png"
+  ],
+  "verified": [
+    "Only selected category content is shown",
+    "800 pt layout uses native segmented picker",
+    "420 pt layout falls back to native menu",
+    "Native NSSegmentedControl action changed General to About and rendered About fields",
+    "Native NSScrollView scroll reached site input and browser-permission controls at bottom of short scope form",
+    "Category selector remained visible while Form scrolled"
+  ],
+  "isolation": {
+    "foregroundPreserved": true,
+    "privateDefaultsSuite": true,
+    "standardPreferencesWritten": false,
+    "modelDownloadOrAudioCapture": false,
+    "browserPermissionRequested": false,
+    "externalAppInteraction": false
+  },
+  "notVerified": [
+    "Physical mouse/keyboard or VoiceOver interaction",
+    "Open menu popup geometry",
+    "Browser permission prompt flow",
+    "iPad runtime layout"
+  ],
+  "temporaryHarness": "/tmp/live-caption-settings-render.swift",
+  "productionSourceEditedByHarness": false
+}

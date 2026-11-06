@@ -1,0 +1,30 @@
+{
+  "captions" : [
+    {
+      "end" : 10.0368125,
+      "start" : 0.036812499999999998,
+      "text" : "インターネットで適対的環境構成し、検索すると、恐らく現地機用の上手が出てくるでしょう。"
+    },
+    {
+      "end" : 10.439937499999999,
+      "start" : 10.0368125,
+      "text" : "ご視聴ありがとうございました"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "ja",
+  "device" : "iPhone",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "ja_jp-0.wav",
+  "inferenceSeconds" : 0.43473616700000001,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 1.203125,
+  "requestedUseGPU" : true,
+  "sourceDurationSeconds" : 10.44,
+  "sourceLanguage" : "ja",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 11.434949040412903
+}

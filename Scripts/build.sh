@@ -6,9 +6,10 @@ CAPTION_BUILD_CONFIGURATION="${CAPTION_CONFIGURATION:-Debug}"
 MODE="${1:-all}"
 
 case "$MODE" in
-    mac|ipad-simulator|ipad-device|all) ;;
+    mac|ios-simulator|ios-device|ipad-simulator|ipad-device|all) ;;
     -h|--help)
-        echo "Usage: bash Scripts/build.sh [mac|ipad-simulator|ipad-device|all]"
+        echo "Usage: bash Scripts/build.sh [mac|ios-simulator|ios-device|all]"
+        echo "iOS builds support iPhone and iPad; legacy ipad-* aliases are also accepted."
         echo "Optional: CAPTION_BUILD_DIR=/path CAPTION_CONFIGURATION=Debug|Release"
         echo "Builds unsigned for verification only; does not install or publish."
         exit 0
@@ -39,8 +40,8 @@ build_target() {
 
 case "$MODE" in
     mac) build_target LiveCaptionMac macosx 'generic/platform=macOS' ;;
-    ipad-simulator) build_target LiveCaptioniPad iphonesimulator 'generic/platform=iOS Simulator' ;;
-    ipad-device) build_target LiveCaptioniPad iphoneos 'generic/platform=iOS' ;;
+    ios-simulator|ipad-simulator) build_target LiveCaptioniPad iphonesimulator 'generic/platform=iOS Simulator' ;;
+    ios-device|ipad-device) build_target LiveCaptioniPad iphoneos 'generic/platform=iOS' ;;
     all)
         build_target LiveCaptionMac macosx 'generic/platform=macOS'
         build_target LiveCaptioniPad iphonesimulator 'generic/platform=iOS Simulator'

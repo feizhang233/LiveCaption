@@ -1,0 +1,54 @@
+[
+  {
+    "test": "AppIntegrationTests/testEnglishRealAudioProducesEnglishCaptions()",
+    "file": "real-inference-en_us-0.wav-cpu.json"
+  },
+  {
+    "test": "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+    "file": "real-inference-fr_fr-0.wav-cpu.json"
+  },
+  {
+    "test": "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+    "file": "real-inference-fr-native-video.mp4-cpu.json"
+  },
+  {
+    "test": "AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+    "file": "real-inference-ja_jp-0.wav-automatic-acceleration.json"
+  },
+  {
+    "test": "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+    "file": "real-inference-ja_jp-0.wav-cpu.json"
+  },
+  {
+    "test": "AppIntegrationTests/testMandarinRealAudioProducesChineseCaptions()",
+    "file": "real-inference-cmn_hans_cn-0.wav-cpu.json"
+  },
+  {
+    "test": "IOSLayoutTests/testAccessibilityTypeKeepsCompactNavigation()",
+    "file": "iphone-320-accessibility3-bottom.png"
+  },
+  {
+    "test": "IOSLayoutTests/testAccessibilityTypeKeepsCompactNavigation()",
+    "file": "iphone-320-accessibility3-live.png"
+  },
+  {
+    "test": "IOSLayoutTests/testCompactLandscapeKeepsTabNavigation()",
+    "file": "iphone-landscape-live.png"
+  },
+  {
+    "test": "IOSLayoutTests/testCompactPortraitShowsAllFourDestinations()",
+    "file": "iphone-320-portrait-settings.png"
+  },
+  {
+    "test": "IOSLayoutTests/testCompactPortraitShowsAllFourDestinations()",
+    "file": "iphone-320-portrait-models.png"
+  },
+  {
+    "test": "IOSLayoutTests/testCompactPortraitShowsAllFourDestinations()",
+    "file": "iphone-320-portrait-live.png"
+  },
+  {
+    "test": "IOSLayoutTests/testRegularIPadUsesSplitNavigation()",
+    "file": "ipad-regular-live.png"
+  }
+]

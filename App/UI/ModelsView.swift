@@ -42,11 +42,10 @@ private struct ModelRow: View {
     var state: ModelInstallState { session.models.state(for: model) }
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(model.name).font(.title3.weight(.semibold))
-                if session.models.selectedID == model.id { Label("已選擇", systemImage: "checkmark.circle.fill").font(.caption).foregroundStyle(CaptionTheme.accent) }
-                Spacer()
-                Text(model.formattedFileSize).font(.body.monospacedDigit())
+            AdaptiveControls(horizontalSpacing: 8, verticalSpacing: 6, verticalAlignment: .firstTextBaseline) {
+                modelName
+                selectedBadge
+                fileSize
             }
             Text("執行記憶體估計 \(model.formattedMemoryEstimate) · 建議裝置記憶體 \(model.formattedRecommendedRAM)")
                 .font(.caption).foregroundStyle(.secondary)
@@ -54,33 +53,83 @@ private struct ModelRow: View {
             switch state {
             case .downloading(let progress):
                 ProgressView(value: progress) { Text(state.statusText) }
-                Button("取消下載") { session.models.cancel(model) }
+                Button { session.models.cancel(model) } label: { actionLabel("取消下載") }
             case .verifying:
                 HStack { ProgressView().controlSize(.small); Text("正在驗證完整性…").font(.callout) }
-                if session.models.canCancel(model) { Button("取消驗證") { session.models.cancel(model) } }
+                if session.models.canCancel(model) {
+                    Button { session.models.cancel(model) } label: { actionLabel("取消驗證") }
+                }
             case .installed:
-                HStack {
-                    Label("已通過完整性校驗", systemImage: "checkmark.shield").font(.caption).foregroundStyle(.secondary)
-                    Spacer()
-                    Button(session.models.activeModelID != nil && session.models.activeModelID != model.id ? "停止並切換" : "使用模型") {
-                        Task { await session.selectModel(model) }
-                    }.disabled(session.models.selectedID == model.id || session.isBusy)
-                    Button("刪除", role: .destructive, action: delete)
-                        .disabled(session.models.activeModelID == model.id)
+                AdaptiveControls(horizontalSpacing: 8, verticalSpacing: 10) {
+                    verifiedLabel
+                    installedActions
                 }
             case .notInstalled:
-                Button("下載 \(model.formattedFileSize)", systemImage: "arrow.down.circle") { session.models.download(model) }
-                    .disabled(session.models.isBusy)
+                Button { session.models.download(model) } label: {
+                    Label { actionLabel("下載 \(model.formattedFileSize)") } icon: { Image(systemName: "arrow.down.circle") }
+                }
+                .disabled(session.models.isBusy)
             case .failed(let error):
                 Label(error, systemImage: "exclamationmark.triangle").font(.callout).foregroundStyle(.orange)
-                HStack {
-                    Button("重試下載") { session.models.download(model) }.disabled(session.models.isBusy)
-                    if session.models.hasStoredFile(model) { Button("刪除無效檔案", role: .destructive, action: delete) }
-                }
+                AdaptiveControls(horizontalSpacing: 8, verticalSpacing: 10) { retryActions }
             }
         }
         .buttonStyle(.bordered)
         .controlSize(.regular)
         .padding(.vertical, 12)
+    }
+
+    private var modelName: some View {
+        Text(model.name).font(.title3.weight(.semibold))
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    @ViewBuilder private var selectedBadge: some View {
+        if session.models.selectedID == model.id {
+            Label("已選擇", systemImage: "checkmark.circle.fill")
+                .font(.caption).foregroundStyle(CaptionTheme.accent)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private var fileSize: some View {
+        Text(model.formattedFileSize).font(.body.monospacedDigit())
+    }
+
+    private var verifiedLabel: some View {
+        Label("已通過完整性校驗", systemImage: "checkmark.shield")
+            .font(.caption).foregroundStyle(.secondary)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private var installedActions: some View {
+        AdaptiveControls(horizontalSpacing: 10, verticalSpacing: 10) { modelSelectionActions }
+    }
+
+    @ViewBuilder private var modelSelectionActions: some View {
+        Button {
+            Task { await session.selectModel(model) }
+        } label: {
+            actionLabel(session.models.activeModelID != nil && session.models.activeModelID != model.id ? "停止並切換" : "使用模型")
+        }
+        .disabled(session.models.selectedID == model.id || session.isBusy)
+        Button(role: .destructive, action: delete) { actionLabel("刪除") }
+            .disabled(session.models.activeModelID == model.id)
+    }
+
+    @ViewBuilder private var retryActions: some View {
+        Button { session.models.download(model) } label: { actionLabel("重試下載") }
+            .disabled(session.models.isBusy)
+        if session.models.hasStoredFile(model) {
+            Button(role: .destructive, action: delete) { actionLabel("刪除無效檔案") }
+        }
+    }
+
+    private func actionLabel(_ title: String) -> some View {
+        Text(title)
+            .fixedSize(horizontal: false, vertical: true)
+            #if os(iOS)
+            .frame(minHeight: 44)
+            #endif
     }
 }

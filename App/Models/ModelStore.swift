@@ -15,7 +15,6 @@ final class ModelStore {
     @ObservationIgnored private let defaults: UserDefaults
     @ObservationIgnored private var operations: [String: Task<Void, Never>] = [:]
     @ObservationIgnored private var operationIDs: [String: UUID] = [:]
-    @ObservationIgnored private var scanTask: Task<Void, Never>?
     private static let selectionKey = "livecaption.selectedModel"
 
     var selectedModel: WhisperModel? { models.first { $0.id == selectedID } }
@@ -56,7 +55,7 @@ final class ModelStore {
                 states[model.id] = .verifying
                 operationIDs[model.id] = UUID()
             }
-            scanTask = Task { [weak self] in await self?.validateExistingFiles(existing) }
+            Task { [weak self] in await self?.validateExistingFiles(existing) }
         } catch {
             storageError = "無法建立模型儲存區：\(error.localizedDescription)"
         }
@@ -139,12 +138,7 @@ final class ModelStore {
                 try Task.checkCancellation()
                 guard self.operationIDs[model.id] == operationID else { return }
                 self.states[model.id] = .verifying
-                let verification = Task.detached(priority: .utility) {
-                    try ModelIntegrity.verify(url, expectedBytes: model.fileBytes, sha256: model.sha256)
-                }
-                try await withTaskCancellationHandler {
-                    try await verification.value
-                } onCancel: { verification.cancel() }
+                try await Self.verifyFile(url, model: model)
                 try Task.checkCancellation()
                 guard self.operationIDs[model.id] == operationID else { return }
                 let destination = self.storageURL.appendingPathComponent(model.fileName)
@@ -189,14 +183,12 @@ final class ModelStore {
     }
 
     private func validateExistingFiles(_ existing: [WhisperModel]) async {
-        defer { scanTask = nil; refreshStorage() }
+        defer { refreshStorage() }
         for model in existing {
             let url = storageURL.appendingPathComponent(model.fileName)
             guard let operationID = operationIDs[model.id], operations[model.id] == nil else { continue }
             do {
-                try await Task.detached(priority: .utility) {
-                    try ModelIntegrity.verify(url, expectedBytes: model.fileBytes, sha256: model.sha256)
-                }.value
+                try await Self.verifyFile(url, model: model)
                 guard operationIDs[model.id] == operationID else { continue }
                 states[model.id] = .installed
             } catch {
@@ -205,6 +197,15 @@ final class ModelStore {
             }
             operationIDs[model.id] = nil
         }
+    }
+
+    private nonisolated static func verifyFile(_ url: URL, model: WhisperModel) async throws {
+        let verification = Task.detached(priority: .utility) {
+            try ModelIntegrity.verify(url, expectedBytes: model.fileBytes, sha256: model.sha256)
+        }
+        try await withTaskCancellationHandler {
+            try await verification.value
+        } onCancel: { verification.cancel() }
     }
 
     private static func itemExists(at url: URL) -> Bool {

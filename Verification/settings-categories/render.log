@@ -1,0 +1,16 @@
+Rendered general-wide.png: 800 × 650, 32200 bytes
+Native category action sent: true; selection: 5
+Rendered captions-wide.png: 800 × 650, 47347 bytes
+Rendered scope-wide.png: 800 × 650, 84619 bytes
+Rendered recognition-wide.png: 800 × 650, 41263 bytes
+Rendered privacy-wide.png: 800 × 650, 46029 bytes
+Rendered about-wide.png: 800 × 650, 37590 bytes
+Rendered captions-narrow.png: 420 × 650, 38090 bytes
+Rendered scope-narrow.png: 420 × 650, 69162 bytes
+View types: AppKitPlatformViewHost<PlatformViewRepresentableAdaptor<PlatformTextFieldAdaptor>>, AppKitTextField, AppKitTextInteractionView, DocumentView, HostingClipView, HostingScrollView, KeyViewProxy, NSHostingView<ModifiedContent<ModifiedContent<ModifiedContent<ModifiedContent<ModifiedContent<SettingsView, _EnvironmentKeyWritingModifier<Locale>>, _EnvironmentKeyWritingModifier<ColorScheme>>, _EnvironmentKeyWritingModifier<Optional<AnyShapeStyle>>>, _FrameLayout>, _BackgroundStyleModifier<Color>>>, NSScroller, NSSimpleLabel, NSVisualEffectView, PlatformContainer, PlatformGroupContainer, _FocusRingView, _NSCoreHostingView<AppKitTextField>, _NSGraphicsView, _NSScrollViewContentBackgroundView
+Scroll document: (0.0, 0.0, 420.0, 677.0); viewport: (0.0, 0.0, 420.0, 371.0); flipped: true
+Rendered scope-short-bottom.png after native NSScrollView scroll
+Rendered scope-short.png: 420 × 420, 41526 bytes
+Foreground preserved: true
+Native NSHostingView bitmap snapshots only; no capture, browser permissions, or external-app UI interaction.
+Verified native offscreen control actions: General -> About category change; scope Form scroll to bottom while category selector stays visible. No physical mouse/keyboard or external app actions.

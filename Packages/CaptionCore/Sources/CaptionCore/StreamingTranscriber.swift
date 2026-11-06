@@ -90,7 +90,8 @@ public actor StreamingTranscriber {
 
     /// Seek/discontinuity invalidates ALL in-flight output. Call before feeding
     /// samples from the new playhead. Previously emitted history belongs to UI.
-    public func reset(at time: Double) {
+    /// The next append supplies the new source timestamp.
+    public func reset() {
         invalidate()
         reconciler.reset()
         metrics = TranscriptionMetrics()
@@ -114,8 +115,7 @@ public actor StreamingTranscriber {
         queue.removeAll(keepingCapacity: true); pendingPartial = nil
         builder.reset(); partialID = UUID(); lastNoAudio = false
         emit(.partial(nil))
-        let saved = waiters; waiters.removeAll()
-        for waiter in saved { waiter.resume() }
+        resumeWaiters()
     }
 
     private func enqueue(_ window: SpeechWindow) {
@@ -184,7 +184,12 @@ public actor StreamingTranscriber {
         guard requestedEpoch == epoch else { return }
         worker = nil
         if running { emit(.status(lastNoAudio ? .noAudio : .listening)) }
-        let saved = waiters; waiters.removeAll()
+        resumeWaiters()
+    }
+
+    private func resumeWaiters() {
+        let saved = waiters
+        waiters.removeAll()
         for waiter in saved { waiter.resume() }
     }
 }

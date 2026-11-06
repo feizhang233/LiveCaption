@@ -1,0 +1,195 @@
+{
+  "devices" : [
+    {
+      "architecture" : "arm64",
+      "deviceId" : "0240F5AE-5648-40AC-B548-F76DFD1AD54F",
+      "deviceName" : "Live Caption iPhone Verification",
+      "modelName" : "iPhone 17",
+      "osBuildNumber" : "24A434",
+      "osVersion" : "27.0",
+      "platform" : "iOS Simulator"
+    }
+  ],
+  "testNodes" : [
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "12s",
+                  "durationInSeconds" : 12.096638083457947,
+                  "name" : "testEnglishRealAudioProducesEnglishCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testEnglishRealAudioProducesEnglishCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testEnglishRealAudioProducesEnglishCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "10s",
+                  "durationInSeconds" : 10.848327994346619,
+                  "name" : "testFrenchRealAudioProducesFrenchCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealAudioProducesFrenchCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "10s",
+                  "durationInSeconds" : 10.873764038085938,
+                  "name" : "testFrenchRealVideoProducesFrenchCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testFrenchRealVideoProducesFrenchCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "11s",
+                  "durationInSeconds" : 11.959630966186523,
+                  "name" : "testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseAutomaticAccelerationProducesJapaneseCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "12s",
+                  "durationInSeconds" : 12.260187983512878,
+                  "name" : "testJapaneseRealAudioProducesJapaneseCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testJapaneseRealAudioProducesJapaneseCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "11s",
+                  "durationInSeconds" : 11.11705207824707,
+                  "name" : "testMandarinRealAudioProducesChineseCaptions()",
+                  "nodeIdentifier" : "AppIntegrationTests/testMandarinRealAudioProducesChineseCaptions()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests/testMandarinRealAudioProducesChineseCaptions",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "AppIntegrationTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/AppIntegrationTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "1s",
+                  "durationInSeconds" : 1.4146099090576172,
+                  "name" : "testAccessibilityTypeKeepsCompactNavigation()",
+                  "nodeIdentifier" : "IOSLayoutTests/testAccessibilityTypeKeepsCompactNavigation()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/IOSLayoutTests/testAccessibilityTypeKeepsCompactNavigation",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.91s",
+                  "durationInSeconds" : 0.9105029106140137,
+                  "name" : "testCompactLandscapeKeepsTabNavigation()",
+                  "nodeIdentifier" : "IOSLayoutTests/testCompactLandscapeKeepsTabNavigation()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/IOSLayoutTests/testCompactLandscapeKeepsTabNavigation",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "2s",
+                  "durationInSeconds" : 2.567694067955017,
+                  "name" : "testCompactPortraitShowsAllFourDestinations()",
+                  "nodeIdentifier" : "IOSLayoutTests/testCompactPortraitShowsAllFourDestinations()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/IOSLayoutTests/testCompactPortraitShowsAllFourDestinations",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "1s",
+                  "durationInSeconds" : 1.1503340005874634,
+                  "name" : "testRegularIPadUsesSplitNavigation()",
+                  "nodeIdentifier" : "IOSLayoutTests/testRegularIPadUsesSplitNavigation()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/IOSLayoutTests/testRegularIPadUsesSplitNavigation",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "IOSLayoutTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/IOSLayoutTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.66s",
+                  "durationInSeconds" : 0.6568340063095093,
+                  "name" : "testCaptionFrameRepaintsWhilePlaybackIsPaused()",
+                  "nodeIdentifier" : "PictureInPictureTests/testCaptionFrameRepaintsWhilePlaybackIsPaused()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests/testCaptionFrameRepaintsWhilePlaybackIsPaused",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.16s",
+                  "durationInSeconds" : 0.16457390785217285,
+                  "name" : "testLateStartFailureClearsStateAndNotifiesOwnerOnce()",
+                  "nodeIdentifier" : "PictureInPictureTests/testLateStartFailureClearsStateAndNotifiesOwnerOnce()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests/testLateStartFailureClearsStateAndNotifiesOwnerOnce",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.004s",
+                  "durationInSeconds" : 0.004027962684631348,
+                  "name" : "testPlaybackQueriesFollowFiniteMediaTimeline()",
+                  "nodeIdentifier" : "PictureInPictureTests/testPlaybackQueriesFollowFiniteMediaTimeline()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests/testPlaybackQueriesFollowFiniteMediaTimeline",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.002s",
+                  "durationInSeconds" : 0.0020020008087158203,
+                  "name" : "testStartRequiresPlayingLocalMediaAndVisiblePreview()",
+                  "nodeIdentifier" : "PictureInPictureTests/testStartRequiresPlayingLocalMediaAndVisiblePreview()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests/testStartRequiresPlayingLocalMediaAndVisiblePreview",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0081s",
+                  "durationInSeconds" : 0.008080005645751953,
+                  "name" : "testTransportActionsReachPlaybackOwner()",
+                  "nodeIdentifier" : "PictureInPictureTests/testTransportActionsReachPlaybackOwner()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests/testTransportActionsReachPlaybackOwner",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "PictureInPictureTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests/PictureInPictureTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "LiveCaptioniPadTests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/LiveCaption/LiveCaptioniPadTests",
+          "nodeType" : "Unit test bundle",
+          "result" : "Passed"
+        }
+      ],
+      "name" : "LiveCaptioniPad",
+      "nodeType" : "Test Plan",
+      "result" : "Passed"
+    }
+  ],
+  "testPlanConfigurations" : [
+    {
+      "configurationId" : "1",
+      "configurationName" : "Test Scheme Action"
+    }
+  ]
+}

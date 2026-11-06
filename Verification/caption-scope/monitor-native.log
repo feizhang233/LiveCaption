@@ -1,0 +1,5 @@
+PASS: default-disabled monitor reports actual foreground identity without reading a page
+PASS: unsupported foreground app fails closed
+Read-only no-prompt probe: Safari: permissionRequired, 0.064 s, URL present: false
+Read-only no-prompt probe: Google Chrome: permissionRequired, 0.025 s, URL present: false
+PASS: stop clears context (3 context notifications)

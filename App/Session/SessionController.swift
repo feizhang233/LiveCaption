@@ -2,6 +2,9 @@ import AVFoundation
 import CaptionCore
 import Foundation
 import Observation
+#if os(macOS)
+import AppKit
+#endif
 #if os(iOS)
 import UIKit
 #endif
@@ -26,8 +29,10 @@ final class SessionController {
     }
     let models: ModelStore
     let media = MediaController()
-    let preferences = AppPreferences()
-    var source: CaptionSource = .media
+    let preferences: AppPreferences
+    var source: CaptionSource = .media {
+        didSet { defaults.set(source.rawValue, forKey: "captionSource") }
+    }
     private var selectedLanguageCode: String
     var language: String {
         get { selectedLanguageCode }
@@ -50,9 +55,28 @@ final class SessionController {
     private(set) var inputDroppedSeconds: Double = 0
     private(set) var activeBackend = "尚未載入"
     var useGPU = true
-    var overlayVisible = false
-    var clickThrough = false
-    var alwaysOnTop = true
+    var overlayVisible = false {
+        didSet {
+            #if os(macOS)
+            if overlayVisible { panel.show(content: FloatingCaptionView(session: self)) }
+            else { panel.hide() }
+            #endif
+        }
+    }
+    var clickThrough = false {
+        didSet {
+            #if os(macOS)
+            panel.setClickThrough(clickThrough)
+            #endif
+        }
+    }
+    var alwaysOnTop = true {
+        didSet {
+            #if os(macOS)
+            panel.setAlwaysOnTop(alwaysOnTop)
+            #endif
+        }
+    }
     @ObservationIgnored let engine: WhisperEngine
     @ObservationIgnored let transcriber: StreamingTranscriber
     @ObservationIgnored private var eventTask: Task<Void, Never>?
@@ -65,13 +89,34 @@ final class SessionController {
     @ObservationIgnored private var isImporting = false
     @ObservationIgnored private var timeline = CaptionTimeline()
     @ObservationIgnored private var sessionStart = ProcessInfo.processInfo.systemUptime
-    @ObservationIgnored private var lastAudio = Date()
-    @ObservationIgnored private var lifecycleObservers: [NSObjectProtocol] = []
     @ObservationIgnored private let defaults: UserDefaults
-    #if os(macOS)
-    @ObservationIgnored let capture = MacSystemAudioCapture()
-    @ObservationIgnored let panel = CaptionPanelController()
+    #if os(iOS)
+    @ObservationIgnored private var lifecycleObservers: [NSObjectProtocol] = []
+    let pictureInPicture = CaptionPictureInPictureController()
+    private(set) var isPreparingPictureInPicture = false
+    @ObservationIgnored private var pictureInPictureRequestedGPU: Bool?
+    @ObservationIgnored private var pictureInPicturePreparation: UUID?
     #endif
+    #if os(macOS)
+    @ObservationIgnored private var lastAudio = Date()
+    @ObservationIgnored var capture: any SystemAudioCapturing = MacSystemAudioCapture()
+    @ObservationIgnored let panel = CaptionPanelController()
+    let captionScope: CaptionScopePreferences
+    let foregroundMonitor = ForegroundContextMonitor()
+    private(set) var scopeWaiting = false
+    @ObservationIgnored private var scopeArmed = false
+    @ObservationIgnored private var scopeRevoked = false
+    @ObservationIgnored private var foregroundContext: ForegroundContext?
+    @ObservationIgnored private var monitorsForeground = true
+    #endif
+
+    var isWaitingForScope: Bool {
+        #if os(macOS)
+        source == .system && (scopeWaiting || (scopeArmed && scopeRevoked))
+        #else
+        false
+        #endif
+    }
 
     var canStart: Bool {
         !isImporting && !media.isLoading && [.idle, .paused, .failed].contains(phase) && hasReadyModel &&
@@ -92,6 +137,7 @@ final class SessionController {
         phase == .paused || (phase == .running && source == .media && !media.isPlaying)
     }
     var stageCaption: CaptionSegment? {
+        if isWaitingForScope { return nil }
         if let partial { return partial }
         if source == .media {
             return captions.last { $0.start <= media.currentTime && $0.end + 2 >= media.currentTime }
@@ -99,10 +145,22 @@ final class SessionController {
         return captions.last
     }
 
-    init(models: ModelStore? = nil, defaults: UserDefaults = .standard) {
+    func displayText(for caption: CaptionSegment) -> String {
+        CaptionDisplayFilter.text(caption.text, language: language, hideFillers: preferences.hideFillerWords)
+    }
+
+    var displayStageText: String { stageCaption.map { displayText(for: $0) } ?? "" }
+
+    init(models: ModelStore? = nil, defaults: UserDefaults = .standard, monitorForeground: Bool = true) {
         self.defaults = defaults
+        preferences = AppPreferences(defaults: defaults)
+        #if os(macOS)
+        source = CaptionSource(rawValue: defaults.string(forKey: "captionSource") ?? "") ?? .system
+        captionScope = CaptionScopePreferences(defaults: defaults)
+        monitorsForeground = monitorForeground
+        #endif
         selectedLanguageCode = SourceLanguageCatalog.validatedCode(defaults.string(forKey: Self.languagePreferenceKey))
-        self.models = models ?? ModelStore()
+        self.models = models ?? ModelStore(defaults: defaults)
         engine = WhisperEngine()
         transcriber = StreamingTranscriber(engine: engine)
         let stream = transcriber.taggedEvents
@@ -112,7 +170,36 @@ final class SessionController {
                 self.receive(envelope.event)
             }
         }
+        #if os(macOS)
+        captionScope.onChange = { [weak self] in self?.scopeSettingsChanged() }
+        scopeSettingsChanged()
+        #endif
         #if os(iOS)
+        observeLifecycle()
+        pictureInPicture.bind(snapshot: { [weak self] in
+            guard let self else { return .init(text: "", status: "字幕已停止", isReady: false, isPlaying: false, currentTime: 0, duration: 0) }
+            return .init(text: self.displayStageText,
+                         status: self.isBusy ? "正在準備字幕…" : self.phase == .running ? "等待語音…" : "字幕已暫停",
+                         isReady: self.media.isReady, isPlaying: self.media.isPlaying,
+                         currentTime: self.media.currentTime, duration: self.media.duration,
+                         fontScale: self.preferences.fontSize / 32)
+        }, setPlaying: { [weak self] playing in
+            guard let self else { return }
+            if playing {
+                if self.phase == .running { self.media.play() }
+                else { await self.start() }
+            } else { await self.pause() }
+        }, skip: { [weak self] interval in
+            guard let self else { return }
+            await self.seek(to: min(self.media.duration, max(0, self.media.currentTime + interval)))
+        }, didStop: { [weak self] in
+            await self?.pictureInPictureEnded()
+        })
+        #endif
+    }
+
+    #if os(iOS)
+    private func observeLifecycle() {
         lifecycleObservers.append(NotificationCenter.default.addObserver(forName: UIApplication.didReceiveMemoryWarningNotification, object: nil, queue: .main) { [weak self] _ in
             Task { @MainActor in
                 await self?.stop()
@@ -131,11 +218,99 @@ final class SessionController {
         lifecycleObservers.append(NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { [weak self] _ in
             Task { @MainActor in await self?.backgrounded() }
         })
-        #endif
     }
+    #endif
 
     func report(_ message: String) { errorMessage = message; status = message }
-    func clearError() { errorMessage = nil }
+
+    #if os(macOS)
+    private var scopeAllowsAudio: Bool {
+        captionScope.allows(bundleIdentifier: foregroundContext?.appBundleIdentifier,
+                            url: foregroundContext?.pageURL)
+    }
+
+    private var scopeWaitingMessage: String {
+        if captionScope.applications.isEmpty && captionScope.websites.isEmpty {
+            return "已啟用自動字幕。請在設定加入指定 App 或網站，目前保持暫停。"
+        }
+        if let context = foregroundContext,
+           ForegroundContextMonitor.supportedBrowsers.contains(where: { $0.id == context.appBundleIdentifier }),
+           !captionScope.websites.isEmpty, context.pageState != .available {
+            return "自動暫停：\(context.pageState.message)切換到指定 App 或可辨識的網站後會繼續。"
+        }
+        return "自動暫停：目前不在指定 App 或網站。切換到指定範圍後會繼續。"
+    }
+
+    private func scopeSettingsChanged() {
+        foregroundMonitor.readsBrowserURL = captionScope.mode == .selected && !captionScope.websites.isEmpty
+        if monitorsForeground {
+            if captionScope.mode == .selected {
+                foregroundMonitor.start { [weak self] context in self?.updateForegroundContext(context) }
+            } else {
+                foregroundMonitor.stop()
+                foregroundContext = nil
+            }
+        }
+        reconcileScopeSoon()
+    }
+
+    // An explicit context entry point also lets regression checks drive foreground
+    // changes without controlling the user's actual applications or permissions.
+    func updateForegroundContext(_ context: ForegroundContext) {
+        foregroundContext = context
+        reconcileScopeSoon()
+    }
+
+    private func reconcileScopeSoon() {
+        guard scopeArmed, source == .system else { return }
+        if !scopeAllowsAudio {
+            if phase == .running || phase == .loading { scopeRevoked = true }
+            partial = nil; level = 0
+        }
+        Task { [weak self] in await self?.reconcileScope() }
+    }
+
+    private func reconcileScope() async {
+        guard scopeArmed, source == .system else { return }
+        if !scopeAllowsAudio || scopeRevoked {
+            if phase == .running { await suspendForScope() }
+            else if phase == .paused, scopeWaiting { status = scopeWaitingMessage }
+            // A loading start checks the latest context before starting capture
+            // and again before feeding PCM. Do not race its capture.start().
+        } else if phase == .paused, scopeWaiting {
+            await start()
+        }
+    }
+
+    private func suspendForScope() async {
+        guard scopeArmed, source == .system, phase == .running || phase == .loading else { return }
+        let token = UUID()
+        generation = token
+        scopeWaiting = true
+        phase = .pausing
+        partial = nil
+        level = 0
+        status = scopeWaitingMessage
+        sourceTask?.cancel(); sourceTask = nil
+        captureTask?.cancel(); captureTask = nil
+        engine.cancel()
+        await capture.stop()
+        guard generation == token else { return }
+        // Discard the unconfirmed tail at a scope boundary; do not transcribe
+        // queued audio after the foreground has become disallowed.
+        await transcriber.stop(unloadModel: false)
+        guard generation == token else { return }
+        phase = .paused
+        scopeRevoked = false
+        if !scopeArmed {
+            scopeWaiting = false
+            status = "已手動暫停。按繼續後才會依指定範圍自動啟用。"
+            return
+        }
+        status = scopeWaitingMessage
+        await reconcileScope()
+    }
+    #endif
 
     func openMedia(_ url: URL) async {
         guard !isImporting else { return }
@@ -164,6 +339,7 @@ final class SessionController {
     }
 
     func togglePlayback() async {
+        if isWaitingForScope { await pause(); return }
         if phase == .running {
             if isPlaybackPaused { media.play() }
             else { await pause() }
@@ -172,6 +348,22 @@ final class SessionController {
 
     func start() async {
         guard canStart, let model = models.selectedModel else { return }
+        #if os(macOS)
+        if source == .system {
+            if !scopeArmed && preferences.autoShowOverlay && !overlayVisible && NSApp != nil { overlayVisible = true }
+            scopeArmed = true
+            scopeRevoked = false
+            guard scopeAllowsAudio else {
+                scopeWaiting = true
+                partial = nil
+                phase = .paused
+                errorMessage = nil
+                status = scopeWaitingMessage
+                return
+            }
+            scopeWaiting = false
+        }
+        #endif
         let token = UUID()
         generation = token
         phase = .loading
@@ -195,6 +387,9 @@ final class SessionController {
             }
             activeBackend = await engine.usingGPU ? "Metal + Accelerate" : "CPU + Accelerate"
             guard generation == token else { return }
+            #if os(macOS)
+            if source == .system, !scopeAllowsAudio || scopeRevoked { await suspendForScope(); return }
+            #endif
             await transcriber.start(language: SourceLanguageCatalog.engineLanguage(for: language))
             guard generation == token else { return }
             if source == .media {
@@ -204,7 +399,7 @@ final class SessionController {
                 }
                 try await media.reader.reset(at: media.currentTime)
                 guard generation == token else { return }
-                await transcriber.reset(at: media.currentTime)
+                await transcriber.reset()
                 guard generation == token else { return }
                 try await audioSession.activate()
                 guard generation == token else { return }
@@ -213,6 +408,7 @@ final class SessionController {
                 launchMediaFeed(token: token)
             } else {
                 #if os(macOS)
+                guard scopeAllowsAudio, !scopeRevoked else { await suspendForScope(); return }
                 let offset = ProcessInfo.processInfo.systemUptime - sessionStart
                 let chunks = try await capture.start(onError: { [weak self] message in
                     Task { @MainActor in
@@ -222,12 +418,14 @@ final class SessionController {
                         self.report(message)
                     }
                 })
-                guard generation == token else { await capture.stop(); return }
+                guard generation == token else { return }
                 phase = .running
+                guard scopeAllowsAudio, !scopeRevoked else { await suspendForScope(); return }
                 let priorDropped = inputDroppedSeconds
                 captureTask = Task { [weak self] in
                     for await chunk in chunks {
                         guard let self, !Task.isCancelled, self.generation == token, self.phase == .running else { return }
+                        guard self.scopeAllowsAudio, !self.scopeWaiting, !self.scopeRevoked else { continue }
                         self.inputDroppedSeconds = priorDropped + chunk.droppedAudioSeconds
                         self.updateLevel(chunk.samples)
                         await self.transcriber.append(samples: chunk.samples, at: chunk.start + offset)
@@ -246,6 +444,16 @@ final class SessionController {
     }
 
     func pause() async {
+        #if os(macOS)
+        scopeArmed = false
+        if scopeWaiting, phase == .pausing { return }
+        scopeRevoked = false
+        if scopeWaiting, phase == .paused {
+            scopeWaiting = false
+            status = "已手動暫停。按繼續後才會依指定範圍自動啟用。"
+            return
+        }
+        #endif
         guard phase == .running else { return }
         let token = generation
         phase = .pausing
@@ -280,6 +488,16 @@ final class SessionController {
     }
 
     func stop() async {
+        #if os(iOS)
+        pictureInPicturePreparation = nil
+        isPreparingPictureInPicture = false
+        restorePictureInPicturePreferences()
+        #endif
+        #if os(macOS)
+        scopeArmed = false
+        scopeWaiting = false
+        scopeRevoked = false
+        #endif
         if let stopTask { await stopTask.value; return }
         generation = UUID()
         phase = .stopping
@@ -303,10 +521,14 @@ final class SessionController {
         stopTask = cleanup
         await cleanup.value
         stopTask = nil
+        #if os(iOS)
+        pictureInPicture.stop()
+        await pictureInPictureEnded()
+        #endif
     }
 
     func clearHistory() async {
-        await transcriber.reset(at: source == .media ? media.currentTime : 0)
+        await transcriber.reset()
         timeline.reset()
         captions = []; partial = nil; trimmedHistory = false
         alternatives = []
@@ -325,7 +547,7 @@ final class SessionController {
         phase = .seeking
         sourceTask?.cancel()
         media.pause()
-        await transcriber.reset(at: time)
+        await transcriber.reset()
         guard generation == token else { return }
         partial = nil
         await media.seek(to: time)
@@ -347,13 +569,66 @@ final class SessionController {
         } else { phase = priorPhase }
     }
 
-    func backgrounded() async {
-        #if os(iOS)
+    #if os(iOS)
+    func startFloatingCaptions() async {
+        guard media.isReady, hasReadyModel, !isBusy, !isPreparingPictureInPicture,
+              UIApplication.shared.applicationState == .active,
+              !pictureInPicture.isActive, !pictureInPicture.isStarting else { return }
+        let request = UUID()
+        pictureInPicturePreparation = request
+        isPreparingPictureInPicture = true
+        defer {
+            if pictureInPicturePreparation == request {
+                pictureInPicturePreparation = nil
+                isPreparingPictureInPicture = false
+            }
+        }
+        pictureInPictureRequestedGPU = useGPU
+        if phase == .running { await pause() }
+        guard pictureInPicturePreparation == request else { return }
+        guard UIApplication.shared.applicationState == .active else { await stop(); return }
+        // A real media session may continue in PiP; Metal inference may not.
+        useGPU = false
+        await start()
+        guard pictureInPicturePreparation == request else { return }
+        guard UIApplication.shared.applicationState == .active else { await stop(); return }
+        guard phase == .running, loadedConfiguration?.requestedGPU == false else {
+            await pictureInPictureEnded()
+            return
+        }
+        media.player.audiovisualBackgroundPlaybackPolicy = .continuesIfPossible
+        pictureInPicture.refresh()
+        if !pictureInPicture.start() {
+            report(pictureInPicture.status)
+            await pictureInPictureEnded()
+        }
+    }
+
+    private func pictureInPictureEnded() async {
+        pictureInPicturePreparation = nil
+        isPreparingPictureInPicture = false
+        restorePictureInPicturePreferences()
+        if UIApplication.shared.applicationState == .background, phase != .idle, phase != .stopping {
+            await stop()
+            status = "子母畫面已關閉，背景字幕已停止。"
+        }
+    }
+
+    private func restorePictureInPicturePreferences() {
+        media.player.audiovisualBackgroundPlaybackPolicy = .pauses
+        if let requested = pictureInPictureRequestedGPU { useGPU = requested }
+        pictureInPictureRequestedGPU = nil
+    }
+
+    private func backgrounded() async {
         guard phase != .idle && phase != .failed else { return }
+        if (pictureInPicture.isActive || pictureInPicture.isStarting),
+           source == .media, loadedConfiguration?.requestedGPU == false,
+           phase == .running || phase == .paused { return }
         await stop()
         status = "App 已進入背景，字幕已停止並釋放模型。返回後可繼續播放辨識。"
-        #endif
     }
+    #endif
 
     private func launchMediaFeed(token: UUID) {
         sourceTask?.cancel()
@@ -384,7 +659,7 @@ final class SessionController {
                             // An explicit native seek to EOF must not transcribe the
                             // skipped remainder as though the user had listened to it.
                             // The timeJumped notification may arrive after this tick.
-                            await self.transcriber.reset(at: now)
+                            await self.transcriber.reset()
                             guard !Task.isCancelled, self.generation == token else { return }
                             try await self.media.reader.reset(at: now)
                             guard !Task.isCancelled, self.generation == token else { return }
@@ -402,7 +677,7 @@ final class SessionController {
                     // VideoPlayer's native transport can seek too. Invalidate old audio/results.
                     if self.media.jumpSerial != previousJump || now < previousTime - 0.15 || now - previousTime > allowedAdvance {
                         previousJump = self.media.jumpSerial
-                        await self.transcriber.reset(at: now)
+                        await self.transcriber.reset()
                         guard !Task.isCancelled, self.generation == token else { return }
                         try await self.media.reader.reset(at: now)
                         guard !Task.isCancelled, self.generation == token else { return }
@@ -460,6 +735,7 @@ final class SessionController {
         }
     }
 
+    #if os(macOS)
     private func launchWatchdog(token: UUID) {
         lastAudio = Date()
         sourceTask = Task { [weak self] in
@@ -472,14 +748,23 @@ final class SessionController {
             }
         }
     }
+    #endif
 
     private func updateLevel(_ samples: [Float]) {
+        #if os(macOS)
         lastAudio = Date()
+        #endif
         guard !samples.isEmpty else { return }
         level = min(1, sqrt(samples.reduce(0) { $0 + $1 * $1 } / Float(samples.count)) * 8)
     }
 
     private func receive(_ event: TranscriptionEvent) {
+        guard phase != .stopping else { return }
+        #if os(macOS)
+        // Reject queued results immediately on a foreground change, before the
+        // asynchronous capture / inference teardown finishes.
+        if source == .system, scopeWaiting || (scopeArmed && (!scopeAllowsAudio || scopeRevoked)) { return }
+        #endif
         switch event {
         case .partial(let caption): partial = caption
         case .confirmed(let additions):
@@ -518,8 +803,13 @@ final class SessionController {
     }
 
     isolated deinit {
+        #if os(macOS)
+        foregroundMonitor.stop()
+        #endif
         eventTask?.cancel(); sourceTask?.cancel(); captureTask?.cancel()
+        #if os(iOS)
         for observer in lifecycleObservers { NotificationCenter.default.removeObserver(observer) }
+        #endif
     }
 }
 

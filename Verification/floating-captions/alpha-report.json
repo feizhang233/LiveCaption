@@ -1,0 +1,160 @@
+{
+  "renderings": [
+    {
+      "name": "background-enabled.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.2964396284829721,
+      "opaqueFraction": 0.031191950464396285,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "empty.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 0,
+      "transparentFraction": 1.0,
+      "opaqueFraction": 0.0,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "initial-controls.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.9613390092879257,
+      "opaqueFraction": 0.033034055727554176,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "main-stage-sibling.png",
+      "width": 760,
+      "height": 220,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.13815789473684212,
+      "opaqueFraction": 0.016357655502392345,
+      "pixel20x20": [
+        17,
+        26,
+        34,
+        240
+      ]
+    },
+    {
+      "name": "minimum-size-32pt.png",
+      "width": 320,
+      "height": 144,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.6734809027777777,
+      "opaqueFraction": 0.0666015625,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "minimum-size-64pt.png",
+      "width": 320,
+      "height": 144,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.7049045138888889,
+      "opaqueFraction": 0.09893663194444445,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "standard-size-64pt.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.7136532507739938,
+      "opaqueFraction": 0.08513157894736842,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "text-only-narrow.png",
+      "width": 320,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.7234191176470588,
+      "opaqueFraction": 0.056415441176470585,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "text-only-on-white.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "transparentFraction": 0.0,
+      "opaqueFraction": 1.0,
+      "pixel20x20": [
+        255,
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "name": "text-only.png",
+      "width": 760,
+      "height": 170,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.8850232198142415,
+      "opaqueFraction": 0.02378482972136223,
+      "pixel20x20": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "finalSourceSHA256": {
+    "App/UI/SharedViews.swift": "2fe79def43f3b69296933767b775a662e79c5c689825cb5ad5371208179bd4b9",
+    "App/Platform/macOS/CaptionPanelController.swift": "1a179ceac48285eba238d8701c1ca110ce36bb896724d6b021a51f525d5c7c65",
+    "App/Session/SessionController.swift": "2356d67979d591cacbee7b16ad1b52903a4d84c47092e99c0da3a56cf92ba512"
+  },
+  "verificationBoundary": "PNG renders use actual SessionController tiny/CPU recognition. Final reusable-host-only controller fix is checked separately by SessionPanelChecks; it does not change rendered SwiftUI pixels. Locked desktop prevents actual mouse hover/drag/resize/cross-App/fullscreen interaction. Reduce Transparency and Increased Contrast are not simulated."
+}

@@ -1,0 +1,100 @@
+Building for debugging...
+Build complete! (0.17 sec)
+whisper_init_from_file_with_params_no_state: loading model from '/var/folders/4v/m_1x8ntj34bblf58v9yn82yc0000gn/T/LiveCaption.FloatingNativeChecks.02C3D632-1D66-40FB-954D-CEBD5F5FAC00/Models/ggml-tiny.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+ggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_compile_all: compiled 'fa_aux' library in 0.002 sec
+ggml_metal_library_compile_all: compiled 'fa_f16' library in 0.006 sec
+ggml_metal_library_compile_all: compiled 'fa_f32' library in 0.003 sec
+ggml_metal_library_compile_all: compiled 'fa_q4_0' library in 0.004 sec
+ggml_metal_library_compile_all: compiled 'fa_q4_1' library in 0.032 sec
+ggml_metal_library_compile_all: compiled 'fa_q5_0' library in 0.031 sec
+ggml_metal_library_compile_all: compiled 'fa_q5_1' library in 0.031 sec
+ggml_metal_library_compile_all: compiled 'fa_q8_0' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_f16' library in 0.021 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_f32' library in 0.009 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q4_0' library in 0.009 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q4_1' library in 0.013 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q5_0' library in 0.041 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q5_1' library in 0.038 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q8_0' library in 0.029 sec
+ggml_metal_library_compile_all: compiled 'mul_mv' library in 0.016 sec
+ggml_metal_library_compile_all: compiled 'mul_mv_mma' library in 0.025 sec
+ggml_metal_library_compile_all: compiled 'mul_mm' library in 0.023 sec
+ggml_metal_library_compile_all: compiled 'quantize' library in 0.026 sec
+ggml_metal_library_compile_all: compiled 'softmax' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'norm' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'unary' library in 0.023 sec
+ggml_metal_library_compile_all: compiled 'binbcast' library in 0.032 sec
+ggml_metal_library_compile_all: compiled 'reduce' library in 0.026 sec
+ggml_metal_library_compile_all: compiled 'tri' library in 0.025 sec
+ggml_metal_library_compile_all: compiled 'ssm' library in 0.038 sec
+ggml_metal_library_compile_all: compiled 'wkv' library in 0.041 sec
+ggml_metal_library_compile_all: compiled 'gated_delta_net' library in 0.020 sec
+ggml_metal_library_compile_all: compiled 'solve_tri' library in 0.020 sec
+ggml_metal_library_compile_all: compiled 'rope' library in 0.032 sec
+ggml_metal_library_compile_all: compiled 'conv' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'upscale' library in 0.032 sec
+ggml_metal_library_compile_all: compiled 'argsort' library in 0.032 sec
+ggml_metal_library_compile_all: compiled 'pool' library in 0.016 sec
+ggml_metal_library_compile_all: compiled 'misc' library in 0.016 sec
+ggml_metal_library_compile_all: loaded 35 libraries from embedded data in 0.042 sec (max single = 0.041 sec)
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0 (Apple M4 Pro)
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 19069.67 MB
+whisper_init_with_params_no_state: devices    = 3
+whisper_init_with_params_no_state: backends   = 3
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 384
+whisper_model_load: n_audio_head  = 6
+whisper_model_load: n_audio_layer = 4
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 384
+whisper_model_load: n_text_head   = 6
+whisper_model_load: n_text_layer  = 4
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 1 (tiny)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =    77.11 MB
+whisper_model_load: model size    =   77.11 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =    3.15 MB
+whisper_init_state: kv cross size =    9.44 MB
+whisper_init_state: kv pad  size  =    2.36 MB
+whisper_init_state: loading Core ML model from '/var/folders/4v/m_1x8ntj34bblf58v9yn82yc0000gn/T/LiveCaption.FloatingNativeChecks.02C3D632-1D66-40FB-954D-CEBD5F5FAC00/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: first run on a device may take a while ...
+whisper_init_state: failed to load Core ML model from '/var/folders/4v/m_1x8ntj34bblf58v9yn82yc0000gn/T/LiveCaption.FloatingNativeChecks.02C3D632-1D66-40FB-954D-CEBD5F5FAC00/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: compute buffer (conv)   =   13.21 MB
+whisper_init_state: compute buffer (encode) =   17.72 MB
+whisper_init_state: compute buffer (cross)  =    3.89 MB
+whisper_init_state: compute buffer (decode) =   95.91 MB
+Rendered initial-controls: 760 × 170, cornerAlpha=0.0, centerAlpha=0.0
+Rendered empty: 760 × 170, cornerAlpha=0.0, centerAlpha=0.0
+Rendered text-only: 760 × 170, cornerAlpha=0.0, centerAlpha=0.23529411764705882
+Rendered text-only-narrow: 320 × 170, cornerAlpha=0.0, centerAlpha=0.3803921568627451
+Rendered text-only-on-white: 760 × 170, cornerAlpha=1.0, centerAlpha=1.0
+Rendered minimum-size-32pt: 320 × 144, cornerAlpha=0.0, centerAlpha=0.3803921568627451
+Rendered minimum-size-64pt: 320 × 144, cornerAlpha=0.0, centerAlpha=1.0
+Rendered standard-size-64pt: 760 × 170, cornerAlpha=0.0, centerAlpha=1.0
+Rendered main-stage-sibling: 760 × 220, cornerAlpha=0.9411764705882353, centerAlpha=0.9568627450980393
+Rendered background-enabled: 760 × 170, cornerAlpha=0.0, centerAlpha=0.9529411764705882
+PASS: Actual tiny/CPU transcription, isolated preferences, offscreen native caption renders; foreground preserved

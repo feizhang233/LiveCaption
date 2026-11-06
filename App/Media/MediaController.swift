@@ -67,8 +67,7 @@ actor MediaPCMReader {
     }
 
     func reset(at time: Double) throws {
-        reader?.cancelReading()
-        reader = nil; output = nil; pending = nil
+        discardDecoder()
         guard let asset, let track else { return }
         guard time.isFinite else { throw MediaError.decoding("跳轉時間無效") }
         if time >= duration - 0.000_01 { return }
@@ -151,9 +150,17 @@ actor MediaPCMReader {
     }
 
     private func discardReader() {
-        reader?.cancelReading()
-        reader = nil; output = nil; pending = nil; asset = nil; track = nil
+        discardDecoder()
+        asset = nil
+        track = nil
         duration = 0
+    }
+
+    private func discardDecoder() {
+        reader?.cancelReading()
+        reader = nil
+        output = nil
+        pending = nil
     }
 }
 
@@ -161,11 +168,11 @@ actor MediaPCMReader {
 final class MediaController {
     let player = AVPlayer()
     let reader = MediaPCMReader()
-    var title: String?
-    var duration: Double = 0
-    var currentTime: Double = 0
-    var isPlaying = false
-    var isLoading = false
+    private(set) var title: String?
+    private(set) var duration: Double = 0
+    private(set) var currentTime: Double = 0
+    private(set) var isPlaying = false
+    private(set) var isLoading = false
     private(set) var jumpSerial: UInt64 = 0
     var isReady: Bool { title != nil }
     @ObservationIgnored private var scopedURL: URL?
@@ -201,7 +208,7 @@ final class MediaController {
         itemRevision &+= 1
         player.pause()
         player.replaceCurrentItem(with: nil)
-        title = nil; duration = 0; currentTime = 0; isPlaying = false
+        clearPlaybackState()
         await reader.close()
         if hasScope { scopedURL?.stopAccessingSecurityScopedResource() }
         scopedURL = url
@@ -218,9 +225,16 @@ final class MediaController {
             await reader.close()
             if hasScope { url.stopAccessingSecurityScopedResource() }
             scopedURL = nil; hasScope = false
-            title = nil; duration = 0; currentTime = 0; isPlaying = false
+            clearPlaybackState()
             throw error
         }
+    }
+
+    private func clearPlaybackState() {
+        title = nil
+        duration = 0
+        currentTime = 0
+        isPlaying = false
     }
 
     func play() {

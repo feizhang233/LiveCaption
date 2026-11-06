@@ -7,17 +7,18 @@
 | 位置 | 職責與關鍵入口 |
 |---|---|
 | [App/LiveCaptionApp.swift](App/LiveCaptionApp.swift) | SwiftUI App 入口；建立一個 `SessionController`，供所有 `WindowGroup` 視窗共用；Mac 全域選單與快捷鍵 |
-| [App/Session](App/Session) | `SessionController` 協調模型、來源、播放、推論、歷史、錯誤與停止；`SessionPhase` 定義操作狀態；`SourceLanguageCatalog` 統一優先語言、其他引擎語言、auto 與設定驗證 |
+| [App/Session](App/Session) | `SessionController` 協調模型、來源、播放、推論、歷史、錯誤與停止；`SessionPhase` 定義操作狀態；`SourceLanguageCatalog` 統一來源語言；`AppPreferences` 保存外觀，與語言／模型選擇共用注入的偏好儲存 |
 | [App/Models](App/Models) | `WhisperModel` 固定模型目錄；`ModelStore` 狀態／選擇／使用鎖；`ModelDownload` 網路落盤；`ModelIntegrity` 大小與 SHA-256 驗證 |
 | [App/Media](App/Media) | `MediaController` 持有 AVPlayer 與檔案存取權；`MediaPCMReader` 依播放時間讀 PCM；`PlaybackAudioSession` 管理 iPad 音訊工作階段；`NativePlayerView` 橋接公開 AVKit 控制項 |
-| [App/Platform/macOS](App/Platform/macOS) | `MacSystemAudioCapture`／`AudioSink` 系統收音，`SystemAudioNormalizer` 轉換及來源時間；`CaptionPanelController`／`CaptionPanelPlacement` 浮窗與位置恢復 |
-| [App/UI](App/UI) | `RootView` 四個頁面、選檔／匯出；`ModelsView`、`SettingsView`；`CaptionStage`、`SessionControls`、`TranscriptHistory` 等共用視圖；`AppPreferences` 與 `GlassPanel` |
+| [App/Platform/macOS](App/Platform/macOS) | `MacSystemAudioCapture`／`AudioSink` 系統收音，`SystemAudioNormalizer` 轉換及來源時間；`CaptionPanelController`／`CaptionPanelPlacement` 無邊框浮窗與位置恢復，`CaptionPanelDragHandle`／`CaptionPanelResizeHandle` 提供原生拖移與縮放 |
+| [App/UI](App/UI) | `RootView` 導航、選檔／匯出呈現；`CaptionWorkspaceView` 共用即時／媒體頁，並持有播放器拖曳狀態；`AdaptiveControls`／`CaptionPageContent` 統一排列／頁面框架；`FloatingCaptionView` 包裝共用字幕與滑鼠控制列，`FloatingCaptionOptions` 共用主視窗／浮窗的設定；`CaptionExport`／`CaptionDocument` 統一匯出資料；其他共用字幕視圖、模型／設定頁及視覺主題 |
+| [App/Resources](App/Resources)／[Design/AppIcon](Design/AppIcon) | Mac／iPad 共用的圖示 catalog 與 `PrivacyInfo.xcprivacy`；圖示母圖、提示詞及機械尺寸匯出入口 |
 | [Packages/CaptionCore](Packages/CaptionCore) | 可獨立測試的 Swift package：音訊處理、辨識排程、whisper.cpp C context、字幕調和／時間軸／匯出；不依賴 App UI |
 | [Config](Config) | Mac sandbox entitlements、iPad Info.plist；其他生成的 Info.plist 欄位在 `project.yml` |
 | [LiveCaption.xcodeproj](LiveCaption.xcodeproj)／[project.yml](project.yml) | 已交付的 Xcode 工程及 XcodeGen 定義；Mac、iPad、iPad hosted test targets |
 | [Experimental](Experimental) | 獨立 ReplayKit／PiP 可行性工具與自己的 Xcode 工程；不嵌入主產品、不載入 Whisper |
 | [Tests](Tests)／[CaptionCoreTests](Packages/CaptionCore/Tests/CaptionCoreTests) | App 整合 harness、平台／模型／媒體回歸、iPad hosted XCTest；核心單元測試在 package 內 |
-| [Scripts](Scripts) | 開發者下載固定引擎、建置、測試及取得測試資料的入口；App 不會啟動這些腳本 |
+| [Scripts](Scripts) | 開發者下載固定引擎、建置、測試及取得測試資料的入口；`test-support.sh` 共用 App harness 編譯，公開測試腳本保留參數介面；App 不會啟動這些腳本 |
 | [ThirdParty](ThirdParty) | 引擎版本／雜湊 manifest、授權原文，以及實際打包進兩平台 App 的 notices |
 | [Docs](Docs)／[Verification](Verification) | 技術決策、平台限制、驗收矩陣，以及實際執行產生的 JSON／SRT／log／測試摘要 |
 | [PRODUCT.md](PRODUCT.md)、[DESIGN.md](DESIGN.md)、[UX-CONTRACT.md](UX-CONTRACT.md) | 產品範圍、視覺規則、操作與資料保留約定；更改產品行為時一併核對 |
@@ -59,6 +60,8 @@ flowchart LR
 5. Session 消費 `taggedEvents`，先檢查 generation，再更新臨時字幕／歷史。確認結果送入 `CaptionTimeline`；UI 與匯出讀取同一份主字幕，不自行再整理另一條時間軸。
 
 目前沒有翻譯、遠端辨識或網路音訊傳輸。手動語言及可選自動偵測進入同一原文轉寫流程；`translate` 必須保持 `false`。直接檔案解碼的耗時與即時播放到字幕顯示的延遲是不同指標。
+
+Mac 系統音訊新增前台啟用範圍：`CaptionScopePreferences` 保存始終／指定 App 或網站與清單，`ForegroundContextMonitor` 透過 NSWorkspace 與經授權的唯讀 Apple Events 提供當前內容，`SessionController` 統一控制自動暫停／恢復。只由使用者按開始後啟用；手動暫停／停止撤銷自動恢復。範圍離開立即關閉 PCM／結果入口，取消未確認尾音，停止 capture 並保留模型及已確認歷史；快速離開再返回也要完成舊 generation 的失效。網址不可讀時不允許網站規則，不能沿用過期網址。詳見 [CaptionScope](Docs/CaptionScope.md)。
 
 ## 3. Actor、執行緒與資源所有權
 
@@ -128,7 +131,7 @@ Actor 是隔離邊界，不表示每個 actor 都有一條專用實體執行緒�
 | 位置／平台 | 產品責任 | 不可擴大解讀的範圍 |
 |---|---|---|
 | macOS 26＋ | ScreenCaptureKit 系統收音、NSPanel 浮窗；也支援 App 內本機媒體 | 離線 PCM／幾何測試不證明錄製權限、全螢幕影片、多顯示器縮放或點擊穿透已實測 |
-| iPadOS 26＋主產品 | 本機媒體前景播放＋本機辨識；公開 AVKit 播放控制 | 不依賴 ReplayKit extension；沒有保活用的虛假背景模式；不宣稱跨 App 背景推論 |
+| iOS／iPadOS 26＋主產品 | iPhone／iPad 通用 App；本機媒體前景播放＋本機辨識；公開 AVKit 播放控制；窄版底部分頁／寬版側欄 | 不依賴 ReplayKit extension；沒有保活用的虛假背景模式；不宣稱跨 App 背景推論 |
 | [ReplayKitProbe.xcodeproj](Experimental/ReplayKitProbe.xcodeproj) | 診斷 host、Broadcast Upload Extension、有界 App Group PCM ring、公開 API PiP 狀態畫面 | 畫面是診斷資料，不是辨識字幕；不載入模型、不連伺服器；不能視為產品已完成 |
 | iPadOS 27＋研究路徑 | 官方 ScreenCaptureKit／系統 picker／正式 screen-capture 背景能力已查核 | 本專案尚未實作該路徑；背景擷取能力不自動等於 Whisper GPU／PiP 長時間可用 |
 
@@ -144,9 +147,10 @@ Actor 是隔離邊界，不表示每個 actor 都有一條專用實體執行緒�
 | 模型下載／校驗／狀態／目錄 | `bash Scripts/test-models.sh`；修改網路流程時再用 `--network` 做真實 tiny 下載／取消重試 | 磁碟耗盡、大型模型及實際 UI 網路狀態 |
 | 媒體解碼／security scope／seek | `bash Scripts/test-media.sh /path/to/audio-or-video`；相關 Session 整合回歸 | 外部檔案提供者授權及各種 DRM 格式 |
 | Session 操作／暫停／EOF／模型切換 | `bash Scripts/test-session.sh /path/to/ggml-tiny.bin /path/to/ja_jp-0.wav`；另測法語 MP4 | 按鈕／檔案選取器／多視窗可視互動 |
+| Mac 前台 App／網站啟用範圍 | `bash Scripts/test-caption-scope.sh`；`bash Scripts/test-caption-scope-session.sh /path/to/ggml-tiny.bin` | 真實瀏覽器授權、分頁與系統收音整條流程 |
 | Mac 音訊 adapter／有界入口／浮窗幾何／probe ring | `bash Scripts/test-platform-audio.sh` | 不會建立 SCStream／NSPanel，不代表實際系統收音及浮窗互動 |
-| iPad 工作階段／音訊中斷／預設加速 | [test-ipad-simulator.sh](Scripts/test-ipad-simulator.sh) 執行 hosted XCTest，核對真實推論及未跳過測試 | Simulator CPU 不等於 iPad Metal、熱與記憶體表現 |
-| SwiftUI／AVKit wrapper／外觀 | `bash Scripts/build.sh all`；依 [UX-CONTRACT](UX-CONTRACT.md) 做 Mac／iPad 方向、大小、無障礙與操作檢查 | 編譯不能代替實際畫面驗收 |
+| iOS 工作階段／音訊中斷／預設加速／窄版導航 | [test-ios-simulator.sh](Scripts/test-ios-simulator.sh) 執行 6 項真實推論與 4 項原生版面 hosted XCTest，核對 10 通過且無跳過；舊 iPad 入口保留 | Simulator CPU 不等於 iPhone／iPad Metal、熱與記憶體表現 |
+| SwiftUI／AVKit wrapper／外觀 | `bash Scripts/build.sh all`；依 [UX-CONTRACT](UX-CONTRACT.md) 做 Mac／iPhone／iPad 方向、大小、無障礙與操作檢查 | 編譯不能代替實際畫面驗收 |
 | ReplayKit／PiP | 平台離線回歸＋獨立 probe Simulator／device build；再按平台矩陣做真機 | 主產品可用的跨 App 全本機字幕 |
 | 引擎 binary／project／signing／最低 OS | 三種 [build.sh](Scripts/build.sh) 目標、核心測試、Session／iPad 整合；核對 notices 與 plist | unsigned build 不證明安裝、Team entitlement 或商店發布 |
 
@@ -166,8 +170,8 @@ swift run --package-path Packages/CaptionCore CaptionProbe \
   --model "/path/to/ggml-tiny.bin" --audio "/path/to/ja_jp-0.wav" \
   --language ja --stream --srt /tmp/live-caption-check.srt
 
-# 使用本機實際存在的 iPad Simulator UDID；會安裝並啟動測試 host
-bash Scripts/test-ipad-simulator.sh \
+# 使用本機實際存在的 iPhone 或 iPad Simulator UDID；會安裝並啟動測試 host
+bash Scripts/test-ios-simulator.sh \
   "SIMULATOR_UDID" "/path/to/ggml-tiny.bin" "/path/to/fixture-directory"
 ```
 
@@ -181,11 +185,13 @@ bash Scripts/test-ipad-simulator.sh \
 xcodegen generate --spec project.yml
 xcodegen generate --spec Experimental/project.yml --project Experimental
 bash Scripts/build.sh mac
-bash Scripts/build.sh ipad-simulator
-bash Scripts/build.sh ipad-device
+bash Scripts/build.sh ios-simulator
+bash Scripts/build.sh ios-device
 ```
 
 主產品兩個 target 的產物名稱均為 `LiveCaption.app`。修改產品名稱時，必須同時核對 target-level `productName`、build settings、scheme `BuildableName`、測試 `TEST_HOST`／`BUNDLE_LOADER` 與腳本安裝路徑；避免只改 `PRODUCT_NAME` 後產生互相矛盾的工程資訊。`all` 只建置 Mac＋iPad Simulator，device 需另跑。
+
+`AppIcon` 由兩個 App 共用 `App/Resources/Assets.xcassets`；修改圖示母圖後執行 `bash Scripts/generate-app-icons.sh`，再確認三個建置目標。版本與建置編號由 `project.yml` 寫入 bundle；關於頁與模型下載的 User-Agent 讀取 bundle，避免另外硬編版本。[隱私清單](Docs/Privacy.md) 隨兩平台打包；更改偏好、計時、儲存空間 API 或引擎時須重新核對用途與官方理由。
 
 使用完整 Xcode Developer 目錄；目前驗證工具鏈及最低 OS 見 [README](README.md)。`build.sh` 預設只做 unsigned 編譯／連結。真機執行請在 Xcode 設自己的 Team、唯一 bundle ID、裝置 Developer Mode；Mac 錄製權限須由 OS 實際授予。主產品不需 App Group，probe 的 host／extension 才需相同 Team 與有相同群組的 provisioning profiles。詳細設定依 [README 簽署指引](README.md) 與 [probe 指引](Docs/PlatformFeasibility.md)。
 

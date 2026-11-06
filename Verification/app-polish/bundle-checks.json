@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-06",
+  "appIconSlots": [
+    {
+      "file": "ipad-1024.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": false
+    },
+    {
+      "file": "mac-16.png",
+      "width": 16,
+      "height": 16,
+      "alpha": true
+    },
+    {
+      "file": "mac-16@2x.png",
+      "width": 32,
+      "height": 32,
+      "alpha": true
+    },
+    {
+      "file": "mac-32.png",
+      "width": 32,
+      "height": 32,
+      "alpha": true
+    },
+    {
+      "file": "mac-32@2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true
+    },
+    {
+      "file": "mac-128.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true
+    },
+    {
+      "file": "mac-128@2x.png",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "file": "mac-256.png",
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "file": "mac-256@2x.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true
+    },
+    {
+      "file": "mac-512.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true
+    },
+    {
+      "file": "mac-512@2x.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true
+    }
+  ],
+  "bundles": [
+    {
+      "target": "mac",
+      "bundle": "DerivedData/Build/Products/Debug/LiveCaption.app",
+      "version": "0.1.0",
+      "build": "1",
+      "icon": "AppIcon",
+      "privacySHA256": "798cc543973b5f96a63bccfd47daffb4050d260973587020c7a2080654b3f37d",
+      "notices": true,
+      "assets": true
+    },
+    {
+      "target": "ipad-simulator",
+      "bundle": "DerivedData-iPad/Build/Products/Debug-iphonesimulator/LiveCaption.app",
+      "version": "0.1.0",
+      "build": "1",
+      "icon": "AppIcon",
+      "privacySHA256": "798cc543973b5f96a63bccfd47daffb4050d260973587020c7a2080654b3f37d",
+      "notices": true,
+      "assets": true
+    },
+    {
+      "target": "ipad-device",
+      "bundle": "DerivedData-iPadDevice/Build/Products/Debug-iphoneos/LiveCaption.app",
+      "version": "0.1.0",
+      "build": "1",
+      "icon": "AppIcon",
+      "privacySHA256": "798cc543973b5f96a63bccfd47daffb4050d260973587020c7a2080654b3f37d",
+      "notices": true,
+      "assets": true
+    }
+  ],
+  "unsignedBuilds": true,
+  "passed": true
+}

@@ -1,0 +1,2 @@
+dbdc67890a11f688582e18287aee7f6c6d3b346cd1baf8c42b5a61531b9fb64d  App/UI/SettingsView.swift
+01b2bdb11d4eb456df7abaf38f754977fe0850ff5254edff2b18bea6bbf97d35  App/UI/CaptionScopeSettingsView.swift

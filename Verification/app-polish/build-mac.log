@@ -1,0 +1,3 @@
+2026-11-06 14:47:36.976 xcodebuild[16660:4783198] [MT] IDESchemeActionsInvocationRecord: Device <IDEOSXSupportCore.IDEMacPlaceholder: 0x74f6b4d540 (Any Mac | undefined_arch)> is missing operatingSystemVersion, operatingSystemVersionWithBuildNumber.
+Build passed: LiveCaptionMac (macosx), unsigned verification only.
+Build products: <PROJECT_ROOT>/DerivedData/Build/Products

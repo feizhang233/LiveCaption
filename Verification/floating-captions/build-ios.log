@@ -1,0 +1,3 @@
+2026-11-06 17:17:42.382 xcodebuild[37138:5136340] [MT] IDESchemeActionsInvocationRecord: Device <DVTiOSDeviceSimulatorPlaceholder: 0x76e6769e00 (Any iOS Simulator Device | undefined_arch)> is missing operatingSystemVersion, operatingSystemVersionWithBuildNumber.
+Build passed: LiveCaptioniPad (iphonesimulator), unsigned verification only.
+Build products: <PROJECT>/DerivedData-iOS/Build/Products

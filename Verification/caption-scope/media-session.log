@@ -1,0 +1,188 @@
+whisper_init_from_file_with_params_no_state: loading model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+ggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_compile_all: compiled 'fa_aux' library in 0.004 sec
+ggml_metal_library_compile_all: compiled 'fa_f16' library in 0.007 sec
+ggml_metal_library_compile_all: compiled 'fa_f32' library in 0.009 sec
+ggml_metal_library_compile_all: compiled 'fa_q4_0' library in 0.010 sec
+ggml_metal_library_compile_all: compiled 'fa_q4_1' library in 0.012 sec
+ggml_metal_library_compile_all: compiled 'fa_q5_0' library in 0.005 sec
+ggml_metal_library_compile_all: compiled 'fa_q5_1' library in 0.013 sec
+ggml_metal_library_compile_all: compiled 'fa_q8_0' library in 0.019 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_f16' library in 0.030 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_f32' library in 0.030 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q4_0' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q4_1' library in 0.024 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q5_0' library in 0.018 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q5_1' library in 0.042 sec
+ggml_metal_library_compile_all: compiled 'fa_vec_q8_0' library in 0.038 sec
+ggml_metal_library_compile_all: compiled 'mul_mv' library in 0.013 sec
+ggml_metal_library_compile_all: compiled 'mul_mv_mma' library in 0.022 sec
+ggml_metal_library_compile_all: compiled 'mul_mm' library in 0.034 sec
+ggml_metal_library_compile_all: compiled 'quantize' library in 0.035 sec
+ggml_metal_library_compile_all: compiled 'softmax' library in 0.006 sec
+ggml_metal_library_compile_all: compiled 'norm' library in 0.042 sec
+ggml_metal_library_compile_all: compiled 'unary' library in 0.042 sec
+ggml_metal_library_compile_all: compiled 'binbcast' library in 0.006 sec
+ggml_metal_library_compile_all: compiled 'reduce' library in 0.042 sec
+ggml_metal_library_compile_all: compiled 'tri' library in 0.033 sec
+ggml_metal_library_compile_all: compiled 'ssm' library in 0.026 sec
+ggml_metal_library_compile_all: compiled 'wkv' library in 0.022 sec
+ggml_metal_library_compile_all: compiled 'gated_delta_net' library in 0.025 sec
+ggml_metal_library_compile_all: compiled 'solve_tri' library in 0.025 sec
+ggml_metal_library_compile_all: compiled 'rope' library in 0.037 sec
+ggml_metal_library_compile_all: compiled 'conv' library in 0.029 sec
+ggml_metal_library_compile_all: compiled 'upscale' library in 0.021 sec
+ggml_metal_library_compile_all: compiled 'argsort' library in 0.037 sec
+ggml_metal_library_compile_all: compiled 'pool' library in 0.011 sec
+ggml_metal_library_compile_all: compiled 'misc' library in 0.012 sec
+ggml_metal_library_compile_all: loaded 35 libraries from embedded data in 0.046 sec (max single = 0.042 sec)
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0 (Apple M4 Pro)
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 19069.67 MB
+whisper_init_with_params_no_state: devices    = 3
+whisper_init_with_params_no_state: backends   = 3
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 384
+whisper_model_load: n_audio_head  = 6
+whisper_model_load: n_audio_layer = 4
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 384
+whisper_model_load: n_text_head   = 6
+whisper_model_load: n_text_layer  = 4
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 1 (tiny)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =    77.11 MB
+whisper_model_load: model size    =   77.11 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =    3.15 MB
+whisper_init_state: kv cross size =    9.44 MB
+whisper_init_state: kv pad  size  =    2.36 MB
+whisper_init_state: loading Core ML model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: first run on a device may take a while ...
+whisper_init_state: failed to load Core ML model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: compute buffer (conv)   =   13.21 MB
+whisper_init_state: compute buffer (encode) =   17.72 MB
+whisper_init_state: compute buffer (cross)  =    3.89 MB
+whisper_init_state: compute buffer (decode) =   95.91 MB
+whisper_init_from_file_with_params_no_state: loading model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 3
+whisper_init_with_params_no_state: backends   = 3
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51865
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 384
+whisper_model_load: n_audio_head  = 6
+whisper_model_load: n_audio_layer = 4
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 384
+whisper_model_load: n_text_head   = 6
+whisper_model_load: n_text_layer  = 4
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 1 (tiny)
+whisper_model_load: adding 1608 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =    77.11 MB
+whisper_model_load: model size    =   77.11 MB
+whisper_backend_init_gpu: no GPU found
+whisper_backend_init: using BLAS backend
+whisper_init_state: kv self size  =    3.15 MB
+whisper_init_state: kv cross size =    9.44 MB
+whisper_init_state: kv pad  size  =    2.36 MB
+whisper_init_state: loading Core ML model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: first run on a device may take a while ...
+whisper_init_state: failed to load Core ML model from '/tmp/live-caption-session-tests.A4y83q/Models/ggml-tiny-encoder.mlmodelc'
+whisper_init_state: compute buffer (conv)   =   13.21 MB
+whisper_init_state: compute buffer (encode) =   17.72 MB
+whisper_init_state: compute buffer (cross)  =    3.89 MB
+whisper_init_state: compute buffer (decode) =   95.91 MB
+{
+  "autoRestartSourceSeconds" : 0.295706994,
+  "checked" : [
+    "verified model selection",
+    "AVPlayer\/AVAssetReader real source-time feed",
+    "delayed polling tick preserves audio generation",
+    "pause drains all played PCM",
+    "pause clock",
+    "explicit seek",
+    "resume",
+    "immutable earlier history",
+    "disjoint SRT",
+    "native AVPlayer seek",
+    "native transport pause drains all played PCM",
+    "clean EOF with flushed tail and retained metrics",
+    "no punctuation-only captions",
+    "automatic replay at EOF",
+    "native direct EOF seek skips unplayed audio",
+    "clear\/stop stale-event rejection",
+    "model unload",
+    "released context reloads after Stop",
+    "unreadable import"
+  ],
+  "cleanEOFSourceSeconds" : 10.44,
+  "cpuInference" : true,
+  "EOFMaximumCueEnd" : 9.3268749999999994,
+  "exportedSRT" : "1\n00:00:00,055 --> 00:00:02,519\nインターネット\n\n2\n00:00:02,519 --> 00:00:07,442\nで適対的環境構成し、検索すると、恐らく電池器用の上手をしています。\n",
+  "firstPass" : [
+    {
+      "end" : 2.5193750000000001,
+      "start" : 0.054875,
+      "text" : "インターネット"
+    }
+  ],
+  "input" : "ja_jp-0.wav",
+  "language" : "ja",
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "nativeSeekToEOFConfirmedCount" : 0,
+  "nativeSeekToEOFSkippedSeconds" : 9.6207095909999989,
+  "passed" : true,
+  "pausedAtSourceSeconds" : 2.5193898749999999,
+  "replayAlternativeCount" : 0,
+  "replayPrimary" : [
+    {
+      "end" : 2.5193750000000001,
+      "start" : 0.054875,
+      "text" : "インターネット"
+    },
+    {
+      "end" : 7.4423750000000002,
+      "start" : 2.5193750000000001,
+      "text" : "で適対的環境構成し、検索すると、恐らく電池器用の上手をしています。"
+    }
+  ],
+  "startCallSeconds" : [
+    0.107882958,
+    0.0113055,
+    0.0022817499999999999,
+    0.0018400840000000001,
+    0.035998791000000002
+  ]
+}

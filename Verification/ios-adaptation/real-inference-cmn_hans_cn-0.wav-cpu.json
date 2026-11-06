@@ -1,0 +1,35 @@
+{
+  "captions" : [
+    {
+      "end" : 1.7181875,
+      "start" : 0.038187499999999999,
+      "text" : "謝謝"
+    },
+    {
+      "end" : 3.7181875000000013,
+      "start" : 1.7181875000000013,
+      "text" : "這並不是告別"
+    },
+    {
+      "end" : 7.5781875000000012,
+      "start" : 3.858187500000001,
+      "text" : "这是一个偏胶的结束也是新偏胶的开始"
+    }
+  ],
+  "cpuInference" : true,
+  "detectedOutputLanguage" : "zh-Hans",
+  "device" : "iPhone",
+  "droppedAudioSeconds" : 0,
+  "fixture" : "cmn_hans_cn-0.wav",
+  "inferenceSeconds" : 0.47687420899999999,
+  "model" : "tiny",
+  "modelSHA256" : "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21",
+  "mutedPlayback" : true,
+  "osVersion" : "27.0",
+  "processedAudioSeconds" : 4.04,
+  "requestedUseGPU" : false,
+  "sourceDurationSeconds" : 10.380000000000001,
+  "sourceLanguage" : "zh",
+  "usingGPU" : false,
+  "wallSecondsIncludingPlayback" : 10.609308004379272
+}

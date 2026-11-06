@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-06",
+  "sourceSHA256": {
+    "App/Platform/macOS/CaptionPanelController.swift": "043ba9b95357be596392255280e027565d06783f41d593de7398a19f4bd173a1",
+    "App/UI/SharedViews.swift": "2fe79def43f3b69296933767b775a662e79c5c689825cb5ad5371208179bd4b9",
+    "App/UI/CaptionWorkspaceView.swift": "24595e0d20cc922fa9decc19c46d9b55c2512dfe3b09078c5ecdf0b0f1d94610",
+    "App/UI/SettingsView.swift": "41b9adbabcef0590e33f000d433d130b6f595278c947840055fb13113c437de2",
+    "App/Session/SessionController.swift": "2356d67979d591cacbee7b16ad1b52903a4d84c47092e99c0da3a56cf92ba512",
+    "App/Session/AppPreferences.swift": "13d4477b2f9e664bddefc656584d66b2c1069fe2efb5b39e503a1e73764c7977",
+    "App/LiveCaptionApp.swift": "8fe18a668073299c35cadf59efe25dac350a677b06ce60dc556bd30400908e93"
+  },
+  "note": "Final native renders verified the unchanged caption layout. The final explicit hosting minimum and reused host were then verified with the real SessionController and FloatingCaptionView across initial display, two delayed reopens, an old 100pt saved height and a live font change; see panel-reopen.log. Final Mac build uses these source hashes."
+}

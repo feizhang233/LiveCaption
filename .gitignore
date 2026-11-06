@@ -70,3 +70,6 @@ AuthKey_*.p8
 .git-credentials
 Secrets.xcconfig
 *.local.xcconfig
+
+# Disposable root UI audit; named Verification evidence remains tracked
+/premium-audit.json

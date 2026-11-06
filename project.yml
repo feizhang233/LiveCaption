@@ -11,11 +11,12 @@ settings:
   base:
     SWIFT_VERSION: '5.0'
     SWIFT_STRICT_CONCURRENCY: targeted
-    MARKETING_VERSION: '0.1.0'
-    CURRENT_PROJECT_VERSION: '1'
+    MARKETING_VERSION: '0.2.0'
+    CURRENT_PROJECT_VERSION: '2'
     CODE_SIGN_STYLE: Automatic
     ENABLE_USER_SCRIPT_SANDBOXING: YES
     GENERATE_INFOPLIST_FILE: YES
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     INFOPLIST_KEY_CFBundleDisplayName: Live Caption
     INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.video
 targets:
@@ -38,6 +39,7 @@ targets:
         ENABLE_HARDENED_RUNTIME: YES
         INFOPLIST_KEY_NSAudioCaptureUsageDescription: 擷取您正在播放的系統音訊，在本機產生原文字幕。
         INFOPLIST_KEY_NSScreenCaptureUsageDescription: 擷取系統播放音訊以產生字幕，不儲存螢幕影像。
+        INFOPLIST_KEY_NSAppleEventsUsageDescription: 讀取您允許的瀏覽器目前網址，在指定網站啟用原文字幕；不讀取網頁內容或儲存瀏覽歷史。
   LiveCaptioniPad:
     type: application
     platform: iOS
@@ -53,13 +55,10 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.livecaption.ipad
         PRODUCT_NAME: LiveCaption
         INFOPLIST_FILE: Config/iPad-Info.plist
-        TARGETED_DEVICE_FAMILY: '2'
+        TARGETED_DEVICE_FAMILY: '1,2'
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
-        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
-        INFOPLIST_KEY_UIApplicationSupportsMultipleScenes: YES
-        INFOPLIST_KEY_UIFileSharingEnabled: YES
-        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: YES
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: NO
+        INFOPLIST_KEY_UIApplicationSupportsMultipleScenes: NO
         SUPPORTS_MACCATALYST: NO
   LiveCaptioniPadTests:
     type: bundle.unit-test
@@ -74,7 +73,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.livecaption.ipad.tests
         TEST_HOST: '$(BUILT_PRODUCTS_DIR)/LiveCaption.app/LiveCaption'
         BUNDLE_LOADER: '$(TEST_HOST)'
-        TARGETED_DEVICE_FAMILY: '2'
+        TARGETED_DEVICE_FAMILY: '1,2'
 schemes:
   LiveCaptionMac:
     build:

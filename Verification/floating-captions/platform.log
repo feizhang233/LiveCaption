@@ -1,0 +1,1 @@
+PASS: ScreenCaptureKit PCM adapter — stereo downmix, 48/44.1/16 kHz conversion, continuous PTS, forward gaps, source-clock rewind and reset; bounded newest-8 ingress, overflow accounting and termination; ReplayKit probe converter and bounded 32-slot ring with gap/overlap timestamps; panel placement on smaller and negative-origin screens. No UI or recording permission requested.
